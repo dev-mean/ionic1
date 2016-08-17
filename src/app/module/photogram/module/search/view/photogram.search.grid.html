@@ -1,0 +1,21 @@
+<ion-view cache-view="false">
+  <!--<ion-nav-title translate="SEARCH.TITLE.LIST"></ion-nav-title>-->
+  <ion-nav-title>
+    <ion-search class="search-wrapper-light" placeholder="{{ 'SEARCH.FORM.INPUT' | translate }}" min-length="1" model="GallerySearchGrid.data"
+      source="GallerySearchGrid.load"></ion-search>
+  </ion-nav-title>
+  <ion-content class="photogram-search">
+
+    <ion-refresher ng-if="!vm.loading" on-refresh="loadMore(true)"></ion-refresher>
+
+    <photogram-loading loading="vm.loading"></photogram-loading>
+
+    <photogram-photo-grid profile="true" photogram="vm.data" loading="vm.loading"></photogram-photo-grid>
+
+    <div class="center-ico" ng-if="vm.empty">
+      <i class="icon ion-ios-camera"></i>
+    </div>
+
+    <ion-infinite-scroll ng-if="!vm.loading && !vm.empty" on-infinite="vm.loadMore()"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

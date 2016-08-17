@@ -1,0 +1,61 @@
+<ion-view view-title="Discovery" cache-view="false">
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+        </button>
+      </ion-nav-buttons>
+
+  <ion-content>
+
+    <ul class="list">
+
+      <li class="item item-toggle">
+        Discoverable
+        <label class="toggle">
+          <input type="checkbox" ng-model="profile.enabled">
+          <div class="track"><div class="handle"></div></div>
+        </label>
+      </li>
+    </ul>
+
+    <div class="item item-divider">
+      Show me
+    </div>
+    <ul class="list">
+      <li class="item item-toggle">
+        Guys
+        <label class="toggle">
+          <input type="checkbox" ng-model="profile.guys">
+          <div class="track"><div class="handle"></div></div>
+        </label>
+      </li>
+      <li class="item item-toggle">
+        Girls
+        <label class="toggle">
+          <input type="checkbox" ng-model="profile.girls">
+          <div class="track"><div class="handle"></div></div>
+        </label>
+      </li>
+      <li class="item item-divider">
+        Search distance: {{profile.distance}}{{profile.distanceType}}
+      </li>
+      <li class="item" style="height: 60px">
+        <slider floor="1" ceiling="200" ng-model-low="profile.distance" ng-model-high="profile.distance"></slider>
+      </li>
+      <li class="item item-divider">
+        Aged between: {{profile.ageFrom}} to {{profile.ageTo == 55 ? '55+' : profile.ageTo}}
+      </li>
+      <!-- There is a MAX_AGE_PLUS var in the cloud code to make the 55 effectively 55+ -->
+      <li class="item" style="height: 60px">
+        <slider floor="18" ceiling="55" ng-model-low="profile.ageFrom" ng-model-high="profile.ageTo"></slider>
+      </li>
+
+    </ul>
+
+    <div style="width:100%;padding-left: 10px;padding-right: 10px;">
+      <button class="button button-block button-positive" ng-click="save()">Save</button>
+      <button class="button button-block button-light" ng-click="cancel()">Cancel</button>
+    </div>
+
+  </ion-content>
+</ion-view>

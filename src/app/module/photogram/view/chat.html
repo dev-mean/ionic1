@@ -1,0 +1,123 @@
+<ion-view id="userMessagesView">
+    <ion-nav-title>{{::matchProfile.name}}</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <i class="button button-icon icon ion-person" ui-sref="^.match-profile({matchId: matchId, profileId : matchProfile.id})"></i>
+        <i class="button button-icon icon ion-android-more-vertical" ng-click="chatOptions()"></i>
+    </ion-nav-buttons>
+
+    <ion-content has-bouncing="true" class="has-header has-footer"  delegate-handle="userMessageScroll">
+
+        <div class="item chat-header">
+            You matched on{{::match.updatedAt | dateFormat:'d mmm yyyy'}}
+        </div>
+
+        <div ng-show="doneLoading == true" ng-repeat="message in messages track by message.id" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
+
+            <div ng-if="::message.sender != profile.uid">
+
+                <img ng-click="viewProfile(message)" class="profile-pic left"
+                     ng-src="{{::matchProfile.photoUrl}}" onerror="onProfilePicError(this)" />
+
+                <div class="chat-bubble left">
+                    <div class="message" ng-if="::message.text" ng-bind-html="::message.text | escapeHTML | emoji" autolinker><!--  | nl2br -->
+                    </div>
+                    <img ng-if="::message.image" id="{{message.id + '_img'}}" ng-src="{{::message.image.url()}}" crossorigin="anonymous" class="wide" />
+                    <div ng-if="::message.audio" ng-click="playAudio(message.audio.url())">
+                        <button class="button-icon icon ion-volume-high"></button>
+                        <button class="button-icon icon ion-play"></button>
+                    </div>
+
+                    <div class="message-detail">
+                        <span>{{::message.createdAt | chatDateFormat}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-if="::message.sender == profile.uid">
+                <!-- Change the sytle .chat-bubble.right to have margin-right: 55px if you want to show your own image too
+                <img ng-click="viewProfile(message)" class="profile-pic right"
+                     ng-src="{{::profile.photoUrl}}" onerror="onProfilePicError(this)" />-->
+                <div class="chat-bubble right">
+                    <div class="message" ng-if="::message.text" ng-bind-html="::message.text | escapeHTML | emoji" autolinker><!-- | nl2br -->
+                    </div>
+                    <!-- If we've just sent the message then re-use the base64 instead of reloading from the server -->
+                    <img ng-if="::message.image && !message.imageBase64" id="{{message.id + '_img'}}" ng-src="{{::message.image.url()}}" crossorigin="anonymous" class="wide"/>
+                    <img ng-if="::message.imageBase64" data-ng-src="{{message.imageBase64}}" class="wide">
+
+                    <div ng-if="::message.audio" ng-click="playAudio(message.audio.url())">
+                        <button class="button-icon icon ion-volume-high"></button>
+                        <button class="button-icon icon ion-play"></button>
+                    </div>
+
+                    <div class="message-detail">
+                        <span>{{::message.createdAt | chatDateFormat}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cf"></div>
+        </div>
+
+        <div ng-repeat="message in sendingMessages track by message.sentAt" class="message-wrapper">
+            <!-- Change the sytle .chat-bubble.right to have margin-right: 55px if you want to show your own image too
+            <img ng-click="viewProfile(message)" class="profile-pic right"
+                 ng-src="{{::profile.photoUrl}}" onerror="onProfilePicError(this)" />-->
+            <div class="chat-bubble right">
+                <div class="message" ng-if="::message.text" ng-bind-html="::message.text | escapeHTML | emoji" autolinker><!-- | nl2br -->
+                </div>
+                <img ng-if="::message.imageBase64" data-ng-src="{{message.imageBase64}}" style="width:100%">
+                <div ng-if="::message.audio">
+                    <button class="button-icon icon ion-volume-high"></button>
+                </div>
+                <div class="message-detail">Sending...</div>
+            </div>
+            <div class="cf"></div>
+        </div>
+
+        <div ng-repeat="message in failedMessages track by message.sentAt" class="message-wrapper" on-hold="onFailedMessageHold($event, $index, message)">
+            <!-- Change the sytle .chat-bubble.right to have margin-right: 55px if you want to show your own image too
+            <img ng-click="viewProfile(message)" class="profile-pic right"
+                 ng-src="{{::profile.photoUrl}}" onerror="onProfilePicError(this)" />-->
+            <div class="chat-bubble right failed">
+                <div class="message" ng-if="::message.text" ng-bind-html="::message.text | escapeHTML | emoji" autolinker><!-- | nl2br -->
+                </div>
+                <img ng-if="::message.imageBase64" data-ng-src="{{message.imageBase64}}" style="width:100%">
+                <div ng-if="::message.audio">
+                    <button class="button-icon icon ion-volume-high"></button>
+                </div>
+                <div class="message-detail">Failed to send</div>
+            </div>
+            <div class="cf"></div>
+        </div>
+
+        <!-- This adds a space and scrolls up when the keyboard is displayed so you can still see the last message you were viewing -->
+        <keyboard-scroll-spacer scroll-delegate="userMessageScroll" offset="chatSubfooter"></keyboard-scroll-spacer>
+
+        <!-- A spacer so the bottom of the chat messages don't display hidden under the camera/audio/video subfooter bar -->
+        <div class="subfooter-height"></div>
+    </ion-content>
+
+    <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+        <ion-footer-bar class="bar-light item-input-inset message-footer" keyboard-attach>
+            <!-- http://stackoverflow.com/questions/29289319/rows-inside-an-ionic-footer-dont-stack-properly -->
+            <div id="chatSubfooter" class="bar bar-subfooter bar-light auto-height hide-on-keyboard-open">
+                <div class="row no-padding">
+<!--                     <i class="button button-icon icon ion-ios-calculator rotate90" ng-click="showKeyboard()"></i> <!-- ion-ios-keypad -->
+<!--                     <i class="button button-icon icon ion-camera" ng-click="imageFromCamera()"></i> -->
+<!--                     <i class="button button-icon icon ion-image" ng-click="imageFromLibrary()"></i> -->
+<!--                     <i class="button button-icon icon ion-mic-a" ng-click="recordAudio()"></i>
+                    <i class="button button-icon icon ion-ios-videocam" ng-disabled="!video.isSupported()" ng-click="video.invite(matchProfile.uid)"></i> -->
+                </div>
+            </div>
+            <i class="button button-icon icon ion-camera" ng-click="imageFromCamera()"></i>
+            <label class="item-input-wrapper">
+                <textarea ng-model="input.message" value="" style="width: 100%" placeholder="Write a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-android-send-no footer-btn" type="submit"
+                        ng-disabled="!input.message || input.message === ''">Send
+                </button>
+            </div>
+        </ion-footer-bar>
+    </form>
+
+</ion-view>

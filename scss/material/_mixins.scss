@@ -1,0 +1,34 @@
+@mixin button-material($color, $text) {
+
+  $color-bg: $color !default;
+  $color-border: lighten($color, 8%);
+  $color-active-bg: lighten($color, 8%);
+  $color-active-border: lighten($color, 8%);
+  $color-text: $text !default;
+
+  @include button-style($color-bg, $color-border, $color-active-bg, $color-active-border, $color-text);
+  @include button-clear($color-bg);
+  @include button-outline($color-bg);
+
+}
+
+@mixin bar-material($color, $text) {
+  $color-bg: $color !default;
+  $color-border: lighten($color, 8%);
+  $color-active-bg: lighten($color, 8%);
+  $color-active-border: lighten($color, 8%);
+  $color-text: $text !default;
+
+  @include bar-style($color-bg, $color-border, $color-text);
+  &.bar-footer {
+    background-image: linear-gradient(180deg, $color-border, $color-border 50%, transparent 50%);
+  }
+}
+
+@mixin bg-material($color) {
+  background-color: $color;
+}
+
+@mixin color-material($color) {
+  color: $color;
+}

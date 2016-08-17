@@ -1,0 +1,41 @@
+<ion-view title="{{ 'Complete your Profile' | translate }}">
+
+  <ion-nav-bar class="bar bar-positive bar-mop" align-title="left">
+
+  </ion-nav-bar>
+
+  <ion-content class="view-avatar">
+
+    <div class="step1 padding">
+      <h5 translate>Your email is already associated with another account, please enter your password</h5>
+    </div>
+
+    <div class="row step1">
+      <div class="col">
+        <img class="avatar" user-avatar ng-src="{{ vm.form.src }}" />
+      </div>
+    </div>
+
+    <div class="list step2">
+      <label class="item item-input">
+                <i class="icon icon-user placeholder-icon"></i>
+                <input type="text" ng-model="vm.form.name" disabled>
+            </label>
+      <label class="item item-input">
+                <i class="icon icon-envelope placeholder-icon"></i>
+                <input type="text" ng-model="vm.form.email" disabled>
+            </label>
+      <label class="item item-input lock">
+                <input type="password" placeholder="{{ 'Password' | translate }}" ng-model="vm.form.password">
+            </label>
+    </div>
+
+    <div class="padding step3">
+      <button ng-click="vm.submitvm(vm.form)" ng-disabled="form.facebook" class="button button-block button-facebook"><i class="icon ion-social-facebook"></i>
+                <span translate>vm Facebook</span>
+            </button>
+    </div>
+
+
+  </ion-content>
+</ion-view>

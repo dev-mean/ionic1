@@ -1,0 +1,12 @@
+<ion-view view-title="{{profile.name}}">
+    <ion-nav-buttons side="right">
+        <i class="button button-icon icon ion-android-close" ng-click="reject()"></i>
+        <i class="button button-icon icon ion-ios-heart-outline" ng-click="like()"></i>
+        <i class="button button-icon icon ion-android-more-vertical" ng-click="profileOptions()"></i>
+        <!-- TODO menu that contain 'Report' menu item )-->
+    </ion-nav-buttons>
+
+    <ion-content>
+        <profile-details profile="profile"></profile-details>
+    </ion-content>
+</ion-view>

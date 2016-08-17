@@ -1,0 +1,134 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+<ion-content has-header="false" scroll="false">
+<style>
+
+@-webkit-keyframes pulse_animation {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.08); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.pulse {
+    animation-name: 'pulse_animation';
+    animation-duration: 1000ms;
+    animation-transform-origin: center bottom;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -moz-animation-name: 'pulse_animation';
+    -moz-animation-duration: 1000ms;
+    -moz-transform-origin: center bottom;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-name: 'pulse_animation';
+    -webkit-animation-duration: 1000ms;
+    -webkit-transform-origin: center bottom;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes drop_animation {
+    0% { -webkit-transform: translateY(0%) }
+    100% { -webkit-transform: translateY(800%) }
+}
+.drop {
+    animation-name: 'drop_animation';
+    animation-duration: 600ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    -moz-animation-name: 'drop_animation';
+    -moz-animation-duration: 600ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-name: 'drop_animation';
+    -webkit-animation-duration: 600ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+.app-name {
+    font-family: 'Avenir Next LT Pro Regular', 'Helvetica Neue', Helvetica;
+    font-size: 48px;
+    color:rgb(33, 85, 170);
+    padding-top: 60px;
+    text-align: center;
+}
+
+#login-status {
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    font-family: 'Avenir Next LT Pro Regular', 'Helvetica Neue', Helvetica;
+}
+
+</style>
+
+    <div class="row">
+      <div class="col">
+        <div class="app-name">{{::appName}}</div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div class="row center">
+      <div class="col">
+        <img ng-show="showLogo == true" ng-class="logo.class" style="padding-top: 20px; width: 100%; max-width: 200px;" src="img/fire-small.png" />
+      </div>
+    </div>
+
+    <div class="row center">
+      <div class="col">
+        <a ng-show="showForm == true" ng-class="login.class" ng-click="facebookLogin()"><img style="width:100%; max-width: 600px; padding-top: 30px" src="img/facebook.png"/></a>
+        <a ng-show="showForm == true" ng-class="login.class" ng-click="linkedInLogin()"><img style="width:100%; max-width: 600px; padding-top: 30px" src="img/linkedin.png"/></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-80 col-offset-10">
+
+          <!-- Login/Register -->
+        <div ng-show="showForm == true" class="list">
+            <label class="item item-input">
+                <span class="input-label" translate="EMAIL"></span>
+                <input type="email" ng-model="credentials.email">
+            </label>
+            <label class="item item-input">
+                <span class="input-label" translate="PASSWORD"></span>
+                <input type="password" ng-model="credentials.password">
+            </label>
+            <div class="center" style="padding-top: 10px;">
+                <a id="login" class="button" style="width:100px" ng-click="emailLogin()" translate="LOG_IN"></a>
+                <a id="register" class="button" style="width:100px" ng-click="emailRegister()" translate="REGISTER"></a>
+            </div>
+            <div class="center" style="padding-top: 20px;">
+                <a id="resetLink" ng-click="showResetPasswordForm()" translate="RESET_PASSWORD"></a>
+            </div>
+        </div>
+
+          <!-- Reset Password -->
+          <div ng-show="showResetPassword == true" class="list">
+              <label class="item item-input">
+                  <span class="input-label" translate="EMAIL"></span>
+                  <input type="email" ng-model="credentials.email">
+              </label>
+              <div class="center" style="padding-top: 10px;">
+                  <a class="button" style="width:150px" ng-click="resetPassword()" translate="RESET_PASSWORD"></a>
+              </div>
+              <div class="center" style="padding-top: 20px;">
+                  <a ng-click="hideResetPasswordForm()" translate="CANCEL"></a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div id="login-status">{{status | translate}}</div>
+      </div>
+    </div>    
+</ion-content> 
+</ion-view>

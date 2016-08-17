@@ -1,0 +1,771 @@
+@import "mixins";
+@import "themes/pallets";
+
+// 237 themes color
+
+// Red
+.color-red-100 {
+  @include color-material($red-100);
+}
+.color-red-200 {
+  @include color-material($red-200);
+}
+.color-red-300 {
+  @include color-material($red-300);
+}
+.color-red-400 {
+  @include color-material($red-400);
+}
+.color-red-500 {
+  @include color-material($red-500);
+}
+.color-red-600 {
+  @include color-material($red-600);
+}
+.color-red-700 {
+  @include color-material($red-700);
+}
+.color-red-800 {
+  @include color-material($red-800);
+}
+.color-red-900 {
+  @include color-material($red-900);
+}
+.color-red-a100 {
+  @include color-material($red-a100);
+}
+.color-red-a200 {
+  @include color-material($red-a200);
+}
+.color-red-a400 {
+  @include color-material($red-a400);
+}
+.color-red-a700 {
+  @include color-material($red-a700);
+}
+
+// Pink
+
+.color-pink-100 {
+  @include color-material($pink-100);
+}
+.color-pink-200 {
+  @include color-material($pink-200);
+}
+.color-pink-300 {
+  @include color-material($pink-300);
+}
+.color-pink-400 {
+  @include color-material($pink-400);
+}
+.color-pink-500 {
+  @include color-material($pink-500);
+}
+.color-pink-600 {
+  @include color-material($pink-600);
+}
+.color-pink-700 {
+  @include color-material($pink-700);
+}
+.color-pink-800 {
+  @include color-material($pink-800);
+}
+.color-pink-900 {
+  @include color-material($pink-900);
+}
+.color-pink-a100 {
+  @include color-material($pink-a100);
+}
+.color-pink-a200 {
+  @include color-material($pink-a200);
+}
+.color-pink-a400 {
+  @include color-material($pink-a400);
+}
+.color-pink-a700 {
+  @include color-material($pink-a700);
+}
+
+// Purple
+
+.color-purple-100 {
+  @include color-material($purple-100);
+}
+.color-purple-200 {
+  @include color-material($purple-200);
+}
+.color-purple-300 {
+  @include color-material($purple-300);
+}
+.color-purple-400 {
+  @include color-material($purple-400);
+}
+.color-purple-500 {
+  @include color-material($purple-500);
+}
+.color-purple-600 {
+  @include color-material($purple-600);
+}
+.color-purple-700 {
+  @include color-material($purple-700);
+}
+.color-purple-800 {
+  @include color-material($purple-800);
+}
+.color-purple-900 {
+  @include color-material($purple-900);
+}
+.color-purple-a100 {
+  @include color-material($purple-a100);
+}
+.color-purple-a200 {
+  @include color-material($purple-a200);
+}
+.color-purple-a400 {
+  @include color-material($purple-a400);
+}
+.color-purple-a700 {
+  @include color-material($purple-a700);
+}
+
+// Deep Purple
+
+.color-deep-purple-100 {
+  @include color-material($deep-purple-100);
+}
+.color-deep-purple-200 {
+  @include color-material($deep-purple-200);
+}
+.color-deep-purple-300 {
+  @include color-material($deep-purple-300);
+}
+.color-deep-purple-400 {
+  @include color-material($deep-purple-400);
+}
+.color-deep-purple-500 {
+  @include color-material($deep-purple-500);
+}
+.color-deep-purple-600 {
+  @include color-material($deep-purple-600);
+}
+.color-deep-purple-700 {
+  @include color-material($deep-purple-700);
+}
+.color-deep-purple-800 {
+  @include color-material($deep-purple-800);
+}
+.color-deep-purple-900 {
+  @include color-material($deep-purple-900);
+}
+.color-deep-purple-a100 {
+  @include color-material($deep-purple-a100);
+}
+.color-deep-purple-a200 {
+  @include color-material($deep-purple-a200);
+}
+.color-deep-purple-a400 {
+  @include color-material($deep-purple-a400);
+}
+.color-deep-purple-a700 {
+  @include color-material($deep-purple-a700);
+}
+
+// Indigo
+
+.color-indigo-100 {
+  @include color-material($indigo-100);
+}
+.color-indigo-200 {
+  @include color-material($indigo-200);
+}
+.color-indigo-300 {
+  @include color-material($indigo-300);
+}
+.color-indigo-400 {
+  @include color-material($indigo-400);
+}
+.color-indigo-500 {
+  @include color-material($indigo-500);
+}
+.color-indigo-600 {
+  @include color-material($indigo-600);
+}
+.color-indigo-700 {
+  @include color-material($indigo-700);
+}
+.color-indigo-800 {
+  @include color-material($indigo-800);
+}
+.color-indigo-900 {
+  @include color-material($indigo-900);
+}
+.color-indigo-a100 {
+  @include color-material($indigo-a100);
+}
+.color-indigo-a200 {
+  @include color-material($indigo-a200);
+}
+.color-indigo-a400 {
+  @include color-material($indigo-a400);
+}
+.color-indigo-a700 {
+  @include color-material($indigo-a700);
+}
+
+// Blue
+
+.color-blue-100 {
+  @include color-material($blue-100);
+}
+.color-blue-200 {
+  @include color-material($blue-200);
+}
+.color-blue-300 {
+  @include color-material($blue-300);
+}
+.color-blue-400 {
+  @include color-material($blue-400);
+}
+.color-blue-500 {
+  @include color-material($blue-500);
+}
+.color-blue-600 {
+  @include color-material($blue-600);
+}
+.color-blue-700 {
+  @include color-material($blue-700);
+}
+.color-blue-800 {
+  @include color-material($blue-800);
+}
+.color-blue-900 {
+  @include color-material($blue-900);
+}
+.color-blue-a100 {
+  @include color-material($blue-a100);
+}
+.color-blue-a200 {
+  @include color-material($blue-a200);
+}
+.color-blue-a400 {
+  @include color-material($blue-a400);
+}
+.color-blue-a700 {
+  @include color-material($blue-a700);
+}
+
+// Light Blue
+
+.color-light-blue-100 {
+  @include color-material($light-blue-100);
+}
+.color-light-blue-200 {
+  @include color-material($light-blue-200);
+}
+.color-light-blue-300 {
+  @include color-material($light-blue-300);
+}
+.color-light-blue-400 {
+  @include color-material($light-blue-400);
+}
+.color-light-blue-500 {
+  @include color-material($light-blue-500);
+}
+.color-light-blue-600 {
+  @include color-material($light-blue-600);
+}
+.color-light-blue-700 {
+  @include color-material($light-blue-700);
+}
+.color-light-blue-800 {
+  @include color-material($light-blue-800);
+}
+.color-light-blue-900 {
+  @include color-material($light-blue-900);
+}
+.color-light-blue-a100 {
+  @include color-material($light-blue-a100);
+}
+.color-light-blue-a200 {
+  @include color-material($light-blue-a200);
+}
+.color-light-blue-a400 {
+  @include color-material($light-blue-a400);
+}
+.color-light-blue-a700 {
+  @include color-material($light-blue-a700);
+}
+
+// Cyan
+
+.color-cyan-100 {
+  @include color-material($cyan-100);
+}
+.color-cyan-200 {
+  @include color-material($cyan-200);
+}
+.color-cyan-300 {
+  @include color-material($cyan-300);
+}
+.color-cyan-400 {
+  @include color-material($cyan-400);
+}
+.color-cyan-500 {
+  @include color-material($cyan-500);
+}
+.color-cyan-600 {
+  @include color-material($cyan-600);
+}
+.color-cyan-700 {
+  @include color-material($cyan-700);
+}
+.color-cyan-800 {
+  @include color-material($cyan-800);
+}
+.color-cyan-900 {
+  @include color-material($cyan-900);
+}
+.color-cyan-a100 {
+  @include color-material($cyan-a100);
+}
+.color-cyan-a200 {
+  @include color-material($cyan-a200);
+}
+.color-cyan-a400 {
+  @include color-material($cyan-a400);
+}
+.color-cyan-a700 {
+  @include color-material($cyan-a700);
+}
+
+// Teal
+
+.color-teal-100 {
+  @include color-material($teal-100);
+}
+.color-teal-200 {
+  @include color-material($teal-200);
+}
+.color-teal-300 {
+  @include color-material($teal-300);
+}
+.color-teal-400 {
+  @include color-material($teal-400);
+}
+.color-teal-500 {
+  @include color-material($teal-500);
+}
+.color-teal-600 {
+  @include color-material($teal-600);
+}
+.color-teal-700 {
+  @include color-material($teal-700);
+}
+.color-teal-800 {
+  @include color-material($teal-800);
+}
+.color-teal-900 {
+  @include color-material($teal-900);
+}
+.color-teal-a100 {
+  @include color-material($teal-a100);
+}
+.color-teal-a200 {
+  @include color-material($teal-a200);
+}
+.color-teal-a400 {
+  @include color-material($teal-a400);
+}
+.color-teal-a700 {
+  @include color-material($teal-a700);
+}
+
+// Green
+
+.color-green-100 {
+  @include color-material($green-100);
+}
+.color-green-200 {
+  @include color-material($green-200);
+}
+.color-green-300 {
+  @include color-material($green-300);
+}
+.color-green-400 {
+  @include color-material($green-400);
+}
+.color-green-500 {
+  @include color-material($green-500);
+}
+.color-green-600 {
+  @include color-material($green-600);
+}
+.color-green-700 {
+  @include color-material($green-700);
+}
+.color-green-800 {
+  @include color-material($green-800);
+}
+.color-green-900 {
+  @include color-material($green-900);
+}
+.color-green-a100 {
+  @include color-material($green-a100);
+}
+.color-green-a200 {
+  @include color-material($green-a200);
+}
+.color-green-a400 {
+  @include color-material($green-a400);
+}
+.color-green-a700 {
+  @include color-material($green-a700);
+}
+
+// Light Green
+
+.color-light-green-100 {
+  @include color-material($light-green-100);
+}
+.color-light-green-200 {
+  @include color-material($light-green-200);
+}
+.color-light-green-300 {
+  @include color-material($light-green-300);
+}
+.color-light-green-400 {
+  @include color-material($light-green-400);
+}
+.color-light-green-500 {
+  @include color-material($light-green-500);
+}
+.color-light-green-600 {
+  @include color-material($light-green-600);
+}
+.color-light-green-700 {
+  @include color-material($light-green-700);
+}
+.color-light-green-800 {
+  @include color-material($light-green-800);
+}
+.color-light-green-900 {
+  @include color-material($light-green-900);
+}
+.color-light-green-a100 {
+  @include color-material($light-green-a100);
+}
+.color-light-green-a200 {
+  @include color-material($light-green-a200);
+}
+.color-light-green-a400 {
+  @include color-material($light-green-a400);
+}
+.color-light-green-a700 {
+  @include color-material($light-green-a700);
+}
+
+// Lime
+
+.color-lime-100 {
+  @include color-material($lime-100);
+}
+.color-lime-200 {
+  @include color-material($lime-200);
+}
+.color-lime-300 {
+  @include color-material($lime-300);
+}
+.color-lime-400 {
+  @include color-material($lime-400);
+}
+.color-lime-500 {
+  @include color-material($lime-500);
+}
+.color-lime-600 {
+  @include color-material($lime-600);
+}
+.color-lime-700 {
+  @include color-material($lime-700);
+}
+.color-lime-800 {
+  @include color-material($lime-800);
+}
+.color-lime-900 {
+  @include color-material($lime-900);
+}
+.color-lime-a100 {
+  @include color-material($lime-a100);
+}
+.color-lime-a200 {
+  @include color-material($lime-a200);
+}
+.color-lime-a400 {
+  @include color-material($lime-a400);
+}
+.color-lime-a700 {
+  @include color-material($lime-a700);
+}
+
+// Yellow
+
+.color-yellow-100 {
+  @include color-material($yellow-100);
+}
+.color-yellow-200 {
+  @include color-material($yellow-200);
+}
+.color-yellow-300 {
+  @include color-material($yellow-300);
+}
+.color-yellow-400 {
+  @include color-material($yellow-400);
+}
+.color-yellow-500 {
+  @include color-material($yellow-500);
+}
+.color-yellow-600 {
+  @include color-material($yellow-600);
+}
+.color-yellow-700 {
+  @include color-material($yellow-700);
+}
+.color-yellow-800 {
+  @include color-material($yellow-800);
+}
+.color-yellow-900 {
+  @include color-material($yellow-900);
+}
+.color-yellow-a100 {
+  @include color-material($yellow-a100);
+}
+.color-yellow-a200 {
+  @include color-material($yellow-a200);
+}
+.color-yellow-a400 {
+  @include color-material($yellow-a400);
+}
+.color-yellow-a700 {
+  @include color-material($yellow-a700);
+}
+
+// Amber
+
+.color-amber-100 {
+  @include color-material($amber-100);
+}
+.color-amber-200 {
+  @include color-material($amber-200);
+}
+.color-amber-300 {
+  @include color-material($amber-300);
+}
+.color-amber-400 {
+  @include color-material($amber-400);
+}
+.color-amber-500 {
+  @include color-material($amber-500);
+}
+.color-amber-600 {
+  @include color-material($amber-600);
+}
+.color-amber-700 {
+  @include color-material($amber-700);
+}
+.color-amber-800 {
+  @include color-material($amber-800);
+}
+.color-amber-900 {
+  @include color-material($amber-900);
+}
+.color-amber-a100 {
+  @include color-material($amber-a100);
+}
+.color-amber-a200 {
+  @include color-material($amber-a200);
+}
+.color-amber-a400 {
+  @include color-material($amber-a400);
+}
+.color-amber-a700 {
+  @include color-material($amber-a700);
+}
+
+// Orange
+
+.color-orange-100 {
+  @include color-material($orange-100);
+}
+.color-orange-200 {
+  @include color-material($orange-200);
+}
+.color-orange-300 {
+  @include color-material($orange-300);
+}
+.color-orange-400 {
+  @include color-material($orange-400);
+}
+.color-orange-500 {
+  @include color-material($orange-500);
+}
+.color-orange-600 {
+  @include color-material($orange-600);
+}
+.color-orange-700 {
+  @include color-material($orange-700);
+}
+.color-orange-800 {
+  @include color-material($orange-800);
+}
+.color-orange-900 {
+  @include color-material($orange-900);
+}
+.color-orange-a100 {
+  @include color-material($orange-a100);
+}
+.color-orange-a200 {
+  @include color-material($orange-a200);
+}
+.color-orange-a400 {
+  @include color-material($orange-a400);
+}
+.color-orange-a700 {
+  @include color-material($orange-a700);
+}
+
+// Deep Orange
+
+.color-deep-orange-100 {
+  @include color-material($deep-orange-100);
+}
+.color-deep-orange-200 {
+  @include color-material($deep-orange-200);
+}
+.color-deep-orange-300 {
+  @include color-material($deep-orange-300);
+}
+.color-deep-orange-400 {
+  @include color-material($deep-orange-400);
+}
+.color-deep-orange-500 {
+  @include color-material($deep-orange-500);
+}
+.color-deep-orange-600 {
+  @include color-material($deep-orange-600);
+}
+.color-deep-orange-700 {
+  @include color-material($deep-orange-700);
+}
+.color-deep-orange-800 {
+  @include color-material($deep-orange-800);
+}
+.color-deep-orange-900 {
+  @include color-material($deep-orange-900);
+}
+.color-deep-orange-a100 {
+  @include color-material($deep-orange-a100);
+}
+.color-deep-orange-a200 {
+  @include color-material($deep-orange-a200);
+}
+.color-deep-orange-a400 {
+  @include color-material($deep-orange-a400);
+}
+.color-deep-orange-a700 {
+  @include color-material($deep-orange-a700);
+}
+
+// Brown
+
+.color-brown-100 {
+  @include color-material($brown-100);
+}
+.color-brown-200 {
+  @include color-material($brown-200);
+}
+.color-brown-300 {
+  @include color-material($brown-300);
+}
+.color-brown-400 {
+  @include color-material($brown-400);
+}
+.color-brown-500 {
+  @include color-material($brown-500);
+}
+.color-brown-600 {
+  @include color-material($brown-600);
+}
+.color-brown-700 {
+  @include color-material($brown-700);
+}
+.color-brown-800 {
+  @include color-material($brown-800);
+}
+.color-brown-900 {
+  @include color-material($brown-900);
+}
+
+// Grey
+
+.color-grey-100 {
+  @include color-material($grey-100);
+}
+.color-grey-200 {
+  @include color-material($grey-200);
+}
+.color-grey-300 {
+  @include color-material($grey-300);
+}
+.color-grey-400 {
+  @include color-material($grey-400);
+}
+.color-grey-500 {
+  @include color-material($grey-500);
+}
+.color-grey-600 {
+  @include color-material($grey-600);
+}
+.color-grey-700 {
+  @include color-material($grey-700);
+}
+.color-grey-800 {
+  @include color-material($grey-800);
+}
+.color-grey-900 {
+  @include color-material($grey-900);
+}
+.color-black {
+  @include color-material($black);
+}
+.color-white {
+  @include color-material($white);
+}
+
+// Blue Grey
+
+.color-blue-grey-100 {
+  @include color-material($blue-grey-100);
+}
+.color-blue-grey-200 {
+  @include color-material($blue-grey-200);
+}
+.color-blue-grey-300 {
+  @include color-material($blue-grey-300);
+}
+.color-blue-grey-400 {
+  @include color-material($blue-grey-400);
+}
+.color-blue-grey-500 {
+  @include color-material($blue-grey-500);
+}
+.color-blue-grey-600 {
+  @include color-material($blue-grey-600);
+}
+.color-blue-grey-700 {
+  @include color-material($blue-grey-700);
+}
+.color-blue-grey-800 {
+  @include color-material($blue-grey-800);
+}
+.color-blue-grey-900 {
+  @include color-material($blue-grey-900);
+}

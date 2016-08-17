@@ -1,0 +1,33 @@
+<ion-view view-title="Likes Me">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-content>
+
+        <ion-refresher
+                pulling-text="pull to refresh"
+                on-refresh="vm.refresh()">
+        </ion-refresher>
+
+        <div ng-if="!vm.profiles.length" class="center">
+            <br/>
+            Check back soon, no likes yet
+        </div>
+
+        <ion-list>
+            <ion-item ng-repeat="profile in vm.profiles"
+                      class="item-thumbnail-left" ng-click="vm.view($index)">
+
+                <img ng-src="{{profile.photoUrl}}">
+                <h2>{{profile.name}}, {{profile.age}}</h2>
+                <p>
+                    {{profile.location | distance}} away<br/>
+                    {{profile.about}}
+                </p>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

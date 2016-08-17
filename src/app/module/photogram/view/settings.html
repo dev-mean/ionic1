@@ -1,0 +1,51 @@
+<ion-view view-title="Settings" cache-view="false">
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+        </button>
+      </ion-nav-buttons>
+
+  <ion-content>
+
+      <div class="list">
+
+          <div class="item item-divider">
+              Notification Sound:
+          </div>
+
+          <ion-toggle ng-model="profile.notifyMatch" toggle-class="toggle-positive">New match</ion-toggle>
+
+          <ion-toggle ng-model="profile.notifyMessage" toggle-class="toggle-positive">New message</ion-toggle>
+
+          <div class="item item-divider">
+              Show distances in:
+          </div>
+
+          <ion-radio ng-model="profile.distanceType" name="distanceType" ng-value="'km'">Km</ion-radio>
+
+          <ion-radio ng-model="profile.distanceType" name="distanceType" ng-value="'mi'">Mi</ion-radio>
+
+          <div class="item item-divider">
+              Language:
+          </div>
+
+          <div style="width:100%;padding:2px">
+            <button ng-click="setLanguage('en')" class="button button-small button-stable">English</button>
+            <button ng-click="setLanguage('de')" class="button button-small button-stable">Deutch</button>
+          </div>
+      </div>
+
+      <br/>
+
+      <div class="wide center padding-10">
+          <button class="button button-block button-positive" ng-click="save()" >Save</button>
+          <button class="button button-block button-stable" ng-click="deleteUnmatchedSwipes()">Delete Unmatched Swipes</button>
+          <button class="button button-block button-stable" ng-click="logout()" >Logout</button>
+          <button class="button button-block button-assertive" ng-click="deleteAccount()" >Delete Account</button>
+      </div>
+
+      <div class="wide center padding-10 bold" ng-click="debug()">
+          Version: {{::(appVersion ? appVersion : 'N/A')}}
+      </div>
+  </ion-content>
+</ion-view>

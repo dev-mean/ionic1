@@ -1,0 +1,29 @@
+<ion-view class="view-home" title='<img class="title-image" src="img/header.png" />'>
+  <ion-nav-title>
+    <span class="icon2-logo"></span>
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-android-menu" ng-click="showMenu()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon ion-ios-filing" ui-sref="photogram.direct"></button>
+
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ion-refresher ng-if="!vm.loading" on-refresh="loadMore(true)"></ion-refresher>
+
+    <photogram-loading loading="vm.loading"></photogram-loading>
+
+    <photogram-photo-list profile="true" photogram="vm.data" loading="vm.loading"></photogram-photo-list>
+
+    <div class="center-ico" ng-if="vm.empty">
+      <i class="icon ion-ios-camera"></i>
+
+      <h1 translate="HOME.TITLE.NO_PHOTO"></h1>
+    </div>
+
+    <ion-infinite-scroll ng-if="!vm.loading && !vm.empty" on-infinite="vm.loadMore()"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

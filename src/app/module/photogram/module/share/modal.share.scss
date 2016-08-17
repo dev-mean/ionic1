@@ -1,0 +1,29 @@
+.photogram {
+  .modal-share textarea {
+    width: 100%;
+  }
+
+  #image {
+    display: block;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .title {
+      display: block;
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      color: #fff;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+}

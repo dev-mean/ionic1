@@ -1,0 +1,8 @@
+{
+     "android": {
+         "release": {
+             "keystore": "/Users/movibe/Sites/PlayStore/agfoccus.keystore",
+             "alias": "agfoccus"
+         }
+     }
+ }

@@ -1,0 +1,15 @@
+<ion-view hide-nav-bar>
+  <ion-content>
+    <div class="item item-divider" translate>Grid List</div>
+
+    <div class="center-ico animated fadeIn" ng-if="vm.empty">
+      <i class="icon ion-camera"></i>
+
+      <h1 translate="">No Post</h1>
+    </div>
+
+    <photogram-loading loading="vm.loading"></photogram-loading>
+
+    <photogram-photo-grid photogram="vm.data" loading="vm.loading"></photogram-photo-grid>
+  </ion-content>
+</ion-view>

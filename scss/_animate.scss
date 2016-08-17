@@ -1,0 +1,108 @@
+@mixin animate($animation, $duration, $delay ) {
+  // Opera
+  -o-animation-name: $animation;
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: ease;
+  -o-animation-fill-mode: both;
+
+  // Mozilla
+  -moz-animation-name: $animation;
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: ease;
+  -moz-animation-fill-mode: both;
+
+  // Safari
+  -webkit-animation-name: $animation;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+
+  // Chrome
+  animation-name: $animation;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+
+  backface-visibility: hidden;
+}
+
+/*
+    Example usage:
+    @include animation(fadeInDown, 1s, .5s)
+ */
+
+$animate1: 'zoomInLeft';
+
+.item-animate1 {
+
+  &.ng-enter {
+    @include animate($animate1, 1s, .5s);
+  }
+
+  &.ng-enter-stagger {
+    -webkit-animation-delay: 100ms;
+    animation-delay: 100ms;
+
+    /* override to make sure it's not inherited from other styles */
+    -webkit-animation-duration: 0s;
+    animation-duration: 0s;
+
+  }
+}
+
+$animate2: 'fadeInDown';
+
+.item-animate2 {
+
+  &.ng-enter {
+    -webkit-animation: $animate1 1s;
+    animation: $animate1 1s;
+  }
+
+  &.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+
+    /* override to make sure it's not inherited from other styles */
+    -webkit-animation-duration: 0;
+    animation-duration: 0;
+
+  }
+}
+
+
+.button-fab {
+
+  &.ng-enter {
+    @include animate(fadeInUp, 1s, 0s);
+  }
+
+ &.ng-leave {
+    @include animate(fadeOutDown, .5s, 0.5s);
+  }
+
+}
+.step1 {
+  @include animate(fadeInDown, 1s, 0s);
+
+  &.ng-leave,&.ng-enter-leave, &.ng-hide {
+    @include animate(fadeOut, 1s, 0.5s);
+  }
+}
+
+.step2 {
+  @include animate(fadeInUp, 1s, 0.5s);
+  
+  &.ng-leave,&.ng-enter-leave, &.ng-hide {
+    @include animate(fadeOut, 1s, 0.5s);
+  }
+}
+
+.step3 {
+  @include animate(fadeInUp, 1s, 1s);
+}

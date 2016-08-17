@@ -1,0 +1,30 @@
+<ion-view cache-view="false" class="photogram-activity">
+
+  <ion-nav-title>
+    <h1 class="title" translate="ACTIVITY.TITLE"></h1>
+  </ion-nav-title>
+
+  <ion-content>
+
+    <photogram-loading loading="vm.loading" icon="android"></photogram-loading>
+
+    <div class="list">
+
+      <div class="item item-avatar item-animate1" ng-repeat="item in vm.data"><img ng-src="{{ ::item.user.img._url || 'img/user.png' }}">
+
+        <h2>{{ ::item.user.name }}</h2>
+
+        <div class="text">{{ ::item.action | translate }}</div>
+        <p>{{ ::item.created | amTimeAgo }}</p>
+
+        <div class="img-right" ng-if="item.img">
+          <img ng-src="{{ ::item.img._url }}">
+        </div>
+      </div>
+
+    </div>
+
+    <ion-infinite-scroll ng-if="!vm.loading && !vm.empty" on-infinite="vm.load()">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

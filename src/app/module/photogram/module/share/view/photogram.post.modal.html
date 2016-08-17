@@ -1,0 +1,25 @@
+<ion-modal-view class="modal-post">
+  <ion-header-bar class="bar-dark">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closePost()"></button>
+    <div class="title" translate="SHARE.TITLE"></div>
+    <button class="button button-positive" ng-click="submitPost(form)">
+            <i class="icon ion-arrow-right-b"></i>
+        </button>
+  </ion-header-bar>
+  <ion-content>
+    <div id="image">
+      <img ng-src="{{form.photo}}">
+    </div>
+    <ul class="list">
+      <li class="item">
+        <textarea type="text" rows="7" ng-model="form.title" autofocus placeholder="{{ 'SHARE.FORM.LEGEND' | translate }}"></textarea>
+      </li>
+      <li class="item item-input" ng-show="form.geo.image">
+        <input type="text" placeholder="{{ 'SHARE.FORM.LOCATION' | translate }}" ion-location location="form.geo" ng-model="form.geo.resume">
+      </li>
+      <li class="item nopadding" ng-show="form.geo.image">
+        <img ng-src="{{ form.geo.image }}">
+      </li>
+    </ul>
+  </ion-content>
+</ion-modal-view>

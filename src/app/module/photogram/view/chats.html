@@ -1,0 +1,39 @@
+<style>
+    .unread {
+        font-weight: bold;
+    }
+</style>
+<ion-view view-title="Chat">
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+        </button>
+      </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <i class="button button-icon icon ion-gear-a" ng-click="chatSettings($event)"></i>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <!-- TODO style this better -->
+    <div ng-show="!matches.length" style="text-align: center;font-family:'Avenir Next LT Pro Regular';font-size:18px">
+        <br/>
+        You don&#39;t have any matches yet.<br/>
+        <br/>
+        Start swiping!
+
+      <!-- buttons which tinder has
+      Discover New People
+      Invite your friends!
+      -->
+    </div>
+    <div class="list">
+      <a class="item item-avatar" ng-repeat="match in matches track by match.id" ui-sref="chat({matchId : match.id})">
+        <img ng-src="{{::match.profile.photoUrl}}" img-cache>
+        <h2>{{::match.profile.name}}</h2>
+        <p ng-class="match.read ? '' : 'unread'" ng-bind-html="match.lastMessage | escapeHTML | emoji"></p>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

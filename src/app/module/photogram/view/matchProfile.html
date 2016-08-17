@@ -1,0 +1,51 @@
+<ion-view view-title="Match Profle">
+    <ion-nav-buttons side="right">
+        <!-- TODO menu that contain 'Report' menu item )-->
+        <i class="button button-icon icon ion-android-more-vertical" ng-click="profileOptions()"></i>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <ion-slide-box show-pager="true" does-continue="true">
+            <ion-slide ng-repeat="photo in matchProfile.photos track by $index">
+                <img ng-src="{{photo.url()}}" style="width:100%"/>
+            </ion-slide>
+            <ion-slide ng-if="!matchProfile.photos.length">
+                <img src="img/generic_avatar.jpg" style="width:100%"/>
+            </ion-slide>
+        </ion-slide-box>
+
+        <div style="padding: 10px;">
+            <b>{{matchProfile.name}}</b>, {{matchProfile.age}}<br/>
+            <span style="color:gray">{{distance}}{{profile.distanceType == 'km' ? 'km' : 'mi'}} away <!-- TODO Active x hours ago --></span><br/>
+
+            <div ng-show="matchProfile.about">
+                {{matchProfile.about}}
+            </div>
+        <!--
+            <div ng-show="friends.length">
+                <b>Shared Friends ({{friends.length}}{{friends.length==25 ? '+' : ''}})</b>
+                <ion-scroll direction="x">
+                    <div class="myItemContainer">
+                        <div class="myItem" ng-repeat="friend in friends">
+                            <img class="likeImg" ng-src="http://graph.facebook.com/v2.2/{{friend.id}}/picture"/><br/>
+                            {{friend.name}}
+                        </div>
+                    </div>
+                </ion-scroll>
+            </div>
+            <div ng-show="likes.length">
+                <b>Shared Interests ({{likes.length}}{{likes.length==25 ? '+' : ''}})</b>
+                <ion-scroll direction="x">
+                    <div class="myItemContainer">
+                        <div class="myItem" ng-repeat="like in likes">
+                            <img class="likeImg" ng-src="http://graph.facebook.com/v2.2/{{like.id}}/picture"/><br/>
+                            {{like.name}}
+                        </div>
+                    </div>
+                </ion-scroll>
+            </div>
+        -->
+        </div>
+    </ion-content>
+</ion-view>

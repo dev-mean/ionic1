@@ -1,0 +1,25 @@
+<ion-view view-title="Location Map" cache-view="false">
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+        </button>
+      </ion-nav-buttons>
+
+    <ion-content>
+        <ul class="items">
+            <li class="item item-toggle">
+                Use GPS location
+                <label class="toggle">
+                    <input type="checkbox" ng-model="location.useGPS" ng-change="useGPSchanged()">
+                    <div class="track"><div class="handle"></div></div>
+                </label>
+            </li>
+        </ul>
+
+        <div id="map" data-tap-disabled="true"></div>
+
+    </ion-content>
+    <ion-footer-bar>
+        <button ng-hide="location.useGPS" class="button button-block button-positive" style="margin:0px" ng-click="setLocation()">Save</button>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Add a photo" cache-view="false">
+
+	<ion-nav-bar class="bar-positive">
+		<ion-nav-back-button>
+		</ion-nav-back-button>
+	</ion-nav-bar>
+
+  <ion-content has-header="true" padding="true">
+
+	<section id="fbphotos">
+	  	<a ng-click="selectPhoto(photo)" ng-repeat="photo in photos">
+	      <img crossorigin="anonymous" ng-src="{{photo.picture}}" />
+	    </a>
+	</section>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,188 @@
+<ion-view view-title="{{::appName}}">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
+        </button>
+      </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <i class="button button-icon icon ion-ios-chatbubble-outline" ui-sref="photogram.menu-chats">
+        <span ng-show="unreadChats > 0" class="badge badge-assertive nav-icon-badge">{{unreadChats}}</span>
+    </i>
+  </ion-nav-buttons>
+  <ion-content class="padding" style="padding-top:100px;padding-top:5vw;text-align:center" no-scroll>
+  <!-- no-scroll style=""-->
+
+    <style>
+
+      @-webkit-keyframes fade_out_animation {
+        0% { -webkit-transform: scale(1); }
+        100% { -webkit-transform: scale(2);  opacity: 0;  }
+      }
+
+      .imgOverlay{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
+
+      .imgCircle{
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        -webkit-border-radius: 150px;
+        -moz-border-radius: 150px;
+      }
+
+      .verticalAlign{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width:100%;
+        margin:0 auto;
+      }
+
+      
+
+      .fade-out {
+        animation-name: 'fade_out_animation';
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: 'fade_out_animation';
+        -webkit-animation-duration: 2000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: 'fade_out_animation';
+        -moz-animation-duration: 2000ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        transition: opacity 2s
+      }
+    </style>
+<!-- for testing the match dialog
+    <button style="position: absolute;bottom:5px" ng-click="openNewMatch()">Match</button>
+-->
+
+    <div></div>
+
+    <div ng-if="!profile.enabled" class="text-label" style="padding-top:50px;padding-top:20vw;">
+        <div style="font-size: 24px; font-size: 8vw">You are not discoverable</div>
+
+        <div style="font-size: 14px;font-size: 4vw;padding-top: 5px">Enable discovery to meet new people nearby</div>
+        <button class="button button-block" ng-click="enableDiscovery()">Enable Discovery</button>
+        <br/><br/>
+        <div ng-show="!profile.photos.length">
+            <br/>
+            <div style="font-size: 20px; font-size: 6vw">You don't have a profile picture yet</div>
+            <button class="button button-block" ui-sref="profile-edit">Edit Profile</button>
+        </div>
+    </div>
+
+    <div ng-show="profile.enabled" >
+
+        <div class="verticalAlign" ng-show="!matches" style="padding-top:150px;padding-top:45vw;">
+            <img class="imgOverlay fade-out" style="width:150px" src="img/ring.png"></img>
+            <img class="photo imgCircle imgOverlay" img-cache ng-src="{{::profilePhoto}}"></img>
+            <!-- Finding people near you... -->
+        </div>
+
+        <div ng-show="!matches || matches.length==0" style="padding-top:150px;padding-top:45vw;">
+            <div class="verticalAlign text-label"  ng-show="!matches">
+              Finding people near you
+            </div>
+            <div class="verticalAlign text-label" style="font-size: 16px;font-size: 5.5vw" ng-show="matches.length == 0">
+              There is no one new around you
+              <br/>
+              <br/>
+              <button class="button" ng-click="searchAgain()">Search Again</button>
+            </div>
+        </div>
+
+
+        <td-cards>
+          <!-- ng-if="$index >= matches.length -2" is to display only the top 2 cards in the DOM for performance -->
+          <!-- The matches array is used like a stack, where the last item shows first -->
+          <td-card ng-if="$index >= matches.length - 2" ng-show="matches" ng-repeat="match in matches track by $index" on-destroy="cardDestroyed($index)" on-transition-left="cardTransitionLeft(match)" on-transition-right="cardTransitionRight(match)"  class="card-{{$index}}" ng-class="{'accepted-transform': match.accepted, 'rejected-transform': match.rejected}">
+            <div class="image" ng-click="viewDetails(match)">
+              <div class="yes-text" ng-style="leftTextOpacity">Like</div>
+              <img style="width:100%" ng-src="{{::match.image}}">
+              <div class="no-text" ng-style="rightTextOpacity">Nope</div>
+            </div>
+            <div >
+              {{match.name}}
+              <!--
+              <div class="button-bar" style="{{match.hideButtons ? 'display:none' : ''}}">
+                <button class="button button-clear button-positive icon ion-ios7-close-empty" ng-click="reject(match)"></button>
+                <button class="button button-clear button-positive icon ion-ios7-heart-outline" ng-click="accept(match)"></button>
+              </div>
+              -->
+            </div>
+          </td-card>
+        </td-cards>
+
+
+        <!--
+            Example alternative layouts. The ng-if="searchLayout == 'type'" is not currently wired up.
+            Neither is the like reject buttons in the big card layout
+        -->
+
+        <!-- For list layout examples see http://ionicframework.com/docs/components/#item-thumbnails -->
+        <div class="list" ng-if="searchLayout == 'list'">
+            <a class="item item-thumbnail-left" style="text-align: left" ng-repeat="match in matches track by $index" ng-click="viewDetails(match)">
+                <img ng-src="{{::match.image}}" img-cache>
+                <h2>{{::match.name}}, {{::match.age}}</h2>
+                <p>
+                    {{match.location | distance}} away<br/>
+                    {{match.about}}
+                </p>
+            </a>
+        </div>
+
+        <!-- 2xN Grid layout There's a few different way to iterate when fixed columns. Using the approach at http://stackoverflow.com/a/30259461/1052084 -->
+        <div class="row" ng-repeat="match in matches track by $index" ng-if="searchLayout == 'grid' && $index % 2 == 0">
+            <div class="col" >
+                <div class="list card" ng-click="viewDetails(match)">
+                    <div class="item item-image"><img ng-src="{{::match.image}}"></div>
+                    <a class="item item-icon-left item-icon-right">{{::match.name}}</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="list card" ng-click="viewDetails(matches[index+1])" ng-if="$index+1 < matches.length">
+                    <div class="item item-image"><img ng-src="{{::matches[index+1].image}}"></div>
+                    <a class="item item-icon-left item-icon-right">{{::matches[index+1].name}}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- For card layout examples see http://ionicframework.com/docs/components/#card-images -->
+        <div class="list card" ng-repeat="match in matches track by $index" ng-if="searchLayout == 'card'" ng-click="viewDetails(match)">
+            <div class="item item-image">
+                <img ng-src="{{::match.image}}">
+            </div>
+            <a class="item item-icon-left  item-icon-right" href="#">
+                <i style="float:left" class="button button-icon icon ion-android-close assertive" ng-click="reject()"></i>
+                {{::match.name}}
+                <i style="float:right" class="button button-icon icon ion-ios-heart-outline assertive" ng-click="like()"></i>
+            </a>
+        </div>
+
+        <div ng-show="matches.length > 0" class="swipe-buttons">
+            <div class="row" >
+                <div class="col">
+                    <a class="button button-icon" ng-click="reject()">
+                        <i class="icon ion-ios-close-outline swipe-button swipe-reject"></i>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="button button-icon" ng-click="accept()">
+                        <i class="icon ion-ios-checkmark-outline swipe-button swipe-accept"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

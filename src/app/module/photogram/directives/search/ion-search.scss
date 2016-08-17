@@ -1,0 +1,33 @@
+$color-input: #fff;
+$color-placeholder: #f7f7f7;
+.search-wrapper-light {
+  &.ion-search {
+    &.item-input-wrapper {
+      background: none;
+
+      > input {
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 1px solid #f7f7f7;
+        padding: 2px 10px;
+        color: $color-input;
+
+        &::-webkit-input-placeholder {
+          color: $color-placeholder;
+        }
+
+        &:-moz-placeholder {
+          color: $color-placeholder;
+        }
+
+        &::-moz-placeholder {
+          color: $color-placeholder;
+        }
+
+        &:-ms-input-placeholder {
+          color: $color-placeholder;
+        }
+      }
+    }
+  }
+}

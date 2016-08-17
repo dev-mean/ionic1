@@ -1,0 +1,28 @@
+// Loading
+.view-loading {
+  background-image: url('../img/bg.jpg');
+  background-color: $positive;
+  background-position: 15%;
+  background-size: cover;
+
+  .scroll-content {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+
+    img {
+      display: block;
+      position: absolute;
+      max-width: 50%;
+      min-width: 200px;
+
+      top: 30%;
+      left: 50%;
+      margin-top: -0px;
+      margin-left: -100px;
+
+      @include animate(fadeIn, 1s, 0.1s);
+    }
+  }
+}

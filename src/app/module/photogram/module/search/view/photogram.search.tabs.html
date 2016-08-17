@@ -1,0 +1,20 @@
+<ion-view title="Search" class="view-tab">
+
+  <ion-nav-title>
+    <h1 class="title" translate="SEARCH.TITLE"></h1>
+  </ion-nav-title>
+
+  <ion-tabs class="tabs-top tabs-positive tabs-striped">
+
+    <ion-tab title="{{'SEARCH.TITLE_LIST' | translate}}" icon="ion-grid" ui-sref="photogram.search.grid">
+      <ion-nav-view name="tabGrid"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="{{'SEARCH.TITLE_MAP' | translate }}" icon="ion-map" ui-sref="photogram.search.map">
+      <ion-nav-view name="tabMap"></ion-nav-view>
+    </ion-tab>
+
+
+  </ion-tabs>
+
+</ion-view>

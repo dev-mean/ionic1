@@ -1,0 +1,123 @@
+{
+    "HOME": {
+        "TITLE": {
+            "NO_PHOTO": "Kein Foto"
+        }
+    },
+    "ACTIVITY": {
+        "TITLE": "Aktivitäten",
+        "FORM": {
+            "PLACEHOLDER": "Senden Sie eine Nachricht..."
+        }
+    },
+    "DIRECT": {
+        "TITLE": "Direkte Nachrichten",
+        "FORM": {
+            "PLACEHOLDER": "Senden Sie eine Nachricht..."
+        },
+        "BUTTON": {
+            "PULL": "Ziehen zum aktualisieren..."
+        }
+    },
+    "FEEDBACK": {
+        "TITLE": "Feedback",
+        "SUBJECT": "Thema",
+        "COMPLAINT": "Beschwerde",
+        "BUG": "Bug",
+        "SUGGESTION": "Vorschlag",
+        "MESSAGE": "Ihre Nachricht"
+    },
+    "SEARCH": {
+        "TITLE": "Suche",
+        "TITLE_LIST": "Sucht in der Liste",
+        "TITLE_MAP": "Suche in der Karte",
+        "FORM": {
+            "INPUT": "Suche..."
+        }
+    },
+    "SHARE": {
+        "TITLE": "Post-Foto",
+        "FORM": {
+            "SHARE_IN": "Teilen",
+            "LEGEND": "Schreiben Sie eine Legende",
+            "LOCATION": "Lage"
+        }
+    },
+    "PHOTOGRAM": {
+        "TITLE": {
+            "HOME": "Home",
+            "SEARCH": "Suche",
+            "SHARE": "Teilen",
+            "ACTIVITY": "Activiy",
+            "PROFILE": "Profil",
+            "NO_PHOTO": "Kein Foto",
+            "SHARE_IN": "Teilen"
+        },
+        "FORM": {
+            "TITLE": "Titel",
+            "GEOLOCATION": "Lage",
+            "ADDCOMMENT": "Fügen Sie Ihren Kommentar",
+            "LOCATION": "Lage",
+            "LEGEND": "Schreiben Sie eine Legende"
+        },
+        "MSG": {
+            "RECENT": "Den letzten",
+            "NO_PHOTO": "Kein Foto",
+            "NO_POST": "Keine post"
+        },
+        "COMMENT": {
+            "TITLE": "Kommentare",
+            "NO_COMMENTS": "Keine Kommentare"
+        },
+        "SETTING": {
+            "TITLE": "Einstellungen",
+            "NOTIFICATION": "Benachrichtigung"
+        },
+        "PROFILE": {
+            "TITLE": {
+                "POST": "Beiträge",
+                "FOLLOWER": "Anhänger",
+                "FOLLOWING": "Folgendes"
+            },
+            "NOTIFICATION": "Benachrichtigung"
+        },
+        "LIKES": "Mag",
+        "BUTTON": {
+            "PULL": "Ziehen zum aktualisieren...",
+            "CHANGE_LANGUAGE": "Sprache ändern",
+            "SAVE_PROFILE": "Profil Speichern",
+            "FACEBOOK_LINK": "Link Facebook",
+            "EDIT": "Bearbeiten",
+            "REMOVE": "Entfernen",
+            "PROFILE_EDIT": "BEARBEITEN SIE IHR PROFIL",
+            "REPORT": "Ein Problem melden",
+            "TERM_POLICY": "Datenschutzerklärung",
+            "TERM_SERVICE": "Nutzungsbedingungen",
+            "HELP": "Helfen",
+            "BUY": "Kaufen Source Code",
+            "ON": "Auf",
+            "OFF": "Aus",
+            "CHANGE_LANGAUGE": "Sprache ändern",
+            "COMMENT_ADD": "Kommentar hinzufügen",
+            "COMMENT_REMOVE": "Kommentar hinzufügen",
+            "LIKE_ADD": "Wie",
+            "LIKE_REMOVE": "Im Gegensatz zu",
+            "FORGOT": "Haben Sie Ihr Passwort vergessen?",
+            "REGISTER": "Züchten Conta",
+            "LOGIN": "Fazer Login",
+            "ENTER_IN": "Anschließend mit ",
+            "RESET_PASS": "Neues Passwort generieren",
+            "UPDATE": "Atualizar",
+            "SAVE": "Salvar",
+            "NEW": "Novo",
+            "CREATE": "Cadastrar"
+        }
+    },
+    "LANG": {
+        "ENGLISH": "Englisch",
+        "PORTUGUES": "Portugiesisch",
+        "PERSIAN": "Persisch",
+        "GERMAN": "Deutsch",
+        "TURKISH": "Türkisch"
+    }
+}

@@ -1,0 +1,22 @@
+<ion-modal-view class="modal-profile photogram-profile">
+  <ion-header-bar class="bar-positive">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closeModal()"></button>
+    <div class="title">Follow Users</div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+
+      <div class="item item-avatar item-button-right" ng-repeat="item in data"><img ng-src="{{ ::item.src }}">
+
+        <h2>{{ ::item.name }}</h2>
+
+        <p>{{ ::item.status }}</p>
+        <button class="button" ng-click="item.follow = !item.follow" ng-class="item.follow ? 'button-positive' : 'button-stable'">
+                    <i class="icon " ng-class="item.follow? 'ion-thumbsup' : 'ion-plus'"></i>
+                </button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-modal-view>

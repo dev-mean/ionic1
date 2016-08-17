@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "serverURL": "https://pandaparse.herokuapp.com/parse",
+      "appId": "Panda_ID",
+      "masterKey": "Panda_Master_Key",
+      "appName": "Panda"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<ion-view view-title="Photo">
+  <ion-content>
+    <div class="list card step1">
+
+      <div class="item item-avatar" data-affix-within-parent-with-class="card" ion-affix>
+        <img ng-src="{{vm.data.user.img}}">
+
+        <h2>{{vm.data.user.name}}</h2>
+        <span>{{vm.data.created | amTimeAgo}}</span>
+      </div>
+
+      <div class="item item-body">
+        <img ng-src="{{vm.data.img._url}}" style="width: 100%">
+      </div>
+      <div class="padding">
+        <p>{{ vm.data.title }}</p>
+
+        <p>
+          <a class="subdued" href="#">1 {{ 'Like' | translate}}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div ng-repeat="item in vm.comments" class="item item-avatar">
+        <img ng-src="{{ item.user.img }}" />
+
+        <h2>{{ item.user.name }}</h2>
+
+        <p>{{ item.text }}</p>
+      </div>
+    </div>
+
+    <div class="step2">
+      <formly-form model="vm.form" fields="vm.formFields" form="rForm">
+
+        <div class="padding">
+          <button class="button button-block button-positive" type="button" ng-click="vm.submitComment(rForm, vm.form)" translate>Comment
+                    </button>
+        </div>
+
+      </formly-form>
+    </div>
+  </ion-content>
+</ion-view>

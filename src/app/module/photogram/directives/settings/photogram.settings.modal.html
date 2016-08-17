@@ -1,0 +1,92 @@
+<ion-modal-view class="modal-profile">
+  <ion-header-bar class="bar-dark">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closeModal()"></button>
+    <div class="title" translate="PHOTOGRAM.SETTING.TITLE"></div>
+  </ion-header-bar>
+  <ion-content class="animated fadeIn">
+
+    <div class="list">
+      <label class="item item-input item-select">
+                <div class="input-label" style="z-index: 2;">
+                    <h2 translate="PHOTOGRAM.BUTTON.CHANGE_LANGUAGE"></h2>
+                </div>
+                <select ng-model="language"
+                        ng-change="changeLanguage(language)"
+                        >
+                    <option ng-repeat="item in languages" value="{{ ::item.code}}" translate="{{ ::item.translation}}"></option>
+                </select>
+            </label>
+
+      <ion-toggle class="toggle-positive" ng-model="form.push">
+        <h3>
+                    <small translate="PHOTOGRAM.SETTING.NOTIFICATION"></small>
+                </h3>
+        <p ng-if="!setting_preview" translate="PHOTOGRAM.BUTTON.OFF"></p>
+
+        <p ng-if="setting_preview" translate="PHOTOGRAM.BUTTON.ON"></p>
+      </ion-toggle>
+
+
+      <!--<ion-item class="item-icon-right" ng-click="showSync();">-->
+      <!--<h3>-->
+      <!--<small translate>Synced Contacts</small>-->
+      <!--</h3>-->
+      <!--<p translate>On</p>-->
+      <!--<i class="icon ion-ios-arrow-right"></i>-->
+      <!--</ion-item>-->
+      <!--<ion-item class="item-icon-right" ng-click="show();">-->
+      <!--<h3>-->
+      <!--<small translate>Invite Friends</small>-->
+      <!--</h3>-->
+      <!--<i class="icon ion-ios-arrow-right"></i>-->
+      <!--</ion-item>-->
+      <!--<ion-toggle ng-modal="form.camera">-->
+      <!--<h3>-->
+      <!--<small translate>Save Photos to the Camera Roll</small>-->
+      <!--</h3>-->
+      <!--<p ng-if="!setting_camera" translate>Off</p>-->
+
+      <!--<p ng-if="setting_camera" translate>On</p>-->
+      <!--</ion-toggle>-->
+<!-- 
+      <ion-item class="item-icon-right" ng-click="openLink('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FAW4JZS7KJM5S')">
+        <h3>
+                    <small translate="PHOTOGRAM.BUTTON.BUY"></small>
+                </h3>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item-icon-right" ng-click="openLink('http://photogramapp.com')">
+        <h3>
+                    <small translate="PHOTOGRAM.BUTTON.HELP"></small>
+                </h3>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+
+      <ion-item class="item-icon-right" ng-click="openLink('http://photogramapp.com')">
+        <h3>
+                    <small translate="PHOTOGRAM.BUTTON.TERM_PRIVACY"></small>
+                </h3>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-icon-right" ng-click="openLink('http://photogramapp.com')">
+        <h3>
+                    <small translate="PHOTOGRAM.BUTTON.TERM_SERVICE">Terms of Service</small>
+                </h3>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-icon-right" ng-click="show();">
+        <h3>
+                    <small translate="PHOTOGRAM.BUTTON.REPORT">Report a Problem</small>
+                </h3>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item> -->
+
+    </div>
+    <div class="padding">
+      <button ng-click="link('logout')" class="button button-block button-positive" translat="USER.BUTTON.LOGOUT">
+                Logout
+            </button>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,19 @@
+<ion-view class="maps-view">
+  <ion-nav-title translate="SEARCH.TITLE_MAP"></ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button ng-click="vm.location()" class="button button-icon icon ion-pinpoint"></button>
+  </ion-nav-buttons>
+  <ion-content scroll="false">
+    <div class="map-container">
+
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+
+        <ui-gmap-marker idKey='0' coords='vm.user'></ui-gmap-marker>
+
+        <ui-gmap-marker click="vm.openModal(item)" idKey='item.id' coords='item.coords' icon="item.icon" ng-repeat="item in vm.data">
+        </ui-gmap-marker>
+
+      </ui-gmap-google-map>
+    </div>
+  </ion-content>
+</ion-view>

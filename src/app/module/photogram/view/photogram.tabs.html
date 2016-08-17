@@ -1,0 +1,57 @@
+<ion-view>
+
+  <ion-nav-bar class="bar bar-positive bar-mop" align-title="left">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-tabs class="tabs-dark tabs-photogram">
+
+    <ion-tab title="{{ ::'PHOTOGRAM.TITLE.HOME' | translate }}" icon="ion-android-home" ui-sref="photogram.home">
+      <ion-nav-view name="tabHome"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="{{ ::'PHOTOGRAM.TITLE.SEARCH' | translate }}" icon="ion-search" ui-sref="photogram.search.grid">
+      <ion-nav-view name="tabSearch"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="{{ ::'PHOTOGRAM.TITLE.SHARE' | translate }}" icon="ion-camera" class="middle" ng-click="vm.postPhoto()">
+      <ion-nav-view name="tabCapture"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="{{ ::'PHOTOGRAM.TITLE.ACTIVITY' | translate }}" icon="ion-chatbubble" ui-sref="photogram.activity">
+      <ion-nav-view name="tabActivity"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="{{ ::'PHOTOGRAM.TITLE.PROFILE' | translate }}" icon="ion-person" ui-sref="photogram.account">
+      <ion-nav-view name="tabProfile"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Chattabs -->
+    <ion-tab title="Profile" icon="ion-person" ui-sref="photogram.menu-profile" hidden="true">
+      <ion-nav-view name="tabMenuProfile"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Find Matches" icon="ion-person" ui-sref="photogram.menu-home" hidden="true">
+      <ion-nav-view name="tabMenuHome"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Chat" icon="ion-person" ui-sref="photogram.menu-chats" hidden="true">
+      <ion-nav-view name="tabMenuChats"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Liked Me" icon="ion-person" ui-sref="photogram.menu-likedMe" hidden="true">
+      <ion-nav-view name="tabMenuLikedMe"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Discovery Preferences" icon="ion-person" ui-sref="photogram.menu-discovery" hidden="true">
+      <ion-nav-view name="tabMenuDiscovery"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Location" icon="ion-person" ui-sref="photogram.menu-location" hidden="true">
+      <ion-nav-view name="tabMenuLocation"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="App Settings" icon="ion-person" ui-sref="photogram.menu-settings" hidden="true">
+      <ion-nav-view name="tabMenuSettings"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Contact Us" icon="ion-person" ui-sref="photogram.menu-contact" hidden="true">
+      <ion-nav-view name="tabMenuContact"></ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+
+</ion-view>

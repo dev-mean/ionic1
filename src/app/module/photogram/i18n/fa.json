@@ -1,0 +1,123 @@
+{
+    "HOME": {
+        "TITLE": {
+            "NO_PHOTO": "هیچ عکس"
+        }
+    },
+    "ACTIVITY": {
+        "TITLE": "فعالیت های",
+        "FORM": {
+            "PLACEHOLDER": "ارسال یک پیام..."
+        }
+    },
+    "DIRECT": {
+        "TITLE": "پیام های مستقیم",
+        "FORM": {
+            "PLACEHOLDER": "ارسال یک پیام..."
+        },
+        "BUTTON": {
+            "PULL": "به روز کردن..."
+        }
+    },
+    "FEEDBACK": {
+        "TITLE": "انتقادات و پیشنهادات",
+        "SUBJECT": "موضوع",
+        "COMPLAINT": "شکایت",
+        "BUG": "اشکال",
+        "SUGGESTION": "پیشنهاد",
+        "MESSAGE": "پیام خود را"
+    },
+    "SEARCH": {
+        "TITLE": "جستجو",
+        "TITLE_LIST": "جستجوی در لیست",
+        "TITLE_MAP": "جستجوی در نقشه",
+        "FORM": {
+            "INPUT": "جستجوی..."
+        }
+    },
+    "SHARE": {
+        "TITLE": "ارسال عکس",
+        "FORM": {
+            "SHARE_IN": "به اشتراک گذاری در",
+            "LEGEND": "نوشتن یک افسانه",
+            "LOCATION": "محل"
+        }
+    },
+    "PHOTOGRAM": {
+        "TITLE": {
+            "HOME": "صفحه اصلی",
+            "SEARCH": "جستجو",
+            "SHARE": "به اشتراک گذاری",
+            "ACTIVITY": "Activiy",
+            "PROFILE": "مشخصات",
+            "NO_PHOTO": "هیچ عکس",
+            "SHARE_IN": "به اشتراک گذاری در"
+        },
+        "FORM": {
+            "TITLE": "عنوان",
+            "GEOLOCATION": "محل",
+            "ADDCOMMENT": "اضافه کردن نظر شما",
+            "LOCATION": "محل",
+            "LEGEND": "نوشتن یک افسانه"
+        },
+        "MSG": {
+            "RECENT": "اخیر",
+            "NO_PHOTO": "هیچ عکس",
+            "NO_POST": "هیچ پست"
+        },
+        "COMMENT": {
+            "TITLE": "نظرات",
+            "NO_COMMENTS": "بدون نظر"
+        },
+        "SETTING": {
+            "TITLE": "تنظیمات",
+            "NOTIFICATION": "اطلاع رسانی"
+        },
+        "PROFILE": {
+            "TITLE": {
+                "POST": "پست",
+                "FOLLOWER": "پیروان",
+                "FOLLOWING": "موارد زیر"
+            },
+            "NOTIFICATION": "اطلاع رسانی"
+        },
+        "LIKES": "دوست دارد",
+        "BUTTON": {
+            "PULL": "به روز کردن...",
+            "CHANGE_LANGUAGE": "تغییر زبان",
+            "SAVE_PROFILE": "ذخیره مشخصات",
+            "FACEBOOK_LINK": "لینک Facebook",
+            "EDIT": "ویرایش",
+            "REMOVE": "حذف",
+            "PROFILE_EDIT": "مشخصات خود را ویرایش کنید",
+            "REPORT": "گزارش یک مشکل",
+            "TERM_POLICY": "سیاست حفظ حریم خصوصی",
+            "TERM_SERVICE": "شرایط استفاده از خدمات",
+            "HELP": "کمک",
+            "BUY": "خرید سورس کد",
+            "ON": "در",
+            "OFF": "خاموش",
+            "CHANGE_LANGAUGE": "تغییر زبان",
+            "COMMENT_ADD": "اضافه کردن نظر",
+            "COMMENT_REMOVE": "اضافه کردن نظر",
+            "LIKE_ADD": "مانند",
+            "LIKE_REMOVE": "بر خلاف",
+            "FORGOT": "عبور خود را فراموش کرده است ؟ ",
+            "REGISTER": "Criar Conta",
+            "LOGIN": "Fazer ورود",
+            "ENTER_IN": "را وارد کنید و با استفاده از ",
+            "RESET_PASS": "تولید رمز عبور جدید",
+            "UPDATE": "Atualizar",
+            "SAVE": "Salvar",
+            "NEW": "Novo",
+            "CREATE": "Cadastrar"
+        }
+    },
+    "LANG": {
+        "ENGLISH": "انگلیسی",
+        "PORTUGUES": "پرتغالی",
+        "PERSIAN": "فارسی",
+        "GERMAN": "آلمانی",
+        "TURKISH": "ترکی"
+    }
+}

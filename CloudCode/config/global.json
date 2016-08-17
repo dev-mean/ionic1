@@ -1,0 +1,23 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "prod": {
+      "applicationId": "UJORjgsTtpX1dfuWsKVnNawL6cIkvYgtOUSAwCIg",
+      "masterKey": "JQjc1ZX2ouJ28tPxZukSAlRLJrFVxfRR3W1Rb5Yo"
+    },
+    "dev": {
+      "applicationId": "UJORjgsTtpX1dfuWsKVnNawL6cIkvYgtOUSAwCIg",
+      "masterKey": "JQjc1ZX2ouJ28tPxZukSAlRLJrFVxfRR3W1Rb5Yo"
+    },
+    "qa": {
+      "applicationId": "UJORjgsTtpX1dfuWsKVnNawL6cIkvYgtOUSAwCIg",
+      "masterKey": "JQjc1ZX2ouJ28tPxZukSAlRLJrFVxfRR3W1Rb5Yo"
+    },
+    "_default": {
+      "link": "dev"
+    }
+  }
+
+}

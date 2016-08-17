@@ -1,0 +1,42 @@
+<ion-view class="view-intro" hide-nav-bar="true" can-swipe-back="false">
+
+  <ion-content scroll="false">
+    <div class="intro-slider">
+      <ion-slide-box active-slide="slideIndex" show-pager="true" on-slide-changed="vm.slideChanged($index)">
+
+        <ion-slide ng-repeat="item in vm.slides">
+
+          <div class="content" ng-if="$index == vm.slideIndex">
+            <span class="top"><h2>{{ ::item.top }}</h2></span>
+
+            <div class="phone {{ ::vm.device }}">
+              <img ng-src="{{ ::item.img }}">
+            </div>
+          </div>
+
+        </ion-slide>
+
+        <ion-slide>
+          <div class="content" ng-if="vm.slides.length == vm.slideIndex">
+
+            <div class="last">
+              <div class="logo2 step1">
+                <img src="img/icon.png">
+                <span class="icon2-logo"></span>
+              </div>
+
+              <button class="button button-block button-clear step2" ui-sref="user.signin" translate="INTRO.BUTTON.ENTER"></button>
+            </div>
+
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+
+    </div>
+
+    <button class="button button-positive button-fab left" ng-if="vm.slideIndex" ng-click="vm.previous()"><i
+                class="icon ion-ios-arrow-left"></i></button>
+
+    <button class="button button-positive button-fab right" ng-hide="vm.slideIndex === vm.slides.length" ng-click="vm.next()"><i class="icon ion-ios-arrow-right"></i></button>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,63 @@
+.button-facebook {
+  background: none repeat scroll 0 0 #3f569b !important;
+  border: 1px solid darken(#3f569b, 20);
+  color: #fff !important;
+  position: relative;
+  width: 100%;
+  //border-radius : 50px;
+  i {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    left: 20px;
+    padding-right: 10px;
+    position: absolute;
+    width: 30px;
+  }
+}
+
+.button-instagram {
+  background: none repeat scroll 0 0 #3f729b !important;
+  border: 1px solid darken(#3f729b, 20);
+  color: #fff !important;
+  position: relative;
+  width: 100%;
+  //border-radius : 50px;
+  i {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    left: 20px;
+    padding-right: 10px;
+    position: absolute;
+    width: 30px;
+  }
+}
+
+.button-whatsapp {
+  background: none repeat scroll 0 0 #009688 !important;
+  border: 1px solid darken(#009688, 20);
+  color: #fff !important;
+  position: relative;
+  width: 100%;
+  //border-radius : 50px;
+  i {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    left: 20px;
+    padding-right: 10px;
+    position: absolute;
+    width: 30px;
+  }
+}
+
+.button-twitter {
+  background: none repeat scroll 0 0 #2795e9 !important;
+  border: 1px solid darken(#2795e9, 20);
+  color: #fff !important;
+  position: relative;
+  width: 100%;
+  //border-radius : 50px;
+  i {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    left: 20px;
+    padding-right: 10px;
+    position: absolute;
+    width: 30px;
+  }
+}

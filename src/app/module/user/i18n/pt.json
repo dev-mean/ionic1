@@ -1,0 +1,37 @@
+{
+    "USER": {
+        "AVATAR": {
+            "TITLE": "Avatar",
+            "BUTTON": {
+                "SUBMIT": "Salvar perfil"
+            }
+        },
+        "INTRO": "Compartilhar mais momentos incríveis",
+        "OR": "ou",
+        "TERM1": "Ao criar sua conta, você concorda com a nossa",
+        "TERM2": "Termos e Condições",
+        "FORM": {
+            "NAME": "Nome",
+            "PASSWORD": "Senha",
+            "EMAIL": "E-mail",
+            "STATUS": "Estado",
+            "GENDER": "Sexo",
+            "MAN": "Homem",
+            "WOMAN": "Mulher"
+        },
+        "BUTTON": {
+            "LOGOUT": "Sair",
+            "ENTER": "Entrar",
+            "NEXT": "Próximo",
+            "LOGIN_SOCIAL": "Ligue o seu ",
+            "SIGNIN": "Login",
+            "SIGNUP": "Cadastro",
+            "FORGOT": "Esqueceu a sua senha?",
+            "RESET_PASS": "Gerar nova senha",
+            "UPDATE": "Atualizar",
+            "SAVE": "SALVAR",
+            "NEW": "NOVO",
+            "CREATE": "ENVIAR"
+        }
+    }
+}

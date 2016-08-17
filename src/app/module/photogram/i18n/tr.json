@@ -1,0 +1,123 @@
+{
+    "HOME": {
+        "TITLE": {
+            "NO_PHOTO": "Hayır fotoğraf"
+        }
+    },
+    "ACTIVITY": {
+        "TITLE": "Faaliyetler",
+        "FORM": {
+            "PLACEHOLDER": "Mesaj gönder..."
+        }
+    },
+    "DIRECT": {
+        "TITLE": "Doğrudan Mesaj",
+        "FORM": {
+            "PLACEHOLDER": "Mesaj gönder..."
+        },
+        "BUTTON": {
+            "PULL": "Yenilemek için çekin."
+        }
+    },
+    "FEEDBACK": {
+        "TITLE": "Geribildirim",
+        "SUBJECT": "Konu",
+        "COMPLAINT": "Şikayet",
+        "BUG": "Hata",
+        "SUGGESTION": "Öneri",
+        "MESSAGE": "Mesaj"
+    },
+    "SEARCH": {
+        "TITLE": "Arama",
+        "TITLE_LIST": "Listede arama",
+        "TITLE_MAP": "Göster aramak",
+        "FORM": {
+            "INPUT": "Arama..."
+        }
+    },
+    "SHARE": {
+        "TITLE": "Sonrası fotoğraf",
+        "FORM": {
+            "SHARE_IN": "Pay",
+            "LEGEND": "Bir Efsane yazmak",
+            "LOCATION": "Konum"
+        }
+    },
+    "PHOTOGRAM": {
+        "TITLE": {
+            "HOME": "Ev",
+            "SEARCH": "Arama",
+            "SHARE": "Paylaşmak",
+            "ACTIVITY": "Activiy",
+            "PROFILE": "Profil",
+            "NO_PHOTO": "Hayır fotoğraf",
+            "SHARE_IN": "Pay"
+        },
+        "FORM": {
+            "TITLE": "Başlık",
+            "GEOLOCATION": "Konum",
+            "ADDCOMMENT": "Yorum ekle",
+            "LOCATION": "Konum",
+            "LEGEND": "Bir Efsane yazmak"
+        },
+        "MSG": {
+            "RECENT": "Son",
+            "NO_PHOTO": "Hayır fotoğraf",
+            "NO_POST": "Hayır post"
+        },
+        "COMMENT": {
+            "TITLE": "Yorumlar",
+            "NO_COMMENTS": "Yorum yok"
+        },
+        "SETTING": {
+            "TITLE": "Ayarları",
+            "NOTIFICATION": "Bildirim"
+        },
+        "PROFILE": {
+            "TITLE": {
+                "POST": "Mesaj",
+                "FOLLOWER": "Takipçileri",
+                "FOLLOWING": "Aşağıdaki"
+            },
+            "NOTIFICATION": "Bildirim"
+        },
+        "LIKES": "Seviyor",
+        "BUTTON": {
+            "PULL": "Yenilemek için çekin.",
+            "CHANGE_LANGUAGE": "Dili değiştir",
+            "SAVE_PROFILE": "Profili Kaydet",
+            "FACEBOOK_LINK": "Facebook Linki",
+            "EDIT": "Edit",
+            "REMOVE": "Kaldır",
+            "PROFILE_EDIT": "PROFİLİNİZİ DÜZENLEYİN",
+            "REPORT": "Bir Sorun rapor",
+            "TERM_POLICY": "Gizlilik Politikası",
+            "TERM_SERVICE": "Hizmet açısından",
+            "HELP": "Yardım",
+            "BUY": "Kaynak Kodu Almak",
+            "ON": "Üzerinde",
+            "OFF": "Kapalı",
+            "CHANGE_LANGAUGE": "Dili değiştir",
+            "COMMENT_ADD": "Yorum ekle",
+            "COMMENT_REMOVE": "Yorum ekle",
+            "LIKE_ADD": "Gibi",
+            "LIKE_REMOVE": "Aksine",
+            "FORGOT": "Şifrenizi mi unuttunuz?",
+            "REGISTER": "Betiği Çıktılar Conta",
+            "LOGIN": "Fazer Giriş",
+            "ENTER_IN": "Kullanarak girin ",
+            "RESET_PASS": "Yeni şifre oluşturmak",
+            "UPDATE": "Atualizar",
+            "SAVE": "Salvar",
+            "NEW": "Novo",
+            "CREATE": "Cadastrar"
+        }
+    },
+    "LANG": {
+        "ENGLISH": "İngilizce",
+        "PORTUGUES": "Portekizce",
+        "PERSIAN": "Pers",
+        "GERMAN": "Almanca",
+        "TURKISH": "Türk"
+    }
+}

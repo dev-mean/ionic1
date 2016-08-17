@@ -1,0 +1,17 @@
+<ion-view>
+  <ion-nav-title translate="DIRECT.TITLE"></ion-nav-title>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon ion-ios-plus-empty" ui-sref="photogram.direct"></button>
+
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="item in vm.data" ui-sref="photogram.message({channelId: item.id})">
+        <img ng-src="{{item.user.src}}" alt="">
+        <h2>{{ item.user.name}}</h2>
+        <p>{{ item.msg }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

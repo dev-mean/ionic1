@@ -1,0 +1,20 @@
+<ion-view hide-nav-bar="true" view-title="{{ 'USER.BUTTON.SIGNUP' | translate }}">
+
+  <ion-content padding="true">
+    <formly-form model="vm.form" fields="vm.formFields" form="vm.rForm">
+
+      <div class="padding">
+        <button class="button button-block button-positive" type="button" ng-disabled="rForm.$invalid" ng-click="vm.submitRegister(vm.rForm, vm.form)"
+          translate="USER.BUTTON.NEXT">
+                </button>
+      </div>
+
+    </formly-form>
+
+    <div class="padding">
+      <p class="text-center">
+        <span translate="USER.TERM1"></span> <b open-terms translate="USER.TERM2"></b></p>
+    </div>
+
+  </ion-content>
+</ion-view>

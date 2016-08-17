@@ -1,0 +1,19 @@
+<ion-view view-title="{{ 'Gallery preview' | translate }}">
+  <ion-content class="bg-content">
+    <ion-list class="card" ng-if="!GalleryPreview.data.images.length">
+      <ion-item class="text-center">
+        No photos
+      </ion-item>
+    </ion-list>
+    <div class="row">
+      <div class="col" ng-repeat="picture in GalleryPreview.data.images" ui-sref="app.gallerypreview({id: picture.id})">
+        <div class="card">
+          <div class="item item-image">
+            <img ng-src="{{picture.image._url}}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

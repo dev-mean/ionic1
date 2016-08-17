@@ -1,0 +1,128 @@
+{
+    "add comment":"Comentou",
+    "add like":"Curtiu",
+    "unlike like": "Descurtiu",
+    "registred": "Se cadastrou",
+    "HOME": {
+        "TITLE": {
+            "NO_PHOTO": "Sem foto"
+        }
+    },
+    "ACTIVITY": {
+        "TITLE": "Actividades",
+        "FORM": {
+            "PLACEHOLDER": "Enviar uma mensagem..."
+        }
+    },
+    "DIRECT": {
+        "TITLE": "Mensagens Diretas",
+        "FORM": {
+            "PLACEHOLDER": "Enviar uma mensagem..."
+        },
+        "BUTTON": {
+            "PULL": "Puxe para atualizar..."
+        }
+    },
+    "FEEDBACK": {
+        "TITLE": "Comentários",
+        "SUBJECT": "Assunto",
+        "COMPLAINT": "Reclamação",
+        "BUG": "Erro",
+        "SUGGESTION": "Sugestão",
+        "MESSAGE": "A sua mensagem"
+    },
+    "SEARCH": {
+        "TITLE": "Procura",
+        "TITLE_LIST": "Pesquisa na Lista",
+        "TITLE_MAP": "Pesquisar no Mapa",
+        "FORM": {
+            "INPUT": "Procurar..."
+        }
+    },
+    "SHARE": {
+        "TITLE": "Post a foto",
+        "FORM": {
+            "SHARE_IN": "Compartilhar no",
+            "LEGEND": "Escreva uma Legenda",
+            "LOCATION": "Localização"
+        }
+    },
+    "PHOTOGRAM": {
+        "TITLE": {
+            "HOME": "Casa",
+            "SEARCH": "Procura",
+            "SHARE": "Compartilhar",
+            "ACTIVITY": "Activiy",
+            "PROFILE": "Perfil",
+            "NO_PHOTO": "Sem foto",
+            "SHARE_IN": "Compartilhar no"
+        },
+        "FORM": {
+            "TITLE": "Título",
+            "GEOLOCATION": "Localização",
+            "ADDCOMMENT": "Adicione o seu comentário",
+            "LOCATION": "Localização",
+            "LEGEND": "Escreva uma Legenda"
+        },
+        "MSG": {
+            "RECENT": "Recentes",
+            "NO_PHOTO": "Sem foto",
+            "NO_POST": "Nenhum post"
+        },
+        "COMMENT": {
+            "TITLE": "Comentários",
+            "NO_COMMENTS": "Sem comentários"
+        },
+        "SETTING": {
+            "TITLE": "Definições",
+            "NOTIFICATION": "Notificação"
+        },
+        "PROFILE": {
+            "TITLE": {
+                "POST": "Posts",
+                "FOLLOWER": "Seguidores",
+                "FOLLOWING": "Seguidores"
+            },
+            "NOTIFICATION": "Notificação"
+        },
+        "LIKES": "Curtidas",
+        "BUTTON": {
+            "PULL": "Puxe para atualizar...",
+            "CHANGE_LANGUAGE": "Alterar idioma",
+            "SAVE_PROFILE": "Salvar Perfil",
+            "FACEBOOK_LINK": "Link Facebook",
+            "EDIT": "Editar",
+            "REMOVE": "Remover",
+            "PROFILE_EDIT": "EDITAR SEU PERFIL",
+            "REPORT": "Relatar um Problema",
+            "TERM_POLICY": "Política De Privacidade",
+            "TERM_SERVICE": "Termos de Serviço",
+            "HELP": "Ajuda",
+            "BUY": "Comprar Código-Fonte",
+            "ON": "No",
+            "OFF": "Fora",
+            "CHANGE_LANGAUGE": "Alterar idioma",
+            "COMMENT_ADD": "Adicionar comentário",
+            "COMMENT_REMOVE": "Adicionar comentário",
+            "LIKE_ADD": "Como",
+            "LIKE_REMOVE": "Ao contrário de",
+            "FORGOT": "Esqueceu sua senha?",
+            "REGISTER": "Criar Conta",
+            "LOGIN": "Fazer Login",
+            "ENTER_IN": "Entrar usando o ",
+            "RESET_PASS": "Gerar nova senha",
+            "UPDATE": "Atualizar",
+            "SAVE": "Salvar",
+            "NEW": "Novo",
+            "CREATE": "Cadastrar",
+            "TERM_PRIVACY": "Termo de Uso"
+        }
+    },
+    "LANG": {
+        "ENGLISH": "Inglês",
+        "PORTUGUES": "Português",
+        "PERSIAN": "Persa",
+        "GERMAN": "Alemão",
+        "TURKISH": "Turco"
+    }
+}

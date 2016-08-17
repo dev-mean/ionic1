@@ -1,0 +1,44 @@
+<ion-modal-view class="modal-share">
+  <ion-header-bar class="bar-dark">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closeShare()"></button>
+    <div class="title" translate="SHARE.TITLE"></div>
+    <button class="button button-positive" ng-click="submitShare(form, social)">
+            <i class="icon ion-arrow-right-b"></i>
+        </button>
+  </ion-header-bar>
+  <ion-content>
+
+
+    <div class="list">
+      <div class="item item-thumbnail-left" href="#">
+        <img ng-src="{{form.photo}}" id="image">
+        <textarea type="text" rows="7" ng-model="form.title" placeholder="{{ 'SHARE.FORM.LEGEND'|translate }}"></textarea>
+      </div>
+    </div>
+
+    <ul class="list">
+      <li class="item item-input">
+        <input type="text" placeholder="{{ 'SHARE.FORM.LOCATION' | translate }}" ion-location location="form.geo" ng-model="form.geo.resume">
+      </li>
+      <div class="item nopadding" ng-show="form.geo.image">
+        <img ng-src="{{ form.geo.image }}">
+      </div>
+    </ul>
+
+    <ul class="list">
+      <li class="item item-divider" translate="SHARE.FORM.SHARE_IN"></li>
+      <li class="item item-icon-left item-toggle" ng-repeat="social in socials">
+        <i class="icon ion-social-{{ social.title | lowercase }}"></i> {{ social.title }}
+        <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model="social.checked">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+      </li>
+
+    </ul>
+
+  </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,474 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: user/intro/intro.ctrl.js:31
+msgid "...and share them to friends"
+msgstr ""
+
+#: user/recovery/recoveryPassDirective.js:46
+msgid "A new password will be sent to your e-mail address"
+msgstr ""
+
+#: photogram/photo/photogram.popover.home.html:8
+msgid "About"
+msgstr ""
+
+#: user/recovery/recoveryPassDirective.js:78
+msgid "Access your accout mail"
+msgstr ""
+
+#: photogram/activity/photogram.activity.html:4
+msgid "Activities"
+msgstr ""
+
+#: photogram/services/PhotogramFactory.js:1148
+msgid "add comment"
+msgstr ""
+
+#: photogram/directives/photolist/photogram.photos.list.html:45
+msgid "Add comment"
+msgstr ""
+
+#: photogram/services/PhotogramFactory.js:1147
+msgid "add photo"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:109
+msgid "Are you sure?"
+msgstr ""
+
+#: components/ion-photo/photoservice.factory.js:48
+msgid "Camera"
+msgstr ""
+
+#: components/ion-photo/ion-crop.directive.js:47
+#: components/ion-photo/ion-crop.directive.js:93
+#: components/ion-photo/photoservice.factory.js:113
+#: components/ion-photo/photoservice.factory.js:57
+#: photogram/directives/comment/photogramCommentDirective.js:99
+#: photogram/directives/photolist/photo.list.js:91
+#: photogram/services/PhotogramShareFactory.js:92
+#: user/recovery/recoveryPassDirective.js:48
+msgid "Cancel"
+msgstr ""
+
+#: user/intro/intro.ctrl.js:28
+msgid "Capture moments..."
+msgstr ""
+
+#: components/ion-photo/ion-crop.directive.js:46
+msgid "Change Image"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:11
+msgid "Change language"
+msgstr ""
+
+#: photogram/photo/photogram.photo.html:38
+msgid "Comment"
+msgstr ""
+
+#: photogram/directives/comment/photogram.comment.directive.html:4
+msgid "Comments"
+msgstr ""
+
+#: user/avatar/user.avatar.html:1
+#: user/merge/user.merge.html:1
+msgid "Complete your Profile"
+msgstr ""
+
+#: user/signin/user.signin.html:26
+msgid "Connect your Facebook"
+msgstr ""
+
+#: photogram/directives/comment/photogramCommentDirective.js:74
+msgid "Delete comment"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:108
+msgid "Delete photo"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:81
+msgid "Delete your photo"
+msgstr ""
+
+#: photogram/directives/comment/photogram.comment.directive.html:25
+msgid "Edit"
+msgstr ""
+
+#: photogram/directives/comment/photogramCommentDirective.js:95
+msgid "Edit comment"
+msgstr ""
+
+#: user/profile/profile.edit.modal.html:4
+msgid "Edit Profile"
+msgstr ""
+
+#: user/profile/profile.html:41
+msgid "EDIT YOUR PROFILE"
+msgstr ""
+
+#: photogram/services/PhotogramShareFactory.js:89
+#: user/recovery/recoveryPassDirective.js:39
+msgid "Email"
+msgstr ""
+
+#: components/ion-photo/photoservice.factory.js:78
+msgid "Enabled your camera"
+msgstr ""
+
+#: index.config.js:53
+msgid "English"
+msgstr ""
+
+#: user/intro/intro.html:28
+#: user/signin/user.signin.html:1
+#: user/signin/user.signin.html:12
+#: user/tabs/user.tabs.html:1
+#: user/tabs/user.tabs.html:14
+msgid "Enter"
+msgstr ""
+
+#: components/ion-photo/photoservice.factory.js:77
+msgid "Error"
+msgstr ""
+
+#: photogram/services/PhotogramShareFactory.js:83
+msgid "Facebook"
+msgstr ""
+
+#: user/signin/UserSigninCtrl.js:101
+msgid "Facebook error"
+msgstr ""
+
+#: photogram/feedback/photogram.photo.feedback.modal.html:4
+msgid "Feedback"
+msgstr ""
+
+#: user/avatar/UserAvatarCtrl.js:46
+msgid "Fill out the fields in red"
+msgstr ""
+
+#: user/profile/profile.modal.html:38
+msgid "Follow"
+msgstr ""
+
+#: user/friend/user.list.html:4
+msgid "Follow Users"
+msgstr ""
+
+#: user/profile/profile.html:30
+#: user/profile/profile.modal.html:25
+msgid "Followers"
+msgstr ""
+
+#: user/profile/profile.modal.html:39
+msgid "Following"
+msgstr ""
+
+#: user/profile/profile.html:36
+#: user/profile/profile.modal.html:31
+msgid "Followings"
+msgstr ""
+
+#: user/recovery/recoveryPassDirective.js:77
+msgid "Forgot your password"
+msgstr ""
+
+#: user/signin/user.signin.html:9
+msgid "Forgot your password?"
+msgstr ""
+
+#: components/ion-photo/photoservice.factory.js:50
+msgid "Gallery"
+msgstr ""
+
+#: photogram/tabs/photogram.view.html:1
+msgid "Gallery preview"
+msgstr ""
+
+#: user/profile/grid.html:3
+msgid "Grid List"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:188
+#: photogram/directives/photolist/photo.list.js:30
+#: photogram/services/PhotogramShareFactory.js:11
+msgid "I'm at"
+msgstr ""
+
+#: photogram/services/PhotogramShareFactory.js:81
+msgid "Instagram"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:188
+#: photogram/directives/photolist/photo.list.js:30
+#: photogram/services/PhotogramShareFactory.js:11
+msgid "Install the application and follow me!"
+msgstr ""
+
+#: user/recovery/recoveryPassDirective.js:59
+msgid "Invalid Email"
+msgstr ""
+
+#: user/avatar/UserAvatarCtrl.js:45
+#: user/merge/UserMergeCtrl.js:58
+msgid "Invalid form"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:29
+#: photogram/services/PhotogramShareFactory.js:10
+msgid "Join me from"
+msgstr ""
+
+#: photogram/photo/photogram.photo.html:19
+msgid "Like"
+msgstr ""
+
+#: photogram/services/PhotogramFactory.js:1149
+msgid "like photo"
+msgstr ""
+
+#: photogram/directives/like/photogram.like.directive.html:4
+#: photogram/directives/photolist/photogram.photos.list.html:32
+msgid "Likes"
+msgstr ""
+
+#: user/profile/profile.edit.modal.html:24
+msgid "Link Facebook"
+msgstr ""
+
+#: photogram/share/photogram.post.modal.html:18
+#: photogram/share/photogram.share.modal.html:21
+msgid "Location"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:83
+msgid "Logout"
+msgstr ""
+
+#: photogram/search/photogram.search.map.html:2
+msgid "Map"
+msgstr ""
+
+#: photogram/popular/photogram.popular.html:20
+msgid "Nenhuma foto postagem por perto"
+msgstr ""
+
+#: photogram/directives/comment/photogram.comment.directive.html:34
+msgid "No Comments"
+msgstr ""
+
+#: photogram/home/photogram.home.html:21
+msgid "No photo"
+msgstr ""
+
+#: user/profile/grid.html:8
+#: user/profile/list.html:8
+#: user/profile/profile.html:67
+#: user/profile/profile.modal.html:66
+msgid "No Post"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:18
+msgid "Notification"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:20
+msgid "Off"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:22
+msgid "On"
+msgstr ""
+
+#: user/signin/user.signin.html:19
+msgid "or"
+msgstr ""
+
+#: user/merge/user.merge.html:29
+msgid "Password"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:90
+msgid "Photo"
+msgstr ""
+
+#: components/ion-photo/ion-crop.directive.js:43
+msgid "Photo Album"
+msgstr ""
+
+#: components/ion-photo/ion-crop.directive.js:41
+msgid "Photo Camera"
+msgstr ""
+
+#: user/merge/UserMergeCtrl.js:59
+msgid "Please enter your email"
+msgstr ""
+
+#: photogram/popular/photogram.popular.html:3
+#: photogram/search/photogram.search.grid.html:1
+msgid "Popular"
+msgstr ""
+
+#: index.config.js:56
+msgid "Portuguese Brazil"
+msgstr ""
+
+#: photogram/share/photogram.post.modal.html:4
+msgid "Post Photo"
+msgstr ""
+
+#: user/profile/profile.html:24
+#: user/profile/profile.modal.html:19
+msgid "Posts"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:64
+msgid "Privacy Policy"
+msgstr ""
+
+#: user/profile/profile.photos.html:1
+msgid "Profile"
+msgstr ""
+
+#: user/profile/profile.html:63
+#: user/profile/profile.modal.html:62
+msgid "Recent"
+msgstr ""
+
+#: user/profile/list.html:3
+msgid "Recent List"
+msgstr ""
+
+#: photogram/services/PhotogramFactory.js:1151
+msgid "register"
+msgstr ""
+
+#: user/signup/user.signup.html:1
+#: user/signup/user.signup.html:7
+#: user/tabs/user.tabs.html:15
+msgid "Register"
+msgstr ""
+
+#: photogram/services/PhotogramFactory.js:1152
+msgid "registered"
+msgstr ""
+
+#: photogram/directives/comment/photogram.comment.directive.html:26
+msgid "Remove"
+msgstr ""
+
+#: photogram/directives/photolist/photo.list.js:74
+msgid "Report"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:76
+msgid "Report a Problem"
+msgstr ""
+
+#: components/ion-photo/ion-crop.directive.js:94
+#: components/ion-photo/photoservice.factory.js:114
+msgid "Save"
+msgstr ""
+
+#: user/avatar/user.avatar.html:23
+#: user/profile/profile.edit.modal.html:27
+msgid "Save Profile"
+msgstr ""
+
+#: photogram/search/photogram.search.grid.html:4
+msgid "Search"
+msgstr ""
+
+#: user/recovery/recoveryPassDirective.js:51
+msgid "Send"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:4
+#: photogram/photo/photogram.popover.home.html:5
+msgid "Settings"
+msgstr ""
+
+#: components/ion-photo/modal.share.photo.html:3
+#: photogram/directives/photolist/photo.list.js:72
+#: photogram/services/PhotogramShareFactory.js:91
+#: photogram/share/photogram.share.modal.html:4
+msgid "Share"
+msgstr ""
+
+#: photogram/share/photogram.share.modal.html:29
+msgid "Share in"
+msgstr ""
+
+#: components/ion-photo/photoservice.factory.js:56
+msgid "Share Photo"
+msgstr ""
+
+#: user/tabs/user.tabs.html:11
+msgid "Share your most amazing moments"
+msgstr ""
+
+#: user/signup/user.signup.html:15
+msgid ""
+"Terms and\n"
+"                                                                                                 Conditions"
+msgstr ""
+
+#: photogram/directives/settings/photogram.settings.modal.html:70
+msgid "Terms of Service"
+msgstr ""
+
+#: photogram/services/PhotogramShareFactory.js:28
+msgid "Thank you for sharing!!"
+msgstr ""
+
+#: photogram/feedback/photogram.feedback.model.js:35
+#: photogram/services/PhotogramShareFactory.js:27
+msgid "Thanks"
+msgstr ""
+
+#: photogram/feedback/photogram.feedback.model.js:36
+msgid "Thanks for your Feedback"
+msgstr ""
+
+#: photogram/services/PhotogramShareFactory.js:85
+msgid "Twitter"
+msgstr ""
+
+#: photogram/services/PhotogramFactory.js:1150
+msgid "unlike photo"
+msgstr ""
+
+#: components/ion-photo/photoservice.factory.js:52
+msgid "Video"
+msgstr ""
+
+#: user/merge/user.merge.html:35
+msgid "vm Facebook"
+msgstr ""
+
+#: photogram/services/PhotogramShareFactory.js:87
+msgid "Whatsapp"
+msgstr ""
+
+#: user/signup/user.signup.html:15
+msgid "When creating your account, you agree to our"
+msgstr ""
+
+#: photogram/share/photogram.post.modal.html:15
+#: photogram/share/photogram.share.modal.html:15
+msgid "Write a Legend"
+msgstr ""
+
+#: photogram/directives/comment/photogramCommentDirective.js:74
+msgid "You are sure?"
+msgstr ""
+
+#: user/merge/user.merge.html:10
+msgid "Your email is already associated with another account, please enter your password"
+msgstr ""

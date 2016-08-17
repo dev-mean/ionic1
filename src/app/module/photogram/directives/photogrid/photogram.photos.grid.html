@@ -1,0 +1,15 @@
+<div class="row " ng-if="$index % 3 === 0" ng-repeat="image in data">
+  <div class="col col-33 item-animate1" ng-if="$index < data.length">
+    <img ng-if="profile" profile-modal user="data[$index].user" ng-src="{{ ::data[$index].src}}" width="100%" />
+    <img ng-if="!profile" ng-src="{{ ::data[$index].src}}" width="100%" />
+  </div>
+  <div class="col col-33 item-animate1" ng-if="$index + 1 < data.length">
+    <img ng-if="profile" profile-modal user="data[$index + 1].user" ng-src="{{ ::data[$index + 1].src}}" width="100%" />
+    <img ng-if="!profile" ng-src="{{ ::data[$index + 1].src}}" width="100%" />
+  </div>
+  <div class="col col-33 item-animate1" ng-if="$index + 2 < data.length">
+    <img ng-if="profile" profile-modal user="data[$index + 2].user" ng-src="{{ ::data[$index + 2].src}}" width="100%" />
+    <img ng-if="!profile" ng-src="{{ ::data[$index + 2].src}}" width="100%" />
+  </div>
+
+</div>

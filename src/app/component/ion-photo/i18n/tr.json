@@ -1,0 +1,12 @@
+{
+    "ION-PHOTO": {
+        "FILTERS": "Filtre",
+        "CAMERA": "Fotoğraf Çekme",
+        "GALLERY": "Galeri",
+        "VIDEO": "Video kaydetme",
+        "SHARE": "Paylaşmak",
+        "CROP": "Ürün",
+        "SAVE": "Kaydet",
+        "CANCEL": "İptal"
+    }
+}

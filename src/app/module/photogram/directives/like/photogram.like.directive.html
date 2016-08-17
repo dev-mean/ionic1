@@ -1,0 +1,25 @@
+<ion-modal-view class="modal-comment">
+  <ion-header-bar class="bar-dark">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closeModal()"></button>
+    <div class="title">{{ ::'Likes' | translate }} ({{ ::likes.length }})
+    </div>
+
+  </ion-header-bar>
+  <ion-content>
+    <div class="list step1">
+      <div ng-repeat="item in likes" class="item item-avatar item-button-right">
+        <img ng-src="{{ ::item.user.img }}" />
+
+        <h2>{{ ::item.user.name }}</h2>
+
+        <div>{{ ::item.text }}</div>
+        <p>{{ ::item.created | amTimeAgo }}</p>
+
+        <button class="button button-positive button-outline">
+                    <i class="icon ion-ios-plus-empty"></i> {{ ::'Follow' }}
+                </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,88 @@
+.profile {
+
+  img.avatar {
+    display: block;
+    width: 91%;
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  .banner {
+
+    background-color: $positive;
+    display: block;
+    height: 220px;
+    position: relative;
+
+    .body {
+      display: block;
+      position: absolute;
+      top: 25px;
+      width: 100%;
+      z-index: 1;
+
+      .avatar {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100px;
+        img {
+          background-color: #fff;
+          border: 2px solid #fff;
+          border-radius: 50%;
+          display: block;
+          top: 10px;
+          z-index: 7;
+          max-width: 100px;
+          max-height: 100px;
+        }
+        i {
+          display: block;
+          position: absolute;
+          background-color: #4fd1c1;
+          color: #fff;
+          border-radius: 100%;
+          height: 25px;
+          width: 25px;
+          font-size: 26px;
+          bottom: -4px;
+          right: 10px;
+        }
+      }
+
+      h3 {
+        display: block;
+        font-size: 20px;
+        margin: 0;
+        position: relative;
+        top: 25px;
+      }
+
+      h4 {
+        color: #fff;
+        display: block;
+        font-size: 15px;
+        opacity: 0.9;
+        position: relative;
+        top: 14px;
+      }
+
+    }
+
+  }
+
+  .background {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-filter: blur(3px);
+  }
+}

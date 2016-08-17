@@ -1,0 +1,50 @@
+<div class="list card animated fadeIn" ng-repeat="gallery in data ">
+
+  <div class="item item-avatar" ion-affix data-affix-within-parent-with-class="card" profile-modal user="gallery.user">
+    <img ng-if="profile" profile="{{ ::gallery.user.id }}" ng-src="{{ ::gallery.user.img._url}}">
+    <img ng-src="{{ ::gallery.user.img._url}}">
+    <h2>{{ ::gallery.user.name}}</h2>
+
+    <p>{{ :: gallery.user.status }}</p>
+    <span>{{ ::gallery.created | amTimeAgo}}</span>
+  </div>
+
+  <div class="item item-body" on-double-tap="vm.like(gallery)" ng-model="gallery">
+    <div class="icon ion-ios-heart heart" ng-class="(gallery.item.liked) ? 'happy' : 'broken' "></div>
+    <i class="icon" ng-if="like"></i> <img cache-src="{{ ::gallery.src}}" id="{{ ::gallery.id}}">
+  </div>
+  <div class="item item-buttons">
+    <div class="row">
+      <div class="col col-75">
+        <ion-spinner ng-show="gallery.item.likeProgress"></ion-spinner>
+        <button photogram-like ng-model="gallery" ng-if="!gallery.item.likeProgress" ng-class="(gallery.item.liked) ? 'ion-ios-heart' : 'ion-ios-heart-outline' "
+          class="button-clear button-icon button-heart"></button>
+        <button photogram-comment ng-model="gallery" class="button-clear button-icon ion-ios-chatbubble-outline"></button>
+        <button ng-click="vm.action(gallery)" photogram="{{ :: gallery.id }}" class="button-clear button-icon ion-android-share"></button>
+      </div>
+      <div class="col text-right">
+        <button ng-click="vm.action(gallery)" photogram="{{ :: gallery.id }}" class="button-clear button-icon ion-android-more-vertical"></button>
+      </div>
+    </div>
+  </div>
+  <div class="padding">
+
+    <span class="likes" photogram-like photogram="{{ :: gallery }}"><i class="icon ion-ios-heart"></i>
+            <span ng-if="!gallery.item.likeProgress">{{ :: gallery.item.qtdLike  }}</span> <span translate="PHOTOGRAM.LIKES"></span></span>
+
+
+    <div class="list-comments">
+      <div class="comment-item" profile-modal user="gallery.user">
+        <span class="username">{{ :: gallery.user.name }}</span>
+        <span class="comment">{{ :: gallery.item.title }}</span>
+      </div>
+      <div class="comment-item" profile-modal user="item.user" ng-repeat="item in gallery.comments">
+        <span class="username">{{ :: item.user.name }}</span> <span class="comment">{{ :: item.text }}</span>
+      </div>
+    </div>
+
+    <button class="button button-block button-clear button-comment " photogram-comment ng-model="gallery"><span
+                translate="PHOTOGRAM.BUTTON.COMMENT_ADD"></span>
+        </button>
+  </div>
+</div>

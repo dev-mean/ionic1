@@ -1,0 +1,27 @@
+<ion-view title="{{ 'USER.AVATAR.TITLE' | translate }}">
+
+  <ion-nav-bar class="bar bar-positive bar-mop" align-title="left">
+  </ion-nav-bar>
+
+  <ion-content class="view-avatar">
+
+    <div class="row step1">
+      <div class="col">
+        <img class="avatar" user-avatar ng-src="{{ ::currentUser.img._url || 'img/user.png' }}" />
+      </div>
+    </div>
+    <div class="step2">
+      <label class="item item-input">
+                <i class="icon icon-envelope placeholder-icon"></i>
+                <input type="text" ng-model="vm.form.email" disabled>
+            </label>
+      <formly-form model="vm.form" fields="vm.formFields" form="vm.rForm">
+      </formly-form>
+    </div>
+
+    <div class="padding step3">
+      <button ng-click="vm.submitAvatar()" class="button button-block button-positive " translate="USER.BUTTON.NEXT">
+            </button>
+    </div>
+  </ion-content>
+</ion-view>

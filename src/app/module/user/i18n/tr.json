@@ -1,0 +1,37 @@
+{
+    "USER": {
+        "AVATAR": {
+            "TITLE": "Avatar",
+            "BUTTON": {
+                "SUBMIT": "Profili Kaydet"
+            }
+        },
+        "INTRO": "En harika anları paylaşmak",
+        "OR": "ya",
+        "TERM1": "Hesabınızı oluştururken, bizim etmektesiniz",
+        "TERM2": "Şartlar ve Condictions",
+        "FORM": {
+            "NAME": "Adı",
+            "PASSWORD": "Şifre",
+            "EMAIL": "E-posta",
+            "STATUS": "Durumu",
+            "GENDER": "Cinsiyet",
+            "MAN": "Adam",
+            "WOMAN": "Kadın"
+        },
+        "BUTTON": {
+            "LOGOUT": "Çıkış",
+            "ENTER": "Girin",
+            "NEXT": "Gelecek",
+            "LOGIN_SOCIAL": "Bağlan ",
+            "SIGNIN": "İmzalıyorum",
+            "SIGNUP": "Kayıt",
+            "FORGOT": "Pas mı unuttunuz?",
+            "RESET_PASS": "Yeni şifre oluşturmak",
+            "UPDATE": "Atualizar",
+            "SAVE": "KAYDET",
+            "NEW": "YENİ",
+            "CREATE": "GÖNDER"
+        }
+    }
+}

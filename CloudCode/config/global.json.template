@@ -1,0 +1,23 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "prod": {
+      "applicationId": "",
+      "masterKey": ""
+    },
+    "dev": {
+      "applicationId": "",
+      "masterKey": ""
+    },
+    "qa": {
+      "applicationId": "",
+      "masterKey": ""
+    },
+    "_default": {
+      "link": "dev"
+    }
+  }
+
+}

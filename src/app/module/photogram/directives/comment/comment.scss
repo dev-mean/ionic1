@@ -1,0 +1,37 @@
+// Modal Comment Directive
+.modal-comment {
+
+  .scroll {
+    height: 100%;
+  }
+
+  .form {
+    border: 1px solid #ccc;
+    padding: 1px;
+    display: block;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+
+    label.item.item-input {
+      display: block;
+      float: left;
+      width: 88%;
+      border: none;
+    }
+    button {
+      padding: 7px;
+      height: 50px;
+      top: -1px;
+      position: absolute;
+      right: -1px;
+      border: none;
+    }
+    form .item, .formly .item {
+      border-bottom: none;
+    }
+  }
+
+}

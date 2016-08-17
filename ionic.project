@@ -1,0 +1,21 @@
+{
+  "name": "Photogram",
+  "app_id": "ea42829b",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*.js",
+    "www/**/*.html",
+    "!www/css/**/*",
+    "!www/lib/**/*"
+  ],
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}

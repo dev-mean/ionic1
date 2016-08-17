@@ -1,0 +1,56 @@
+.item-body .heart {
+  font-size: 300px;
+  cursor: pointer;
+  position: absolute;
+  transition: all .3s ease;
+  color: #fff;
+  left: 15%;
+  top: 15%;
+  display: block;
+  z-index: 33333;
+
+  &.happy {
+    opacity: 0;
+    //transform: scale(2) translateX(0);
+    animation: fly 1s ease;
+  }
+
+  &.broken {
+    opacity: 0;
+    animation: flyout 1s ease;
+  }
+}
+
+@keyframes fly {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateX(-100%) translateY(150%) rotateZ(50deg);
+  }
+  50% {
+    opacity: 0.9;
+    color: #fff;
+    transform: scale(1) translateY(0) translateX(0) rotateZ(0deg);
+  }
+  100% {
+    opacity: 0;
+    color: #a00;
+    transform: scale(2);
+  }
+}
+
+@keyframes flyout {
+  0% {
+    opacity: 0;
+    color: #a00;
+    transform: scale(2);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    color: #fff;
+    transform: scale(0.5) translateX(-100%) translateY(150%) rotateZ(15deg);
+  }
+}

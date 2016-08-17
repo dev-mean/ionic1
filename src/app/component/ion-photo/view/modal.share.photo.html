@@ -1,0 +1,22 @@
+<ion-modal-view class="modal-share">
+  <ion-header-bar class="bar-dark">
+    <div class="title">{{ ::'Share' | translate }}</div>
+    <button class="button button-positive" ng-click="modal.hide()">
+            <i class="icon ion-arrow-right-b"></i>
+        </button>
+  </ion-header-bar>
+  <ion-content ng-cloak>
+    <div id="image">
+      <img ng-src="{{ ::form.photo}}">
+      <div class="title">{{ ::form.title }}</div>
+    </div>
+
+    <ul class="list">
+      <li class="padding">
+        <button ng-repeat="social in sociais" ng-click="share(form, social)" class="button button-block button-{{ social }}"><i class="icon ion-social-{{ social }}"></i> {{ ::social | uppercase }}
+                </button>
+      </li>
+    </ul>
+  </ion-content>
+
+</ion-modal-view>

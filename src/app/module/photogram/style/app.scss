@@ -1,0 +1,451 @@
+body {
+  
+}
+
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/Avenir Next LT Pro Regular'), url('../fonts/AvenirNextLTPro-Regular.woff') format('woff');
+}
+
+/* This is need for the chat screen otherwise there is a pixel gap between the button bar and the message box */
+.bar-subfooter { bottom: 43px; }
+
+.subfooter-height { height: 43px; }
+
+.auto-height {height: auto !important;}
+
+.no-padding { padding: 0px; }
+
+.padding-10 { padding: 10px; }
+
+.bold { font-weight: bold; }
+
+.wide { width:100%; }
+
+.cf { clear: both !important; }
+
+.rotate90 {
+    transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+}
+
+.input-grey { background-color: #F5F5F5; }
+
+
+
+/* Positions the unread count badge */
+.bar .buttons-right .nav-icon-badge {
+    top: -35px;
+    left: 8px;
+}
+
+/* Profile edit */
+.profileImage {
+    border: 5px solid white;
+}
+.profileImageSelected {
+    border: 5px solid dodgerblue;
+}
+.profileImg {
+    width: 100%;
+    padding: 0;
+}
+
+
+
+
+/* For the google map */
+.scroll {
+    height: 100%;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* For the image cropper */
+.cropArea {
+    background: white;
+    overflow: hidden;
+    width:100%px;
+    height:350px;
+    text-align: center;
+}
+
+/* Over-ride styles for the multi-slider */
+[slider], slider {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+[slider] div.handle, slider div.handle {
+    width: 25px;
+    height: 25px;
+}
+[slider] div.handle:after, slider div.handle:after {
+    display: none; /* This gets rid of the dot in the slider drag handles */
+}
+
+textarea {
+    padding: 3px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.flex-center{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+}
+
+
+/* Swipe cards */
+
+td-cards {
+    display: block;
+}
+
+td-card {
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid #999;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+.td-card {
+    background: white;
+}
+
+/*
+td-card.card-0 {
+  -webkit-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
+  top: 0px;
+  z-index: 10;
+}
+td-card.card-1 {
+  -webkit-transform: translate3d(0, 4px, 0);
+  transform: translate3d(0, 4px, 0);
+  z-index: 9;
+}
+td-card.card-2 {
+  -webkit-transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 8px, 0);
+  z-index: 8;
+}
+*/
+
+td-card .image {
+    position: relative;
+}
+
+td-card img {
+    max-width: 100%;
+}
+
+.yes-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color: rgb(111, 250, 111);
+    opacity: 0;
+}
+.no-text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: rgb(255, 115, 115);
+    opacity: 0;
+}
+
+.fade {
+    -webkit-transition: 0.2s opacity linear;
+    transition: 0.2s opacity linear;
+    opacity: 0;
+}
+
+.swipe-buttons {
+    position:absolute;
+    bottom:10px;
+    width:100%;
+}
+
+.swipe-button:before,
+.swipe-button {
+    font-size:80px !important;
+    font-weight: 500;
+    display:block !important;
+}
+.swipe-reject:before, .swipe-reject {
+    color: red;
+}
+.swipe-accept:before, .swipe-accept {
+    color: green;
+}
+
+.accepted-transform {
+    -webkit-transition:all linear 0.4s;
+    transition:all linear 0.4s;
+    opacity:0.7;
+    transform: translate3d(500px, 0px, 0px) rotate(0.60rad) !important;
+    -webkit-transform: translate3d(500px, 0px, 0px) rotate(0.60rad) !important;
+    -moz-transform: translate3d(500px, 0px, 0px) rotate(0.60rad) !important;
+    -o-transform: translate3d(500px, 0px, 0px) rotate(0.60rad) !important;
+    -ms-transform: translate3d(500px, 0px, 0px) rotate(0.60rad) !important;
+}
+
+.rejected-transform {
+    -webkit-transition:all linear 0.4s;
+    transition:all linear 0.4s;
+    opacity:0.7;
+    transform: translate3d(-500px, 0px, 0px) rotate(-0.60rad) !important;
+    -webkit-transform: translate3d(-500px, 0px, 0px) rotate(-0.60rad) !important;
+    -moz-transform: translate3d(-500px, 0px, 0px) rotate(-0.60rad) !important;
+    -o-transform: translate3d(-500px, 0px, 0px) rotate(-0.60rad) !important;
+    -ms-transform: translate3d(-500px, 0px, 0px) rotate(-0.60rad) !important;
+}
+
+
+/*  Chat styles */
+
+/* allows the bar-footer to be elastic /*
+/* optionally set a max-height */
+/* maxlength on the textarea will prevent /*
+/* it from getting too large also */
+.bar-footer {
+    overflow: visible !important;
+}
+
+.bar-footer textarea {
+    resize: none;
+    height: 25px;
+}
+
+/* fixes an ios bug bear */
+button.ion-android-send {
+    padding-top: 2px;
+}
+
+/* add this to keep your footer buttons down
+at the bottom as the textarea resizes */
+.footer-btn-wrap {
+    position: relative;
+    height: 100%;
+    width: 50px;
+    top: 7px;
+}
+
+.footer-btn {
+    position: absolute !important;
+    bottom: 0;
+}
+
+img.profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+}
+
+img.profile-pic.left {
+    left: 10px;
+}
+
+img.profile-pic.right {
+    right: 10px;
+}
+
+.ion-email {
+    float: right;
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+
+.chat-header {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.message {
+    font-size: 14px;
+}
+
+.message-detail {
+    white-space: nowrap;
+    font-size: 10px;
+}
+
+.bar.item-input-inset .item-input-wrapper input {
+    width: 100% !important;
+}
+
+.message-wrapper {
+    position: relative;
+}
+
+.message-footer {
+    border: 1px 0 0 0;
+    border-style: solid;
+}
+
+.message-wrapper:last-child {
+    margin-bottom: 10px;
+}
+
+.chat-bubble {
+    border-radius: 6px;
+    display: inline-block;
+    padding: 4px 8px;
+    position: relative;
+    margin: 8px;
+    max-width: 80%;
+}
+
+/*
+.chat-bubble:before {
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    width: 9px;
+    position: absolute;
+    bottom: -7.5px;
+}
+*/
+
+.chat-bubble.left {
+    background-color: #e6e5eb;
+    float: left;
+    margin-left: 55px;
+}
+
+.chat-bubble.left:before {
+    background-color: #e6e5eb;
+    left: 10px;
+    -webkit-transform: rotate(70deg) skew(5deg);
+}
+
+.chat-bubble.right {
+    background-color: #158ffe;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+}
+
+.chat-bubble.right:before {
+    background-color: #158ffe;
+    right: 10px;
+    -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.chat-bubble.right a.autolinker {
+    color: #fff;
+    font-weight: bold;
+}
+
+.chat-bubble.failed {
+    color: darkred;
+}
+
+.user-messages-top-icon {
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    right: 5px;
+}
+
+.msg-header-username {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+}
+
+.item-input-wrapper {
+    background-color: white !important;
+}
+
+
+a.autolinker {
+    color: #3b88c3;
+    text-decoration: none;
+}

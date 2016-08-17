@@ -1,0 +1,46 @@
+{
+  "name": "twilio-common",
+  "version": "0.1.4",
+  "description": "Twilio Common JavaScript library",
+  "license": "BSD",
+  "authors": [
+    "markandrusroberts@gmail.com"
+  ],
+  "main": "dist/twilio-common.min.js",
+  "keywords": [
+    "twilio",
+    "library",
+    "javascript"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "*.md",
+    "bower_components",
+    "css",
+    "dist/docs",
+    "index.html",
+    "js",
+    "lib",
+    "node_modules",
+    "src",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/twilio/twilio-common",
+  "_release": "0.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.4",
+    "commit": "3035eee3ef88f0bbcd62e75e73a4efbd62a9085d"
+  },
+  "_source": "git://github.com/twilio/twilio-common.git",
+  "_target": "~0.1.4",
+  "_originalSource": "twilio-common",
+  "_direct": true
+}

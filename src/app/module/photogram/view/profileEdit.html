@@ -1,0 +1,40 @@
+<ion-view view-title="Edit Profile" cache-view="false" ng-controller="ProfileEdit as vm" >
+
+    <ion-nav-buttons side="primary">
+        <i class="button button-icon icon ion-arrow-swap" ng-click="vm.swapPhotos()" ng-if="vm.selectedCount() == 2" ng-cloak></i>
+        <i class="button button-icon icon ion-ios-trash" ng-click="vm.deletePhotos()" ng-if="vm.selectedCount() > 0" ng-cloak></i>
+    </ion-nav-buttons>
+
+    <ion-content padding="true">
+
+        <div class="row">
+            <div class="col col-33" ng-repeat="photo in vm.photos track by $index">
+                <img ng-class="photo.selected ? 'profileImageSelected' : 'profileImage'" ng-click="vm.toggleSelected(photo)" ng-src="{{photo.file.url()}}" class="profileImg">
+            </div>
+            <div class="col col-33" id="addPhoto" ng-if="vm.photos.length < vm.MAX_PHOTOS">
+                <img ng-src="{{vm.NO_IMAGE}}" ng-click="vm.addPhoto()" class="profileImg"/>
+            </div>
+            <!-- TODO could have some placeholder images in the other empty spots so there isn't odd looking empty space -->
+        </div>
+        <br/>
+        <div>
+            <h2>About You</h2>
+
+            <textarea class="wide input-grey"
+                    rows="7"
+                    placeholder="{{'ABOUT_YOU' | translate}}"
+                    id="aboutYou"
+                    ng-model="vm.about"
+                    ng-keyup="vm.expandText()"
+                    ng-keydown="vm.expandText()"></textarea>
+            <br/>
+            <div style="text-align:center">
+                <button class="button button-positive" ng-click="vm.saveProfile()" ng-hide="vm.profile.about == vm.about">&nbsp;save&nbsp;</button>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,1061 @@
+/**
+ * Buttons
+ * --------------------------------------------------
+ */
+// @import "themes/mixins";
+
+.button {
+  // set the color defaults
+  @include button-style($button-default-bg, $button-default-border, $button-default-active-bg, $button-default-active-border, $button-default-text);
+
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 $button-padding;
+
+  min-width: ($button-padding * 3) + $button-font-size;
+  min-height: $button-height + 5px;
+
+  border-width: $button-border-width;
+  border-style: solid;
+  border-radius: $button-border-radius;
+
+  vertical-align: top;
+  text-align: center;
+
+  text-overflow: ellipsis;
+  font-size: $button-font-size;
+  line-height: $button-height - $button-border-width + 1px;
+
+  cursor: pointer;
+
+  &:after {
+    // used to create a larger button "hit" area
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    content: ' ';
+  }
+
+  .icon {
+    vertical-align: top;
+    pointer-events: none;
+  }
+
+  .icon:before,
+  &.icon:before,
+  &.icon-left:before,
+  &.icon-right:before {
+    display: inline-block;
+    padding: 0 0 $button-border-width 0;
+    vertical-align: inherit;
+    font-size: $button-icon-size;
+    line-height: $button-height - $button-border-width;
+    pointer-events: none;
+  }
+  &.icon-left:before {
+    float: left;
+    padding-right: .2em;
+    padding-left: 0;
+  }
+  &.icon-right:before {
+    float: right;
+    padding-right: 0;
+    padding-left: .2em;
+  }
+
+  &.button-block, &.button-full {
+    margin-top: $button-block-margin;
+    margin-bottom: $button-block-margin;
+  }
+
+  &.button-light {
+    @include button-style($button-light-bg, $button-light-border, $button-light-active-bg, $button-light-active-border, $button-light-text);
+    @include button-clear($button-light-border);
+    @include button-outline($button-light-border);
+  }
+
+  &.button-stable {
+    @include button-style($button-stable-bg, $button-stable-border, $button-stable-active-bg, $button-stable-active-border, $button-stable-text);
+    @include button-clear($button-stable-border);
+    @include button-outline($button-stable-border);
+  }
+
+  &.button-positive {
+    @include button-style($button-positive-bg, $button-positive-border, $button-positive-active-bg, $button-positive-active-border, $button-positive-text);
+    @include button-clear($button-positive-bg);
+    @include button-outline($button-positive-bg);
+  }
+
+  &.button-calm {
+    @include button-style($button-calm-bg, $button-calm-border, $button-calm-active-bg, $button-calm-active-border, $button-calm-text);
+    @include button-clear($button-calm-bg);
+    @include button-outline($button-calm-bg);
+  }
+
+  &.button-assertive {
+    @include button-style($button-assertive-bg, $button-assertive-border, $button-assertive-active-bg, $button-assertive-active-border, $button-assertive-text);
+    @include button-clear($button-assertive-bg);
+    @include button-outline($button-assertive-bg);
+  }
+
+  &.button-balanced {
+    @include button-style($button-balanced-bg, $button-balanced-border, $button-balanced-active-bg, $button-balanced-active-border, $button-balanced-text);
+    @include button-clear($button-balanced-bg);
+    @include button-outline($button-balanced-bg);
+  }
+
+  &.button-energized {
+    @include button-style($button-energized-bg, $button-energized-border, $button-energized-active-bg, $button-energized-active-border, $button-energized-text);
+    @include button-clear($button-energized-bg);
+    @include button-outline($button-energized-bg);
+  }
+
+  &.button-royal {
+    @include button-style($button-royal-bg, $button-royal-border, $button-royal-active-bg, $button-royal-active-border, $button-royal-text);
+    @include button-clear($button-royal-bg);
+    @include button-outline($button-royal-bg);
+  }
+
+  &.button-dark {
+    @include button-style($button-dark-bg, $button-dark-border, $button-dark-active-bg, $button-dark-active-border, $button-dark-text);
+    @include button-clear($button-dark-bg);
+    @include button-outline($button-dark-bg);
+  }
+
+  //   Material
+  &.button-primary {
+    @include button-style($button-primary-bg, $button-primary-border, $button-primary-active-bg, $button-primary-active-border, $button-primary-text);
+    @include button-clear($button-primary-bg);
+    @include button-outline($button-primary-bg);
+  }
+
+  &.button-dark-primary {
+    @include button-style($button-dark-primary-bg, $button-dark-primary-border, $button-dark-primary-active-bg, $button-dark-primary-active-border, $button-dark-primary-text);
+    @include button-clear($button-dark-primary-bg);
+    @include button-outline($button-dark-primary-bg);
+  }
+
+  &.button-light {
+    @include button-style($button-light-bg, $button-light-border, $button-light-active-bg, $button-light-active-border, $button-light-text);
+    @include button-clear($button-light-bg);
+    @include button-outline($button-light-bg);
+  }
+
+  &.button-accent {
+    @include button-style($button-accent-bg, $button-accent-border, $button-accent-active-bg, $button-accent-active-border, $button-accent-text);
+    @include button-clear($button-accent-bg);
+    @include button-outline($button-accent-bg);
+  }
+
+  // Amber
+  &.amber-50 {
+    @include button-material($amber-50, $primaryTextColor);
+  }
+  &.amber-100 {
+    @include button-material($amber-100, $primaryTextColor);
+  }
+  &.amber-200 {
+    @include button-material($amber-200, $primaryTextColor);
+  }
+  &.amber-300 {
+    @include button-material($amber-300, $primaryTextColor);
+  }
+  &.amber-400 {
+    @include button-material($amber-400, $primaryTextColor);
+  }
+  &.amber-500 {
+    @include button-material($amber-500, $primaryTextColor);
+  }
+  &.amber-600 {
+    @include button-material($amber-600, $primaryTextColor);
+  }
+  &.amber-700 {
+    @include button-material($amber-700, $primaryTextColor);
+  }
+  &.amber-800 {
+    @include button-material($amber-800, $primaryTextColor);
+  }
+  &.amber-900 {
+    @include button-material($amber-900, $primaryTextColor);
+  }
+  &.amber-a100 {
+    @include button-material($amber-a100, $primaryTextColor);
+  }
+  &.amber-a200 {
+    @include button-material($amber-a200, $primaryTextColor);
+  }
+  &.amber-a400 {
+    @include button-material($amber-a400, $primaryTextColor);
+  }
+  &.amber-a700 {
+    @include button-material($amber-a700, $primaryTextColor);
+  }
+  // blue
+  &.blue-50 {
+    @include button-material($blue-50, $primaryTextColor);
+  }
+  &.blue-100 {
+    @include button-material($blue-100, $primaryTextColor);
+  }
+  &.blue-200 {
+    @include button-material($blue-200, $primaryTextColor);
+  }
+  &.blue-300 {
+    @include button-material($blue-300, $primaryTextColor);
+  }
+  &.blue-400 {
+    @include button-material($blue-400, $primaryTextColor);
+  }
+  &.blue-500 {
+    @include button-material($blue-500, $primaryTextColor);
+  }
+  &.blue-600 {
+    @include button-material($blue-600, $primaryTextColor);
+  }
+  &.blue-700 {
+    @include button-material($blue-700, $primaryTextColor);
+  }
+  &.blue-800 {
+    @include button-material($blue-800, $primaryTextColor);
+  }
+  &.blue-900 {
+    @include button-material($blue-900, $primaryTextColor);
+  }
+  &.blue-a100 {
+    @include button-material($blue-a100, $primaryTextColor);
+  }
+  &.blue-a200 {
+    @include button-material($blue-a200, $primaryTextColor);
+  }
+  &.blue-a400 {
+    @include button-material($blue-a400, $primaryTextColor);
+  }
+  &.blue-a700 {
+    @include button-material($blue-a700, $primaryTextColor);
+  }
+
+  // blue-grey
+  &.blue-grey-50 {
+    @include button-material($blue-grey-50, $primaryTextColor);
+  }
+  &.blue-grey-100 {
+    @include button-material($blue-grey-100, $primaryTextColor);
+  }
+  &.blue-grey-200 {
+    @include button-material($blue-grey-200, $primaryTextColor);
+  }
+  &.blue-grey-300 {
+    @include button-material($blue-grey-300, $primaryTextColor);
+  }
+  &.blue-grey-400 {
+    @include button-material($blue-grey-400, $primaryTextColor);
+  }
+  &.blue-grey-500 {
+    @include button-material($blue-grey-500, $primaryTextColor);
+  }
+  &.blue-grey-600 {
+    @include button-material($blue-grey-600, $primaryTextColor);
+  }
+  &.blue-grey-700 {
+    @include button-material($blue-grey-700, $primaryTextColor);
+  }
+  &.blue-grey-800 {
+    @include button-material($blue-grey-800, $primaryTextColor);
+  }
+  &.blue-grey-900 {
+    @include button-material($blue-grey-900, $primaryTextColor);
+  }
+
+  // brown
+  &.brown-50 {
+    @include button-material($brown-50, $primaryTextColor);
+  }
+  &.brown-100 {
+    @include button-material($brown-100, $primaryTextColor);
+  }
+  &.brown-200 {
+    @include button-material($brown-200, $primaryTextColor);
+  }
+  &.brown-300 {
+    @include button-material($brown-300, $primaryTextColor);
+  }
+  &.brown-400 {
+    @include button-material($brown-400, $primaryTextColor);
+  }
+  &.brown-500 {
+    @include button-material($brown-500, $primaryTextColor);
+  }
+  &.brown-600 {
+    @include button-material($brown-600, $primaryTextColor);
+  }
+  &.brown-700 {
+    @include button-material($brown-700, $primaryTextColor);
+  }
+  &.brown-800 {
+    @include button-material($brown-800, $primaryTextColor);
+  }
+  &.brown-900 {
+    @include button-material($brown-900, $primaryTextColor);
+  }
+  // cyan
+  &.cyan-50 {
+    @include button-material($cyan-50, $primaryTextColor);
+  }
+  &.cyan-100 {
+    @include button-material($cyan-100, $primaryTextColor);
+  }
+  &.cyan-200 {
+    @include button-material($cyan-200, $primaryTextColor);
+  }
+  &.cyan-300 {
+    @include button-material($cyan-300, $primaryTextColor);
+  }
+  &.cyan-400 {
+    @include button-material($cyan-400, $primaryTextColor);
+  }
+  &.cyan-500 {
+    @include button-material($cyan-500, $primaryTextColor);
+  }
+  &.cyan-600 {
+    @include button-material($cyan-600, $primaryTextColor);
+  }
+  &.cyan-700 {
+    @include button-material($cyan-700, $primaryTextColor);
+  }
+  &.cyan-800 {
+    @include button-material($cyan-800, $primaryTextColor);
+  }
+  &.cyan-900 {
+    @include button-material($cyan-900, $primaryTextColor);
+  }
+  &.cyan-a100 {
+    @include button-material($cyan-a100, $primaryTextColor);
+  }
+  &.cyan-a200 {
+    @include button-material($cyan-a200, $primaryTextColor);
+  }
+  &.cyan-a400 {
+    @include button-material($cyan-a400, $primaryTextColor);
+  }
+  &.cyan-a700 {
+    @include button-material($cyan-a700, $primaryTextColor);
+  }
+  // deep-orange
+  &.deep-orange-50 {
+    @include button-material($deep-orange-50, $primaryTextColor);
+  }
+  &.deep-orange-100 {
+    @include button-material($deep-orange-100, $primaryTextColor);
+  }
+  &.deep-orange-200 {
+    @include button-material($deep-orange-200, $primaryTextColor);
+  }
+  &.deep-orange-300 {
+    @include button-material($deep-orange-300, $primaryTextColor);
+  }
+  &.deep-orange-400 {
+    @include button-material($deep-orange-400, $primaryTextColor);
+  }
+  &.deep-orange-500 {
+    @include button-material($deep-orange-500, $primaryTextColor);
+  }
+  &.deep-orange-600 {
+    @include button-material($deep-orange-600, $primaryTextColor);
+  }
+  &.deep-orange-700 {
+    @include button-material($deep-orange-700, $primaryTextColor);
+  }
+  &.deep-orange-800 {
+    @include button-material($deep-orange-800, $primaryTextColor);
+  }
+  &.deep-orange-900 {
+    @include button-material($deep-orange-900, $primaryTextColor);
+  }
+  &.deep-orange-a100 {
+    @include button-material($deep-orange-a100, $primaryTextColor);
+  }
+  &.deep-orange-a200 {
+    @include button-material($deep-orange-a200, $primaryTextColor);
+  }
+  &.deep-orange-a400 {
+    @include button-material($deep-orange-a400, $primaryTextColor);
+  }
+  &.deep-orange-a700 {
+    @include button-material($deep-orange-a700, $primaryTextColor);
+  }
+  // deep-purple
+  &.deep-purple-50 {
+    @include button-material($deep-purple-50, $primaryTextColor);
+  }
+  &.deep-purple-100 {
+    @include button-material($deep-purple-100, $primaryTextColor);
+  }
+  &.deep-purple-200 {
+    @include button-material($deep-purple-200, $primaryTextColor);
+  }
+  &.deep-purple-300 {
+    @include button-material($deep-purple-300, $primaryTextColor);
+  }
+  &.deep-purple-400 {
+    @include button-material($deep-purple-400, $primaryTextColor);
+  }
+  &.deep-purple-500 {
+    @include button-material($deep-purple-500, $primaryTextColor);
+  }
+  &.deep-purple-600 {
+    @include button-material($deep-purple-600, $primaryTextColor);
+  }
+  &.deep-purple-700 {
+    @include button-material($deep-purple-700, $primaryTextColor);
+  }
+  &.deep-purple-800 {
+    @include button-material($deep-purple-800, $primaryTextColor);
+  }
+  &.deep-purple-900 {
+    @include button-material($deep-purple-900, $primaryTextColor);
+  }
+  &.deep-purple-a100 {
+    @include button-material($deep-purple-a100, $primaryTextColor);
+  }
+  &.deep-purple-a200 {
+    @include button-material($deep-purple-a200, $primaryTextColor);
+  }
+  &.deep-purple-a400 {
+    @include button-material($deep-purple-a400, $primaryTextColor);
+  }
+  &.deep-purple-a700 {
+    @include button-material($deep-purple-a700, $primaryTextColor);
+  }
+  // green
+  &.green-50 {
+    @include button-material($green-50, $primaryTextColor);
+  }
+  &.green-100 {
+    @include button-material($green-100, $primaryTextColor);
+  }
+  &.green-200 {
+    @include button-material($green-200, $primaryTextColor);
+  }
+  &.green-300 {
+    @include button-material($green-300, $primaryTextColor);
+  }
+  &.green-400 {
+    @include button-material($green-400, $primaryTextColor);
+  }
+  &.green-500 {
+    @include button-material($green-500, $primaryTextColor);
+  }
+  &.green-600 {
+    @include button-material($green-600, $primaryTextColor);
+  }
+  &.green-700 {
+    @include button-material($green-700, $primaryTextColor);
+  }
+  &.green-800 {
+    @include button-material($green-800, $primaryTextColor);
+  }
+  &.green-900 {
+    @include button-material($green-900, $primaryTextColor);
+  }
+  &.green-a100 {
+    @include button-material($green-a100, $primaryTextColor);
+  }
+  &.green-a200 {
+    @include button-material($green-a200, $primaryTextColor);
+  }
+  &.green-a400 {
+    @include button-material($green-a400, $primaryTextColor);
+  }
+  &.green-a700 {
+    @include button-material($green-a700, $primaryTextColor);
+  }
+  // grey
+  &.grey-50 {
+    @include button-material($grey-50, $primaryTextColor);
+  }
+  &.grey-100 {
+    @include button-material($grey-100, $primaryTextColor);
+  }
+  &.grey-200 {
+    @include button-material($grey-200, $primaryTextColor);
+  }
+  &.grey-300 {
+    @include button-material($grey-300, $primaryTextColor);
+  }
+  &.grey-400 {
+    @include button-material($grey-400, $primaryTextColor);
+  }
+  &.grey-500 {
+    @include button-material($grey-500, $primaryTextColor);
+  }
+  &.grey-600 {
+    @include button-material($grey-600, $primaryTextColor);
+  }
+  &.grey-700 {
+    @include button-material($grey-700, $primaryTextColor);
+  }
+  &.grey-800 {
+    @include button-material($grey-800, $primaryTextColor);
+  }
+  &.grey-900 {
+    @include button-material($grey-900, $primaryTextColor);
+  }
+  // indigo
+  &.indigo-50 {
+    @include button-material($indigo-50, $primaryTextColor);
+  }
+  &.indigo-100 {
+    @include button-material($indigo-100, $primaryTextColor);
+  }
+  &.indigo-200 {
+    @include button-material($indigo-200, $primaryTextColor);
+  }
+  &.indigo-300 {
+    @include button-material($indigo-300, $primaryTextColor);
+  }
+  &.indigo-400 {
+    @include button-material($indigo-400, $primaryTextColor);
+  }
+  &.indigo-500 {
+    @include button-material($indigo-500, $primaryTextColor);
+  }
+  &.indigo-600 {
+    @include button-material($indigo-600, $primaryTextColor);
+  }
+  &.indigo-700 {
+    @include button-material($indigo-700, $primaryTextColor);
+  }
+  &.indigo-800 {
+    @include button-material($indigo-800, $primaryTextColor);
+  }
+  &.indigo-900 {
+    @include button-material($indigo-900, $primaryTextColor);
+  }
+  &.indigo-a100 {
+    @include button-material($indigo-a100, $primaryTextColor);
+  }
+  &.indigo-a200 {
+    @include button-material($indigo-a200, $primaryTextColor);
+  }
+  &.indigo-a400 {
+    @include button-material($indigo-a400, $primaryTextColor);
+  }
+  &.indigo-a700 {
+    @include button-material($indigo-a700, $primaryTextColor);
+  }
+  // light-blue
+  &.light-blue-50 {
+    @include button-material($light-blue-50, $primaryTextColor);
+  }
+  &.light-blue-100 {
+    @include button-material($light-blue-100, $primaryTextColor);
+  }
+  &.light-blue-200 {
+    @include button-material($light-blue-200, $primaryTextColor);
+  }
+  &.light-blue-300 {
+    @include button-material($light-blue-300, $primaryTextColor);
+  }
+  &.light-blue-400 {
+    @include button-material($light-blue-400, $primaryTextColor);
+  }
+  &.light-blue-500 {
+    @include button-material($light-blue-500, $primaryTextColor);
+  }
+  &.light-blue-600 {
+    @include button-material($light-blue-600, $primaryTextColor);
+  }
+  &.light-blue-700 {
+    @include button-material($light-blue-700, $primaryTextColor);
+  }
+  &.light-blue-800 {
+    @include button-material($light-blue-800, $primaryTextColor);
+  }
+  &.light-blue-900 {
+    @include button-material($light-blue-900, $primaryTextColor);
+  }
+  &.light-blue-a100 {
+    @include button-material($light-blue-a100, $primaryTextColor);
+  }
+  &.light-blue-a200 {
+    @include button-material($light-blue-a200, $primaryTextColor);
+  }
+  &.light-blue-a400 {
+    @include button-material($light-blue-a400, $primaryTextColor);
+  }
+  &.light-blue-a700 {
+    @include button-material($light-blue-a700, $primaryTextColor);
+  }
+  // light-green
+  &.light-green-50 {
+    @include button-material($light-green-50, $primaryTextColor);
+  }
+  &.light-green-100 {
+    @include button-material($light-green-100, $primaryTextColor);
+  }
+  &.light-green-200 {
+    @include button-material($light-green-200, $primaryTextColor);
+  }
+  &.light-green-300 {
+    @include button-material($light-green-300, $primaryTextColor);
+  }
+  &.light-green-400 {
+    @include button-material($light-green-400, $primaryTextColor);
+  }
+  &.light-green-500 {
+    @include button-material($light-green-500, $primaryTextColor);
+  }
+  &.light-green-600 {
+    @include button-material($light-green-600, $primaryTextColor);
+  }
+  &.light-green-700 {
+    @include button-material($light-green-700, $primaryTextColor);
+  }
+  &.light-green-800 {
+    @include button-material($light-green-800, $primaryTextColor);
+  }
+  &.light-green-900 {
+    @include button-material($light-green-900, $primaryTextColor);
+  }
+  &.light-green-a100 {
+    @include button-material($light-green-a100, $primaryTextColor);
+  }
+  &.light-green-a200 {
+    @include button-material($light-green-a200, $primaryTextColor);
+  }
+  &.light-green-a400 {
+    @include button-material($light-green-a400, $primaryTextColor);
+  }
+  &.light-green-a700 {
+    @include button-material($light-green-a700, $primaryTextColor);
+  }
+  // lime
+  &.lime-50 {
+    @include button-material($lime-50, $primaryTextColor);
+  }
+  &.lime-100 {
+    @include button-material($lime-100, $primaryTextColor);
+  }
+  &.lime-200 {
+    @include button-material($lime-200, $primaryTextColor);
+  }
+  &.lime-300 {
+    @include button-material($lime-300, $primaryTextColor);
+  }
+  &.lime-400 {
+    @include button-material($lime-400, $primaryTextColor);
+  }
+  &.lime-500 {
+    @include button-material($lime-500, $primaryTextColor);
+  }
+  &.lime-600 {
+    @include button-material($lime-600, $primaryTextColor);
+  }
+  &.lime-700 {
+    @include button-material($lime-700, $primaryTextColor);
+  }
+  &.lime-800 {
+    @include button-material($lime-800, $primaryTextColor);
+  }
+  &.lime-900 {
+    @include button-material($lime-900, $primaryTextColor);
+  }
+  &.lime-a100 {
+    @include button-material($lime-a100, $primaryTextColor);
+  }
+  &.lime-a200 {
+    @include button-material($lime-a200, $primaryTextColor);
+  }
+  &.lime-a400 {
+    @include button-material($lime-a400, $primaryTextColor);
+  }
+  &.lime-a700 {
+    @include button-material($lime-a700, $primaryTextColor);
+  }
+  // orange
+  &.orange-50 {
+    @include button-material($orange-50, $primaryTextColor);
+  }
+  &.orange-100 {
+    @include button-material($orange-100, $primaryTextColor);
+  }
+  &.orange-200 {
+    @include button-material($orange-200, $primaryTextColor);
+  }
+  &.orange-300 {
+    @include button-material($orange-300, $primaryTextColor);
+  }
+  &.orange-400 {
+    @include button-material($orange-400, $primaryTextColor);
+  }
+  &.orange-500 {
+    @include button-material($orange-500, $primaryTextColor);
+  }
+  &.orange-600 {
+    @include button-material($orange-600, $primaryTextColor);
+  }
+  &.orange-700 {
+    @include button-material($orange-700, $primaryTextColor);
+  }
+  &.orange-800 {
+    @include button-material($orange-800, $primaryTextColor);
+  }
+  &.orange-900 {
+    @include button-material($orange-900, $primaryTextColor);
+  }
+  &.orange-a100 {
+    @include button-material($orange-a100, $primaryTextColor);
+  }
+  &.orange-a200 {
+    @include button-material($orange-a200, $primaryTextColor);
+  }
+  &.orange-a400 {
+    @include button-material($orange-a400, $primaryTextColor);
+  }
+  &.orange-a700 {
+    @include button-material($orange-a700, $primaryTextColor);
+  }
+  // pink
+  &.pink-50 {
+    @include button-material($pink-50, $primaryTextColor);
+  }
+  &.pink-100 {
+    @include button-material($pink-100, $primaryTextColor);
+  }
+  &.pink-200 {
+    @include button-material($pink-200, $primaryTextColor);
+  }
+  &.pink-300 {
+    @include button-material($pink-300, $primaryTextColor);
+  }
+  &.pink-400 {
+    @include button-material($pink-400, $primaryTextColor);
+  }
+  &.pink-500 {
+    @include button-material($pink-500, $primaryTextColor);
+  }
+  &.pink-600 {
+    @include button-material($pink-600, $primaryTextColor);
+  }
+  &.pink-700 {
+    @include button-material($pink-700, $primaryTextColor);
+  }
+  &.pink-800 {
+    @include button-material($pink-800, $primaryTextColor);
+  }
+  &.pink-900 {
+    @include button-material($pink-900, $primaryTextColor);
+  }
+  &.pink-a100 {
+    @include button-material($pink-a100, $primaryTextColor);
+  }
+  &.pink-a200 {
+    @include button-material($pink-a200, $primaryTextColor);
+  }
+  &.pink-a400 {
+    @include button-material($pink-a400, $primaryTextColor);
+  }
+  &.pink-a700 {
+    @include button-material($pink-a700, $primaryTextColor);
+  }
+  // purple
+  &.purple-50 {
+    @include button-material($purple-50, $primaryTextColor);
+  }
+  &.purple-100 {
+    @include button-material($purple-100, $primaryTextColor);
+  }
+  &.purple-200 {
+    @include button-material($purple-200, $primaryTextColor);
+  }
+  &.purple-300 {
+    @include button-material($purple-300, $primaryTextColor);
+  }
+  &.purple-400 {
+    @include button-material($purple-400, $primaryTextColor);
+  }
+  &.purple-500 {
+    @include button-material($purple-500, $primaryTextColor);
+  }
+  &.purple-600 {
+    @include button-material($purple-600, $primaryTextColor);
+  }
+  &.purple-700 {
+    @include button-material($purple-700, $primaryTextColor);
+  }
+  &.purple-800 {
+    @include button-material($purple-800, $primaryTextColor);
+  }
+  &.purple-900 {
+    @include button-material($purple-900, $primaryTextColor);
+  }
+  &.purple-a100 {
+    @include button-material($purple-a100, $primaryTextColor);
+  }
+  &.purple-a200 {
+    @include button-material($purple-a200, $primaryTextColor);
+  }
+  &.purple-a400 {
+    @include button-material($purple-a400, $primaryTextColor);
+  }
+  &.purple-a700 {
+    @include button-material($purple-a700, $primaryTextColor);
+  }
+  // red
+  &.red-50 {
+    @include button-material($red-50, $primaryTextColor);
+  }
+  &.red-100 {
+    @include button-material($red-100, $primaryTextColor);
+  }
+  &.red-200 {
+    @include button-material($red-200, $primaryTextColor);
+  }
+  &.red-300 {
+    @include button-material($red-300, $primaryTextColor);
+  }
+  &.red-400 {
+    @include button-material($red-400, $primaryTextColor);
+  }
+  &.red-500 {
+    @include button-material($red-500, $primaryTextColor);
+  }
+  &.red-600 {
+    @include button-material($red-600, $primaryTextColor);
+  }
+  &.red-700 {
+    @include button-material($red-700, $primaryTextColor);
+  }
+  &.red-800 {
+    @include button-material($red-800, $primaryTextColor);
+  }
+  &.red-900 {
+    @include button-material($red-900, $primaryTextColor);
+  }
+  &.red-a100 {
+    @include button-material($red-a100, $primaryTextColor);
+  }
+  &.red-a200 {
+    @include button-material($red-a200, $primaryTextColor);
+  }
+  &.red-a400 {
+    @include button-material($red-a400, $primaryTextColor);
+  }
+  &.red-a700 {
+    @include button-material($red-a700, $primaryTextColor);
+  }
+  // teal
+  &.teal-50 {
+    @include button-material($teal-50, $primaryTextColor);
+  }
+  &.teal-100 {
+    @include button-material($teal-100, $primaryTextColor);
+  }
+  &.teal-200 {
+    @include button-material($teal-200, $primaryTextColor);
+  }
+  &.teal-300 {
+    @include button-material($teal-300, $primaryTextColor);
+  }
+  &.teal-400 {
+    @include button-material($teal-400, $primaryTextColor);
+  }
+  &.teal-500 {
+    @include button-material($teal-500, $primaryTextColor);
+  }
+  &.teal-600 {
+    @include button-material($teal-600, $primaryTextColor);
+  }
+  &.teal-700 {
+    @include button-material($teal-700, $primaryTextColor);
+  }
+  &.teal-800 {
+    @include button-material($teal-800, $primaryTextColor);
+  }
+  &.teal-900 {
+    @include button-material($teal-900, $primaryTextColor);
+  }
+  &.teal-a100 {
+    @include button-material($teal-a100, $primaryTextColor);
+  }
+  &.teal-a200 {
+    @include button-material($teal-a200, $primaryTextColor);
+  }
+  &.teal-a400 {
+    @include button-material($teal-a400, $primaryTextColor);
+  }
+  &.teal-a700 {
+    @include button-material($teal-a700, $primaryTextColor);
+  }
+  // yellow
+  &.yellow-50 {
+    @include button-material($yellow-50, $primaryTextColor);
+  }
+  &.yellow-100 {
+    @include button-material($yellow-100, $primaryTextColor);
+  }
+  &.yellow-200 {
+    @include button-material($yellow-200, $primaryTextColor);
+  }
+  &.yellow-300 {
+    @include button-material($yellow-300, $primaryTextColor);
+  }
+  &.yellow-400 {
+    @include button-material($yellow-400, $primaryTextColor);
+  }
+  &.yellow-500 {
+    @include button-material($yellow-500, $primaryTextColor);
+  }
+  &.yellow-600 {
+    @include button-material($yellow-600, $primaryTextColor);
+  }
+  &.yellow-700 {
+    @include button-material($yellow-700, $primaryTextColor);
+  }
+  &.yellow-800 {
+    @include button-material($yellow-800, $primaryTextColor);
+  }
+  &.yellow-900 {
+    @include button-material($yellow-900, $primaryTextColor);
+  }
+  &.yellow-a100 {
+    @include button-material($yellow-a100, $primaryTextColor);
+  }
+  &.yellow-a200 {
+    @include button-material($yellow-a200, $primaryTextColor);
+  }
+  &.yellow-a400 {
+    @include button-material($yellow-a400, $primaryTextColor);
+  }
+  &.yellow-a700 {
+    @include button-material($yellow-a700, $primaryTextColor);
+  }
+}
+
+.button-small {
+  padding: 2px $button-small-padding 1px;
+  min-width: $button-small-height;
+  min-height: $button-small-height + 2;
+  font-size: $button-small-font-size;
+  line-height: $button-small-height - $button-border-width - 1;
+
+  .icon:before,
+  &.icon:before,
+  &.icon-left:before,
+  &.icon-right:before {
+    font-size: $button-small-icon-size;
+    line-height: $button-small-icon-size + 3;
+    margin-top: 3px;
+  }
+}
+
+.button-large {
+  padding: 0 $button-large-padding;
+  min-width: ($button-large-padding * 3) + $button-large-font-size;
+  min-height: $button-large-height + 5;
+  font-size: $button-large-font-size;
+  line-height: $button-large-height - $button-border-width;
+
+  .icon:before,
+  &.icon:before,
+  &.icon-left:before,
+  &.icon-right:before {
+    padding-bottom: ($button-border-width * 2);
+    font-size: $button-large-icon-size;
+    line-height: $button-large-height - ($button-border-width * 2) - 1;
+  }
+}
+
+.button-icon {
+  @include transition(opacity .1s);
+  padding: 0 6px;
+  min-width: initial;
+  border-color: transparent;
+  background: none;
+
+  &.button.active,
+  &.button.activated {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    opacity: 0.3;
+  }
+
+  .icon:before,
+  &.icon:before {
+    font-size: $button-large-icon-size;
+  }
+}
+
+.button-clear {
+  @include button-clear($button-default-border);
+  @include transition(opacity .1s);
+  padding: 0 $button-clear-padding;
+  max-height: $button-height;
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+
+  &.active,
+  &.activated {
+    opacity: 0.3;
+  }
+}
+
+.button-outline {
+  @include button-outline($button-default-border);
+  @include transition(opacity .1s);
+  background: none;
+  box-shadow: none;
+}
+
+.padding > .button.button-block:first-child {
+  margin-top: 0;
+}
+
+.button-block {
+  display: block;
+  clear: both;
+
+  &:after {
+    clear: both;
+  }
+}
+
+.button-full,
+.button-full > .button {
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-radius: 0;
+}
+
+button.button-block,
+button.button-full,
+.button-full > button.button,
+input.button.button-block {
+  width: 100%;
+}
+
+a.button {
+  text-decoration: none;
+
+  .icon:before,
+  &.icon:before,
+  &.icon-left:before,
+  &.icon-right:before {
+    margin-top: 2px;
+  }
+}
+
+.button.disabled,
+.button[disabled] {
+  opacity: .4;
+  cursor: default !important;
+  pointer-events: none;
+}

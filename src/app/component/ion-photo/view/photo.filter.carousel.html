@@ -1,0 +1,7 @@
+<div class="wide-as-needed">
+  <a ng-repeat="filter in filters" ng-click="applyFilter('image', filter)">
+    <div caman image="image" name="filter" filter="filter" class="image" loading="loading" ng-class="{disabled: loading}"></div>
+    <ion-spinner ng-if="loading"></ion-spinner>
+    <p>{{ ::filter }}</p>
+  </a>
+</div>

@@ -1,0 +1,49 @@
+@import "shadow";
+@import "colors";
+@import "themes";
+
+//@import "./themes/light";
+// @import "./themes/dark";
+// @import "./themes/amber";
+// @import "./themes/blue";
+// @import "./themes/blue-gray";
+//@import "./themes/brown";
+// @import "./themes/cyan";
+// @import "./themes/deep-orange";
+// @import "./themes/deep-purple";
+// @import "./themes/green";
+// @import "./themes/grey";
+// @import "./themes/indigo";
+// @import "./themes/light-blue";
+// @import "./themes/light-green";
+// @import "./themes/lime";
+// @import "./themes/orange";
+// @import "./themes/pink";
+// @import "./themes/purple";
+// @import "./themes/red";
+@import "./themes/teal";
+//@import "./themes/yellow";
+
+$background: #eef1f4;
+$bright:     #c7ccd4 !default;
+
+
+.color-light{
+  @include color-material($primaryTextColor);
+}
+.color-dark {
+  @include color-material($textPrimaryColor);
+}
+
+// 237 themes color
+.bg-primary {
+  @include bg-material($primaryColor);
+}
+
+.bg-dark-primary {
+  @include bg-material($darkPrimaryColor);
+}
+
+.bg-light-primary {
+  @include bg-material($lightPrimaryColor);
+}

@@ -1,0 +1,82 @@
+<ion-modal-view class="modal-profile photogram-profile">
+  <ion-header-bar class="bar-positive">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closeModal()"></button>
+    <div class="title">{{ user.name }}</div>
+  </ion-header-bar>
+  <ion-content overflow-scroll="true">
+
+    <div class="profile-top">
+      <div class="row">
+        <div class="col-25">
+          <img class="avatar" ng-src="{{ user.src }}" />
+        </div>
+        <div class="col col-statics">
+          <div class="row">
+            <div class="col">
+              <photogram-loading loading="loadingPhotos"></photogram-loading>
+              <span ng-if="!loadingPhotos" class="text-center">{{ user.qtdPhotos  }}</span>
+
+              <h3 translate="PHOTOGRAM.PROFILE.TITLE.POST">Posts</h3>
+            </div>
+            <div class="col">
+              <photogram-loading loading="loadingFollowers"></photogram-loading>
+              <span ng-if="!loadingFollowers" class="text-center">{{ user.qtdFollowers }}</span>
+
+              <h3 translate="PHOTOGRAM.PROFILE.TITLE.FOLLOWER"></h3>
+            </div>
+            <div class="col">
+              <photogram-loading loading="loadingFollowing"></photogram-loading>
+              <span ng-if="!loadingFollowing" class="text-center">{{ user.qtdFollowing  }}</span>
+
+              <h3 translate="PHOTOGRAM.PROFILE.TITLE.FOLLOWING">Followings</h3>
+            </div>
+          </div>
+          <div class="row col-edit">
+            <div class="col">
+              <photogram-loading loading="loadingFollow"></photogram-loading>
+              <button ng-if="!loadingFollow" ng-class="{'button-unfollow': user.follow, 'button-follow': !user.follow}" ng-click="follow()"
+                class="button">
+                                <span ng-show="!user.follow" translate>Follow</span>
+                                <span ng-show="user.follow" translate>Following</span>
+                            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="padding">
+        <span class="user-username">{{ user.name }}</span>
+
+        <p class="user-status">{{ user.status }}</p>
+      </div>
+
+    </div>
+
+    <div class="item bar">
+      <div class="button-bar">
+        <button class="button button-icon icon ion-drag" ng-class="{active: tab.list}" ng-click="changeTab('list')"></button>
+        <button class="button button-icon icon ion-grid" ng-class="{active: tab.grid}" ng-click="changeTab('grid')"></button>
+        <button class="button button-icon icon ion-ios-location"></button>
+
+      </div>
+    </div>
+
+    <div class="item item-divider" translate>Recent</div>
+
+    <div class="center-ico animated fadeIn" ng-if="empty">
+      <i class="icon ion-camera"></i>
+      <h1 translate="">No Post</h1>
+    </div>
+
+    <photogram-loading loading="loading"></photogram-loading>
+
+    <div class="tab" ng-if="tab.list">
+      <photogram-photo-list photogram="data" user="false" loading="loading"></photogram-photo-list>
+    </div>
+
+    <div class="tab" ng-if="tab.grid">
+      <photogram-photo-grid photogram="data" user="false" loading="loading"></photogram-photo-grid>
+    </div>
+
+
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,30 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">It's a Match!</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="row">
+          <div class="col center">
+                <p translate="LIKED_EACH_OTHER"  translate-values="{name: matchProfile.name}"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col center" style="min-height: 100px;">
+            <img class="circle" ng-src="{{profile.photoUrl}}"/>
+            <span style="width:30px"></span>
+            <!-- TODO make this image a link to their profile -->
+            <img class="circle" ng-src="{{matchProfile.photoUrl}}"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-50 col-offset-25 center">
+            <a class="button" style="width:100%;" ng-click="messageNewMatch()">Send Message</a>
+            <br/><br/>
+            <a class="button" style="width:100%;" ng-click="closeNewMatch()">Keep Playing</a>
+          </div>
+        </div>
+
+    </ion-content>
+</ion-modal-view>

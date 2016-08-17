@@ -1,0 +1,125 @@
+{
+  "HOME": {
+    "TITLE": {
+      "NO_PHOTO": "No photo"
+    }
+  },
+  "ACTIVITY": {
+    "TITLE": "Activities",
+    "FORM": {
+      "PLACEHOLDER": "Send a message..."
+    }
+  },
+  "DIRECT": {
+    "TITLE": "Direct Messages",
+    "FORM": {
+      "PLACEHOLDER": "Send a message..."
+    },
+    "BUTTON": {
+      "PULL": "Pull to refresh..."
+    }
+  },
+  "FEEDBACK": {
+    "TITLE": "Feedback",
+    "SUBJECT": "Subject",
+    "COMPLAINT": "Complaint",
+    "BUG": "Bug",
+    "SUGGESTION": "Suggestion",
+    "MESSAGE": "Your message"
+  },
+  "SEARCH": {
+    "TITLE": "Search",
+    "TITLE_LIST": "Seach in List",
+    "TITLE_MAP": "Seach in Map",
+    "FORM": {
+      "INPUT": "Search..."
+    }
+  },
+  "SHARE": {
+    "TITLE": "Post photo",
+    "FORM": {
+      "SHARE_IN": "Share in",
+      "LEGEND": "Write a Legend",
+      "LOCATION": "Location"
+    }
+  },
+  "PHOTOGRAM": {
+    "TITLE": {
+      "HOME": "Home",
+      "SEARCH": "Search",
+      "SHARE": "Share",
+      "ACTIVITY": "Activiy",
+      "PROFILE": "Profile",
+      "NO_PHOTO": "No photo",
+      "SHARE_IN": "Share in",
+      "SHARE": "Share"
+    },
+    "FORM": {
+      "TITLE": "Title",
+      "GEOLOCATION": "Location",
+      "ADDCOMMENT": "Add your comment",
+      "LOCATION": "Location",
+      "LEGEND": "Write a Legend"
+    },
+    "MSG": {
+      "RECENT": "Recent",
+      "NO_PHOTO": "No photo",
+      "NO_POST": "No post"
+    },
+    "COMMENT": {
+      "TITLE": "Comments",
+      "NO_COMMENTS": "No comments"
+    },
+    "SETTING": {
+      "TITLE": "Settings",
+      "NOTIFICATION": "Notification"
+    },
+    "PROFILE": {
+      "TITLE": {
+        "POST": "Posts",
+        "FOLLOWER": "Followers",
+        "FOLLOWING": "Followings"
+      },
+      "NOTIFICATION": "Notification"
+    },
+    "LIKES": "Likes",
+    "BUTTON": {
+      "PULL": "Pull to refresh...",
+      "CHANGE_LANGUAGE": "Change language",
+      "SAVE_PROFILE": "Save Profile",
+      "FACEBOOK_LINK": "Link Facebook",
+      "EDIT": "Edit",
+      "REMOVE": "Remove",
+      "PROFILE_EDIT": "EDIT YOUR PROFILE",
+      "REPORT": "Report a Problem",
+      "TERM_POLICY": "Privacy Policy",
+      "TERM_SERVICE": "Terms of Service",
+      "HELP": "Help",
+      "BUY": "Buy Source Code",
+      "ON": "On",
+      "OFF": "Off",
+      "CHANGE_LANGAUGE": "Change language",
+      "COMMENT_ADD": "Add comment",
+      "COMMENT_REMOVE": "Add comment",
+      "LIKE_ADD": "Like",
+      "LIKE_REMOVE": "Unlike",
+      "FORGOT": "Forgot your pass?",
+      "REGISTER": "Register",
+      "LOGIN": "Login",
+      "ENTER_IN": "Enter in",
+      "RESET_PASS": "Reset new password",
+      "UPDATE": "Update",
+      "SAVE": "Save",
+      "NEW": "New",
+      "CREATE": "Create",
+      "TERM_PRIVACY": "Term of use"
+    }
+  },
+  "LANG": {
+    "ENGLISH": "English",
+    "PORTUGUES": "Portuguese",
+    "PERSIAN": "Persian",
+    "GERMAN": "German",
+    "TURKISH": "Turkish"
+  }
+}

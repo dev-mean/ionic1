@@ -1,0 +1,30 @@
+<ion-view cache-view="false">
+    <ion-content class="flex-center">
+
+        <div class="row center">
+            <div class="col">
+                {{'VERIFY_EMAIL_MESSAGE' | translate}}
+            </div>
+        </div>
+
+
+        <div class="row center">
+            <div class="col">
+                <i class="icon ion-ios-email-outline" style="font-size: 90px"></i>
+            </div>
+        </div>
+
+
+        <section layout="horizontal" layout-sm="horizontal" layout-align="center center">
+            <button class="button button-positive" ng-click="isEmailVerified()">{{'CHECK_EMAIL_VERIFICATION' | translate}}</button>
+        </section>
+
+
+        <div class="row center">
+            <div class="col">
+                <a ng-click="cancel()">Cancel</a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

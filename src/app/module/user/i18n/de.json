@@ -1,0 +1,37 @@
+{
+    "USER": {
+        "AVATAR": {
+            "TITLE": "Avatar",
+            "BUTTON": {
+                "SUBMIT": "Profil speichern"
+            }
+        },
+        "INTRO": "Teilen Sie Ihre schönsten Momente",
+        "OR": "oder",
+        "TERM1": "Bei der Erstellung Ihres Kontos Stimmen Sie unserer",
+        "TERM2": "Bedingungen und Condictions",
+        "FORM": {
+            "NAME": "Name",
+            "PASSWORD": "Passwort",
+            "EMAIL": "E-Mail",
+            "STATUS": "Status",
+            "GENDER": "Gender",
+            "MAN": "Mann",
+            "WOMAN": "Frau"
+        },
+        "BUTTON": {
+            "LOGOUT": "Logout",
+            "ENTER": "Geben Sie",
+            "NEXT": "Weiter",
+            "LOGIN_SOCIAL": "Verbinden Sie Ihren ",
+            "SIGNIN": "Signin",
+            "SIGNUP": "Anmeldung",
+            "FORGOT": "Vergessen Sie Ihren pass?",
+            "RESET_PASS": "Neues Passwort generieren",
+            "UPDATE": "Atualizar",
+            "SAVE": "SPEICHERN",
+            "NEW": "NEUE",
+            "CREATE": "SENDEN"
+        }
+    }
+}

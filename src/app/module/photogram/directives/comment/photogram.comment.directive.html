@@ -1,0 +1,50 @@
+<ion-modal-view class="modal-comment">
+  <ion-header-bar class="bar-dark">
+    <button class="button button-clear button-icon ion-ios-arrow-thin-left" ng-click="closeModal()"></button>
+    <div class="title"><span translate="PHOTOGRAM.COMMENT.TITLE"></span>({{ ::comments.length }})
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+    <photogram-loading loading="loading" icon="android"></photogram-loading>
+
+    <ion-list class="list" ng-show="comments.length" can-swipe="true">
+      <ion-item ng-repeat="item in comments" class="item item-avatar">
+        <img ng-src="{{ ::item.user.img._url }}" />
+
+        <div class="row">
+          <h2>{{ ::item.user.name }}</h2>
+
+          <div>{{ ::item.text }}</div>
+        </div>
+        <div class="row">
+          <p>{{ ::item.created | amTimeAgo }}</p>
+        </div>
+
+        <div ng-if="item.user.id === currentUser.id">
+          <ion-option-button class="button-info" ng-click="editComment(item)" translate="PHOTOGRAM.BUTTON.EDIT">Edit
+          </ion-option-button>
+          <ion-option-button class="button-assertive" ng-click="deleteComment(item)" translate="PHOTOGRAM.BUTTON.REMOVE">Remove
+          </ion-option-button>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <div class="center-ico" ng-if="nocomments">
+      <i class="icon ion-ios-chatbubble-outline"></i>
+
+      <h1 translate="PHOTOGRAM.COMMENT.NO_COMMENTS">No Comments</h1>
+    </div>
+  </ion-content>
+  <ion-footer class="step2">
+    <div class="form">
+      <formly-form model="form" fields="formFields" form="rForm">
+
+        <button class="button button-positive" type="button" ng-click="submitComment(rForm, form)">
+                    <i class="icon ion-arrow-right-b"></i>
+                </button>
+
+      </formly-form>
+    </div>
+  </ion-footer>
+</ion-modal-view>

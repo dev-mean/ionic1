@@ -1,0 +1,1223 @@
+/**
+ * Bar (Headers and Footers)
+ * --------------------------------------------------
+ */
+
+@import "mixins";
+.bar {
+  @include display-flex();
+  @include translate3d(0, 0, 0);
+  @include user-select(none);
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: $z-index-bar;
+
+  box-sizing: border-box;
+  padding: $bar-padding-portrait;
+
+  width: 100%;
+  height: $bar-height;
+  border-width: 0;
+  border-style: solid;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid $bar-default-border;
+
+  background-color: $bar-default-bg;
+
+  /* border-width: 1px will actually create 2 device pixels on retina */
+  /* this nifty trick sets an actual 1px border on hi-res displays */
+  background-size: 0;
+  @media (min--moz-device-pixel-ratio: 1.5),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    border: none;
+    background-image: linear-gradient(0deg, $bar-default-border, $bar-default-border 50%, transparent 50%);
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+  }
+
+  &.bar-clear {
+    border: none;
+    background: none;
+    color: #fff;
+
+    .button {
+      color: #fff;
+    }
+    .title {
+      color: #fff;
+    }
+  }
+
+  &.item-input-inset {
+    .item-input-wrapper {
+      margin-top: -1px;
+
+      input {
+        padding-left: 8px;
+        width: 94%;
+        height: 28px;
+        background: transparent;
+      }
+    }
+  }
+
+  &.bar-light {
+    @include bar-style($bar-light-bg, $bar-light-border, $bar-light-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-light-border, $bar-light-border 50%, transparent 50%);
+    }
+  }
+  &.bar-stable {
+    @include bar-style($bar-stable-bg, $bar-stable-border, $bar-stable-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-stable-border, $bar-stable-border 50%, transparent 50%);
+    }
+  }
+  &.bar-positive {
+    @include bar-style($bar-positive-bg, $bar-positive-border, $bar-positive-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-positive-border, $bar-positive-border 50%, transparent 50%);
+    }
+  }
+  &.bar-calm {
+    @include bar-style($bar-calm-bg, $bar-calm-border, $bar-calm-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-calm-border, $bar-calm-border 50%, transparent 50%);
+    }
+  }
+  &.bar-assertive {
+    @include bar-style($bar-assertive-bg, $bar-assertive-border, $bar-assertive-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-assertive-border, $bar-assertive-border 50%, transparent 50%);
+    }
+  }
+  &.bar-balanced {
+    @include bar-style($bar-balanced-bg, $bar-balanced-border, $bar-balanced-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-balanced-border, $bar-positive-border 50%, transparent 50%);
+    }
+  }
+  &.bar-energized {
+    @include bar-style($bar-energized-bg, $bar-energized-border, $bar-energized-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-energized-border, $bar-energized-border 50%, transparent 50%);
+    }
+  }
+  &.bar-royal {
+    @include bar-style($bar-royal-bg, $bar-royal-border, $bar-royal-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-royal-border, $bar-royal-border 50%, transparent 50%);
+    }
+  }
+  &.bar-dark {
+    @include bar-style($bar-dark-bg, $bar-dark-border, $bar-dark-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-dark-border, $bar-dark-border 50%, transparent 50%);
+    }
+  }
+
+  // Material
+
+  &.bar-primary {
+    @include bar-style($bar-primary-bg, $bar-primary-border, $primaryTextColor);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-primary-border, $bar-primary-border 50%, transparent 50%);
+    }
+  }
+  &.bar-dark-primary {
+    @include bar-style($bar-dark-primary-bg, $bar-dark-primary-border, $bar-dark-primary-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-dark-primary-border, $bar-dark-primary-border 50%, transparent 50%);
+    }
+  }
+  &.bar-light {
+    @include bar-style($bar-light-bg, $bar-light-border, $bar-light-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-light-border, $bar-light-border 50%, transparent 50%);
+    }
+  }
+  &.bar-accent {
+    @include bar-style($bar-accent-bg, $bar-accent-border, $bar-accent-text);
+    &.bar-footer {
+      background-image: linear-gradient(180deg, $bar-accent-border, $bar-accent-border 50%, transparent 50%);
+    }
+  }
+
+  // Amber
+  &.amber-50 {
+    @include bar-material($amber-50, $primaryTextColor);
+  }
+  &.amber-100 {
+    @include bar-material($amber-100, $primaryTextColor);
+  }
+  &.amber-200 {
+    @include bar-material($amber-200, $primaryTextColor);
+  }
+  &.amber-300 {
+    @include bar-material($amber-300, $primaryTextColor);
+  }
+  &.amber-400 {
+    @include bar-material($amber-400, $primaryTextColor);
+  }
+  &.amber-500 {
+    @include bar-material($amber-500, $primaryTextColor);
+  }
+  &.amber-600 {
+    @include bar-material($amber-600, $primaryTextColor);
+  }
+  &.amber-700 {
+    @include bar-material($amber-700, $primaryTextColor);
+  }
+  &.amber-800 {
+    @include bar-material($amber-800, $primaryTextColor);
+  }
+  &.amber-900 {
+    @include bar-material($amber-900, $primaryTextColor);
+  }
+  &.amber-a100 {
+    @include bar-material($amber-a100, $primaryTextColor);
+  }
+  &.amber-a200 {
+    @include bar-material($amber-a200, $primaryTextColor);
+  }
+  &.amber-a400 {
+    @include bar-material($amber-a400, $primaryTextColor);
+  }
+  &.amber-a700 {
+    @include bar-material($amber-a700, $primaryTextColor);
+  }
+  // blue
+  &.blue-50 {
+    @include bar-material($blue-50, $primaryTextColor);
+  }
+  &.blue-100 {
+    @include bar-material($blue-100, $primaryTextColor);
+  }
+  &.blue-200 {
+    @include bar-material($blue-200, $primaryTextColor);
+  }
+  &.blue-300 {
+    @include bar-material($blue-300, $primaryTextColor);
+  }
+  &.blue-400 {
+    @include bar-material($blue-400, $primaryTextColor);
+  }
+  &.blue-500 {
+    @include bar-material($blue-500, $primaryTextColor);
+  }
+  &.blue-600 {
+    @include bar-material($blue-600, $primaryTextColor);
+  }
+  &.blue-700 {
+    @include bar-material($blue-700, $primaryTextColor);
+  }
+  &.blue-800 {
+    @include bar-material($blue-800, $primaryTextColor);
+  }
+  &.blue-900 {
+    @include bar-material($blue-900, $primaryTextColor);
+  }
+  &.blue-a100 {
+    @include bar-material($blue-a100, $primaryTextColor);
+  }
+  &.blue-a200 {
+    @include bar-material($blue-a200, $primaryTextColor);
+  }
+  &.blue-a400 {
+    @include bar-material($blue-a400, $primaryTextColor);
+  }
+  &.blue-a700 {
+    @include bar-material($blue-a700, $primaryTextColor);
+  }
+
+  // blue-grey
+  &.blue-grey-50 {
+    @include bar-material($blue-grey-50, $primaryTextColor);
+  }
+  &.blue-grey-100 {
+    @include bar-material($blue-grey-100, $primaryTextColor);
+  }
+  &.blue-grey-200 {
+    @include bar-material($blue-grey-200, $primaryTextColor);
+  }
+  &.blue-grey-300 {
+    @include bar-material($blue-grey-300, $primaryTextColor);
+  }
+  &.blue-grey-400 {
+    @include bar-material($blue-grey-400, $primaryTextColor);
+  }
+  &.blue-grey-500 {
+    @include bar-material($blue-grey-500, $primaryTextColor);
+  }
+  &.blue-grey-600 {
+    @include bar-material($blue-grey-600, $primaryTextColor);
+  }
+  &.blue-grey-700 {
+    @include bar-material($blue-grey-700, $primaryTextColor);
+  }
+  &.blue-grey-800 {
+    @include bar-material($blue-grey-800, $primaryTextColor);
+  }
+  &.blue-grey-900 {
+    @include bar-material($blue-grey-900, $primaryTextColor);
+  }
+
+  // brown
+  &.brown-50 {
+    @include bar-material($brown-50, $primaryTextColor);
+  }
+  &.brown-100 {
+    @include bar-material($brown-100, $primaryTextColor);
+  }
+  &.brown-200 {
+    @include bar-material($brown-200, $primaryTextColor);
+  }
+  &.brown-300 {
+    @include bar-material($brown-300, $primaryTextColor);
+  }
+  &.brown-400 {
+    @include bar-material($brown-400, $primaryTextColor);
+  }
+  &.brown-500 {
+    @include bar-material($brown-500, $primaryTextColor);
+  }
+  &.brown-600 {
+    @include bar-material($brown-600, $primaryTextColor);
+  }
+  &.brown-700 {
+    @include bar-material($brown-700, $primaryTextColor);
+  }
+  &.brown-800 {
+    @include bar-material($brown-800, $primaryTextColor);
+  }
+  &.brown-900 {
+    @include bar-material($brown-900, $primaryTextColor);
+  }
+  // cyan
+  &.cyan-50 {
+    @include bar-material($cyan-50, $primaryTextColor);
+  }
+  &.cyan-100 {
+    @include bar-material($cyan-100, $primaryTextColor);
+  }
+  &.cyan-200 {
+    @include bar-material($cyan-200, $primaryTextColor);
+  }
+  &.cyan-300 {
+    @include bar-material($cyan-300, $primaryTextColor);
+  }
+  &.cyan-400 {
+    @include bar-material($cyan-400, $primaryTextColor);
+  }
+  &.cyan-500 {
+    @include bar-material($cyan-500, $primaryTextColor);
+  }
+  &.cyan-600 {
+    @include bar-material($cyan-600, $primaryTextColor);
+  }
+  &.cyan-700 {
+    @include bar-material($cyan-700, $primaryTextColor);
+  }
+  &.cyan-800 {
+    @include bar-material($cyan-800, $primaryTextColor);
+  }
+  &.cyan-900 {
+    @include bar-material($cyan-900, $primaryTextColor);
+  }
+  &.cyan-a100 {
+    @include bar-material($cyan-a100, $primaryTextColor);
+  }
+  &.cyan-a200 {
+    @include bar-material($cyan-a200, $primaryTextColor);
+  }
+  &.cyan-a400 {
+    @include bar-material($cyan-a400, $primaryTextColor);
+  }
+  &.cyan-a700 {
+    @include bar-material($cyan-a700, $primaryTextColor);
+  }
+  // deep-orange
+  &.deep-orange-50 {
+    @include bar-material($deep-orange-50, $primaryTextColor);
+  }
+  &.deep-orange-100 {
+    @include bar-material($deep-orange-100, $primaryTextColor);
+  }
+  &.deep-orange-200 {
+    @include bar-material($deep-orange-200, $primaryTextColor);
+  }
+  &.deep-orange-300 {
+    @include bar-material($deep-orange-300, $primaryTextColor);
+  }
+  &.deep-orange-400 {
+    @include bar-material($deep-orange-400, $primaryTextColor);
+  }
+  &.deep-orange-500 {
+    @include bar-material($deep-orange-500, $primaryTextColor);
+  }
+  &.deep-orange-600 {
+    @include bar-material($deep-orange-600, $primaryTextColor);
+  }
+  &.deep-orange-700 {
+    @include bar-material($deep-orange-700, $primaryTextColor);
+  }
+  &.deep-orange-800 {
+    @include bar-material($deep-orange-800, $primaryTextColor);
+  }
+  &.deep-orange-900 {
+    @include bar-material($deep-orange-900, $primaryTextColor);
+  }
+  &.deep-orange-a100 {
+    @include bar-material($deep-orange-a100, $primaryTextColor);
+  }
+  &.deep-orange-a200 {
+    @include bar-material($deep-orange-a200, $primaryTextColor);
+  }
+  &.deep-orange-a400 {
+    @include bar-material($deep-orange-a400, $primaryTextColor);
+  }
+  &.deep-orange-a700 {
+    @include bar-material($deep-orange-a700, $primaryTextColor);
+  }
+  // deep-purple
+  &.deep-purple-50 {
+    @include bar-material($deep-purple-50, $primaryTextColor);
+  }
+  &.deep-purple-100 {
+    @include bar-material($deep-purple-100, $primaryTextColor);
+  }
+  &.deep-purple-200 {
+    @include bar-material($deep-purple-200, $primaryTextColor);
+  }
+  &.deep-purple-300 {
+    @include bar-material($deep-purple-300, $primaryTextColor);
+  }
+  &.deep-purple-400 {
+    @include bar-material($deep-purple-400, $primaryTextColor);
+  }
+  &.deep-purple-500 {
+    @include bar-material($deep-purple-500, $primaryTextColor);
+  }
+  &.deep-purple-600 {
+    @include bar-material($deep-purple-600, $primaryTextColor);
+  }
+  &.deep-purple-700 {
+    @include bar-material($deep-purple-700, $primaryTextColor);
+  }
+  &.deep-purple-800 {
+    @include bar-material($deep-purple-800, $primaryTextColor);
+  }
+  &.deep-purple-900 {
+    @include bar-material($deep-purple-900, $primaryTextColor);
+  }
+  &.deep-purple-a100 {
+    @include bar-material($deep-purple-a100, $primaryTextColor);
+  }
+  &.deep-purple-a200 {
+    @include bar-material($deep-purple-a200, $primaryTextColor);
+  }
+  &.deep-purple-a400 {
+    @include bar-material($deep-purple-a400, $primaryTextColor);
+  }
+  &.deep-purple-a700 {
+    @include bar-material($deep-purple-a700, $primaryTextColor);
+  }
+  // green
+  &.green-50 {
+    @include bar-material($green-50, $primaryTextColor);
+  }
+  &.green-100 {
+    @include bar-material($green-100, $primaryTextColor);
+  }
+  &.green-200 {
+    @include bar-material($green-200, $primaryTextColor);
+  }
+  &.green-300 {
+    @include bar-material($green-300, $primaryTextColor);
+  }
+  &.green-400 {
+    @include bar-material($green-400, $primaryTextColor);
+  }
+  &.green-500 {
+    @include bar-material($green-500, $primaryTextColor);
+  }
+  &.green-600 {
+    @include bar-material($green-600, $primaryTextColor);
+  }
+  &.green-700 {
+    @include bar-material($green-700, $primaryTextColor);
+  }
+  &.green-800 {
+    @include bar-material($green-800, $primaryTextColor);
+  }
+  &.green-900 {
+    @include bar-material($green-900, $primaryTextColor);
+  }
+  &.green-a100 {
+    @include bar-material($green-a100, $primaryTextColor);
+  }
+  &.green-a200 {
+    @include bar-material($green-a200, $primaryTextColor);
+  }
+  &.green-a400 {
+    @include bar-material($green-a400, $primaryTextColor);
+  }
+  &.green-a700 {
+    @include bar-material($green-a700, $primaryTextColor);
+  }
+  // grey
+  &.grey-50 {
+    @include bar-material($grey-50, $primaryTextColor);
+  }
+  &.grey-100 {
+    @include bar-material($grey-100, $primaryTextColor);
+  }
+  &.grey-200 {
+    @include bar-material($grey-200, $primaryTextColor);
+  }
+  &.grey-300 {
+    @include bar-material($grey-300, $primaryTextColor);
+  }
+  &.grey-400 {
+    @include bar-material($grey-400, $primaryTextColor);
+  }
+  &.grey-500 {
+    @include bar-material($grey-500, $primaryTextColor);
+  }
+  &.grey-600 {
+    @include bar-material($grey-600, $primaryTextColor);
+  }
+  &.grey-700 {
+    @include bar-material($grey-700, $primaryTextColor);
+  }
+  &.grey-800 {
+    @include bar-material($grey-800, $primaryTextColor);
+  }
+  &.grey-900 {
+    @include bar-material($grey-900, $primaryTextColor);
+  }
+  // indigo
+  &.indigo-50 {
+    @include bar-material($indigo-50, $primaryTextColor);
+  }
+  &.indigo-100 {
+    @include bar-material($indigo-100, $primaryTextColor);
+  }
+  &.indigo-200 {
+    @include bar-material($indigo-200, $primaryTextColor);
+  }
+  &.indigo-300 {
+    @include bar-material($indigo-300, $primaryTextColor);
+  }
+  &.indigo-400 {
+    @include bar-material($indigo-400, $primaryTextColor);
+  }
+  &.indigo-500 {
+    @include bar-material($indigo-500, $primaryTextColor);
+  }
+  &.indigo-600 {
+    @include bar-material($indigo-600, $primaryTextColor);
+  }
+  &.indigo-700 {
+    @include bar-material($indigo-700, $primaryTextColor);
+  }
+  &.indigo-800 {
+    @include bar-material($indigo-800, $primaryTextColor);
+  }
+  &.indigo-900 {
+    @include bar-material($indigo-900, $primaryTextColor);
+  }
+  &.indigo-a100 {
+    @include bar-material($indigo-a100, $primaryTextColor);
+  }
+  &.indigo-a200 {
+    @include bar-material($indigo-a200, $primaryTextColor);
+  }
+  &.indigo-a400 {
+    @include bar-material($indigo-a400, $primaryTextColor);
+  }
+  &.indigo-a700 {
+    @include bar-material($indigo-a700, $primaryTextColor);
+  }
+  // light-blue
+  &.light-blue-50 {
+    @include bar-material($light-blue-50, $primaryTextColor);
+  }
+  &.light-blue-100 {
+    @include bar-material($light-blue-100, $primaryTextColor);
+  }
+  &.light-blue-200 {
+    @include bar-material($light-blue-200, $primaryTextColor);
+  }
+  &.light-blue-300 {
+    @include bar-material($light-blue-300, $primaryTextColor);
+  }
+  &.light-blue-400 {
+    @include bar-material($light-blue-400, $primaryTextColor);
+  }
+  &.light-blue-500 {
+    @include bar-material($light-blue-500, $primaryTextColor);
+  }
+  &.light-blue-600 {
+    @include bar-material($light-blue-600, $primaryTextColor);
+  }
+  &.light-blue-700 {
+    @include bar-material($light-blue-700, $primaryTextColor);
+  }
+  &.light-blue-800 {
+    @include bar-material($light-blue-800, $primaryTextColor);
+  }
+  &.light-blue-900 {
+    @include bar-material($light-blue-900, $primaryTextColor);
+  }
+  &.light-blue-a100 {
+    @include bar-material($light-blue-a100, $primaryTextColor);
+  }
+  &.light-blue-a200 {
+    @include bar-material($light-blue-a200, $primaryTextColor);
+  }
+  &.light-blue-a400 {
+    @include bar-material($light-blue-a400, $primaryTextColor);
+  }
+  &.light-blue-a700 {
+    @include bar-material($light-blue-a700, $primaryTextColor);
+  }
+  // light-green
+  &.light-green-50 {
+    @include bar-material($light-green-50, $primaryTextColor);
+  }
+  &.light-green-100 {
+    @include bar-material($light-green-100, $primaryTextColor);
+  }
+  &.light-green-200 {
+    @include bar-material($light-green-200, $primaryTextColor);
+  }
+  &.light-green-300 {
+    @include bar-material($light-green-300, $primaryTextColor);
+  }
+  &.light-green-400 {
+    @include bar-material($light-green-400, $primaryTextColor);
+  }
+  &.light-green-500 {
+    @include bar-material($light-green-500, $primaryTextColor);
+  }
+  &.light-green-600 {
+    @include bar-material($light-green-600, $primaryTextColor);
+  }
+  &.light-green-700 {
+    @include bar-material($light-green-700, $primaryTextColor);
+  }
+  &.light-green-800 {
+    @include bar-material($light-green-800, $primaryTextColor);
+  }
+  &.light-green-900 {
+    @include bar-material($light-green-900, $primaryTextColor);
+  }
+  &.light-green-a100 {
+    @include bar-material($light-green-a100, $primaryTextColor);
+  }
+  &.light-green-a200 {
+    @include bar-material($light-green-a200, $primaryTextColor);
+  }
+  &.light-green-a400 {
+    @include bar-material($light-green-a400, $primaryTextColor);
+  }
+  &.light-green-a700 {
+    @include bar-material($light-green-a700, $primaryTextColor);
+  }
+  // lime
+  &.lime-50 {
+    @include bar-material($lime-50, $primaryTextColor);
+  }
+  &.lime-100 {
+    @include bar-material($lime-100, $primaryTextColor);
+  }
+  &.lime-200 {
+    @include bar-material($lime-200, $primaryTextColor);
+  }
+  &.lime-300 {
+    @include bar-material($lime-300, $primaryTextColor);
+  }
+  &.lime-400 {
+    @include bar-material($lime-400, $primaryTextColor);
+  }
+  &.lime-500 {
+    @include bar-material($lime-500, $primaryTextColor);
+  }
+  &.lime-600 {
+    @include bar-material($lime-600, $primaryTextColor);
+  }
+  &.lime-700 {
+    @include bar-material($lime-700, $primaryTextColor);
+  }
+  &.lime-800 {
+    @include bar-material($lime-800, $primaryTextColor);
+  }
+  &.lime-900 {
+    @include bar-material($lime-900, $primaryTextColor);
+  }
+  &.lime-a100 {
+    @include bar-material($lime-a100, $primaryTextColor);
+  }
+  &.lime-a200 {
+    @include bar-material($lime-a200, $primaryTextColor);
+  }
+  &.lime-a400 {
+    @include bar-material($lime-a400, $primaryTextColor);
+  }
+  &.lime-a700 {
+    @include bar-material($lime-a700, $primaryTextColor);
+  }
+  // orange
+  &.orange-50 {
+    @include bar-material($orange-50, $primaryTextColor);
+  }
+  &.orange-100 {
+    @include bar-material($orange-100, $primaryTextColor);
+  }
+  &.orange-200 {
+    @include bar-material($orange-200, $primaryTextColor);
+  }
+  &.orange-300 {
+    @include bar-material($orange-300, $primaryTextColor);
+  }
+  &.orange-400 {
+    @include bar-material($orange-400, $primaryTextColor);
+  }
+  &.orange-500 {
+    @include bar-material($orange-500, $primaryTextColor);
+  }
+  &.orange-600 {
+    @include bar-material($orange-600, $primaryTextColor);
+  }
+  &.orange-700 {
+    @include bar-material($orange-700, $primaryTextColor);
+  }
+  &.orange-800 {
+    @include bar-material($orange-800, $primaryTextColor);
+  }
+  &.orange-900 {
+    @include bar-material($orange-900, $primaryTextColor);
+  }
+  &.orange-a100 {
+    @include bar-material($orange-a100, $primaryTextColor);
+  }
+  &.orange-a200 {
+    @include bar-material($orange-a200, $primaryTextColor);
+  }
+  &.orange-a400 {
+    @include bar-material($orange-a400, $primaryTextColor);
+  }
+  &.orange-a700 {
+    @include bar-material($orange-a700, $primaryTextColor);
+  }
+  // pink
+  &.pink-50 {
+    @include bar-material($pink-50, $primaryTextColor);
+  }
+  &.pink-100 {
+    @include bar-material($pink-100, $primaryTextColor);
+  }
+  &.pink-200 {
+    @include bar-material($pink-200, $primaryTextColor);
+  }
+  &.pink-300 {
+    @include bar-material($pink-300, $primaryTextColor);
+  }
+  &.pink-400 {
+    @include bar-material($pink-400, $primaryTextColor);
+  }
+  &.pink-500 {
+    @include bar-material($pink-500, $primaryTextColor);
+  }
+  &.pink-600 {
+    @include bar-material($pink-600, $primaryTextColor);
+  }
+  &.pink-700 {
+    @include bar-material($pink-700, $primaryTextColor);
+  }
+  &.pink-800 {
+    @include bar-material($pink-800, $primaryTextColor);
+  }
+  &.pink-900 {
+    @include bar-material($pink-900, $primaryTextColor);
+  }
+  &.pink-a100 {
+    @include bar-material($pink-a100, $primaryTextColor);
+  }
+  &.pink-a200 {
+    @include bar-material($pink-a200, $primaryTextColor);
+  }
+  &.pink-a400 {
+    @include bar-material($pink-a400, $primaryTextColor);
+  }
+  &.pink-a700 {
+    @include bar-material($pink-a700, $primaryTextColor);
+  }
+  // purple
+  &.purple-50 {
+    @include bar-material($purple-50, $primaryTextColor);
+  }
+  &.purple-100 {
+    @include bar-material($purple-100, $primaryTextColor);
+  }
+  &.purple-200 {
+    @include bar-material($purple-200, $primaryTextColor);
+  }
+  &.purple-300 {
+    @include bar-material($purple-300, $primaryTextColor);
+  }
+  &.purple-400 {
+    @include bar-material($purple-400, $primaryTextColor);
+  }
+  &.purple-500 {
+    @include bar-material($purple-500, $primaryTextColor);
+  }
+  &.purple-600 {
+    @include bar-material($purple-600, $primaryTextColor);
+  }
+  &.purple-700 {
+    @include bar-material($purple-700, $primaryTextColor);
+  }
+  &.purple-800 {
+    @include bar-material($purple-800, $primaryTextColor);
+  }
+  &.purple-900 {
+    @include bar-material($purple-900, $primaryTextColor);
+  }
+  &.purple-a100 {
+    @include bar-material($purple-a100, $primaryTextColor);
+  }
+  &.purple-a200 {
+    @include bar-material($purple-a200, $primaryTextColor);
+  }
+  &.purple-a400 {
+    @include bar-material($purple-a400, $primaryTextColor);
+  }
+  &.purple-a700 {
+    @include bar-material($purple-a700, $primaryTextColor);
+  }
+  // red
+  &.red-50 {
+    @include bar-material($red-50, $primaryTextColor);
+  }
+  &.red-100 {
+    @include bar-material($red-100, $primaryTextColor);
+  }
+  &.red-200 {
+    @include bar-material($red-200, $primaryTextColor);
+  }
+  &.red-300 {
+    @include bar-material($red-300, $primaryTextColor);
+  }
+  &.red-400 {
+    @include bar-material($red-400, $primaryTextColor);
+  }
+  &.red-500 {
+    @include bar-material($red-500, $primaryTextColor);
+  }
+  &.red-600 {
+    @include bar-material($red-600, $primaryTextColor);
+  }
+  &.red-700 {
+    @include bar-material($red-700, $primaryTextColor);
+  }
+  &.red-800 {
+    @include bar-material($red-800, $primaryTextColor);
+  }
+  &.red-900 {
+    @include bar-material($red-900, $primaryTextColor);
+  }
+  &.red-a100 {
+    @include bar-material($red-a100, $primaryTextColor);
+  }
+  &.red-a200 {
+    @include bar-material($red-a200, $primaryTextColor);
+  }
+  &.red-a400 {
+    @include bar-material($red-a400, $primaryTextColor);
+  }
+  &.red-a700 {
+    @include bar-material($red-a700, $primaryTextColor);
+  }
+  // teal
+  &.teal-50 {
+    @include bar-material($teal-50, $primaryTextColor);
+  }
+  &.teal-100 {
+    @include bar-material($teal-100, $primaryTextColor);
+  }
+  &.teal-200 {
+    @include bar-material($teal-200, $primaryTextColor);
+  }
+  &.teal-300 {
+    @include bar-material($teal-300, $primaryTextColor);
+  }
+  &.teal-400 {
+    @include bar-material($teal-400, $primaryTextColor);
+  }
+  &.teal-500 {
+    @include bar-material($teal-500, $primaryTextColor);
+  }
+  &.teal-600 {
+    @include bar-material($teal-600, $primaryTextColor);
+  }
+  &.teal-700 {
+    @include bar-material($teal-700, $primaryTextColor);
+  }
+  &.teal-800 {
+    @include bar-material($teal-800, $primaryTextColor);
+  }
+  &.teal-900 {
+    @include bar-material($teal-900, $primaryTextColor);
+  }
+  &.teal-a100 {
+    @include bar-material($teal-a100, $primaryTextColor);
+  }
+  &.teal-a200 {
+    @include bar-material($teal-a200, $primaryTextColor);
+  }
+  &.teal-a400 {
+    @include bar-material($teal-a400, $primaryTextColor);
+  }
+  &.teal-a700 {
+    @include bar-material($teal-a700, $primaryTextColor);
+  }
+  // yellow
+  &.yellow-50 {
+    @include bar-material($yellow-50, $primaryTextColor);
+  }
+  &.yellow-100 {
+    @include bar-material($yellow-100, $primaryTextColor);
+  }
+  &.yellow-200 {
+    @include bar-material($yellow-200, $primaryTextColor);
+  }
+  &.yellow-300 {
+    @include bar-material($yellow-300, $primaryTextColor);
+  }
+  &.yellow-400 {
+    @include bar-material($yellow-400, $primaryTextColor);
+  }
+  &.yellow-500 {
+    @include bar-material($yellow-500, $primaryTextColor);
+  }
+  &.yellow-600 {
+    @include bar-material($yellow-600, $primaryTextColor);
+  }
+  &.yellow-700 {
+    @include bar-material($yellow-700, $primaryTextColor);
+  }
+  &.yellow-800 {
+    @include bar-material($yellow-800, $primaryTextColor);
+  }
+  &.yellow-900 {
+    @include bar-material($yellow-900, $primaryTextColor);
+  }
+  &.yellow-a100 {
+    @include bar-material($yellow-a100, $primaryTextColor);
+  }
+  &.yellow-a200 {
+    @include bar-material($yellow-a200, $primaryTextColor);
+  }
+  &.yellow-a400 {
+    @include bar-material($yellow-a400, $primaryTextColor);
+  }
+  &.yellow-a700 {
+    @include bar-material($yellow-a700, $primaryTextColor);
+  }
+
+  // Title inside of a bar is centered
+  .title {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $z-index-bar-title;
+    overflow: hidden;
+
+    margin: 0 10px;
+
+    min-width: 30px;
+    height: $bar-height - 1;
+
+    text-align: center;
+
+    // Go into ellipsis if too small
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: $bar-title-font-size;
+    font-weight: $headings-font-weight;
+
+    line-height: $bar-height;
+
+    &.title-left {
+      text-align: left;
+    }
+    &.title-right {
+      text-align: right;
+    }
+  }
+
+  .title a {
+    color: inherit;
+  }
+
+  .button {
+    z-index: $z-index-bar-button;
+    padding: 0 $button-bar-button-padding;
+    min-width: initial;
+    min-height: $button-bar-button-height - 1;
+    font-weight: 400;
+    font-size: $button-bar-button-font-size;
+    line-height: $button-bar-button-height;
+
+    &.button-icon:before,
+    .icon:before,
+    &.icon:before,
+    &.icon-left:before,
+    &.icon-right:before {
+      padding-right: 2px;
+      padding-left: 2px;
+      font-size: $button-bar-button-icon-size;
+      line-height: $button-bar-button-height;
+    }
+
+    &.button-icon {
+      font-size: $bar-title-font-size;
+      .icon:before,
+      &:before,
+      &.icon-left:before,
+      &.icon-right:before {
+        vertical-align: top;
+        font-size: $button-large-icon-size;
+        line-height: $button-bar-button-height;
+      }
+    }
+    &.button-clear {
+      padding-right: 2px;
+      padding-left: 2px;
+      font-weight: 300;
+      font-size: $bar-title-font-size;
+
+      .icon:before,
+      &.icon:before,
+      &.icon-left:before,
+      &.icon-right:before {
+        font-size: $button-large-icon-size;
+        line-height: $button-bar-button-height;
+      }
+    }
+
+    &.back-button {
+      display: block;
+      margin-right: 5px;
+      padding: 0;
+      white-space: nowrap;
+      font-weight: 400;
+    }
+
+    &.back-button.active,
+    &.back-button.activated {
+      opacity: 0.2;
+    }
+  }
+
+  .button-bar > .button,
+  .buttons > .button {
+    min-height: $button-bar-button-height - 1;
+    line-height: $button-bar-button-height;
+  }
+
+  .button-bar + .button,
+  .button + .button-bar {
+    margin-left: 5px;
+  }
+
+  // Android 4.4 messes with the display property
+  .buttons,
+  .buttons.primary-buttons,
+  .buttons.secondary-buttons {
+    display: inherit;
+  }
+  .buttons span {
+    display: inline-block;
+  }
+  .buttons-left span {
+    margin-right: 5px;
+  }
+  .buttons-right span {
+    margin-left: 5px;
+  }
+
+  // Place the last button in a bar on the right of the bar
+  .title + .button:last-child,
+  > .button + .button:last-child,
+  > .button.pull-right,
+  .buttons.pull-right,
+  .title + .buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+  }
+
+}
+
+// Default styles for buttons inside of styled bars
+.bar-light {
+  .button {
+    @include button-style($bar-light-bg, $bar-light-border, $bar-light-active-bg, $bar-light-active-border, $bar-light-text);
+    @include button-clear($bar-light-text, $bar-title-font-size);
+  }
+}
+
+.bar-stable {
+  .button {
+    @include button-style($bar-stable-bg, $bar-stable-border, $bar-stable-active-bg, $bar-stable-active-border, $bar-stable-text);
+    @include button-clear($bar-stable-text, $bar-title-font-size);
+  }
+}
+
+.bar-positive {
+  .button {
+    @include button-style($bar-positive-bg, $bar-positive-border, $bar-positive-active-bg, $bar-positive-active-border, $bar-positive-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-calm {
+  .button {
+    @include button-style($bar-calm-bg, $bar-calm-border, $bar-calm-active-bg, $bar-calm-active-border, $bar-calm-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-assertive {
+  .button {
+    @include button-style($bar-assertive-bg, $bar-assertive-border, $bar-assertive-active-bg, $bar-assertive-active-border, $bar-assertive-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-balanced {
+  .button {
+    @include button-style($bar-balanced-bg, $bar-balanced-border, $bar-balanced-active-bg, $bar-balanced-active-border, $bar-balanced-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-energized {
+  .button {
+    @include button-style($bar-energized-bg, $bar-energized-border, $bar-energized-active-bg, $bar-energized-active-border, $bar-energized-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-royal {
+  .button {
+    @include button-style($bar-royal-bg, $bar-royal-border, $bar-royal-active-bg, $bar-royal-active-border, $bar-royal-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-dark {
+  .button {
+    @include button-style($bar-dark-bg, $bar-dark-border, $bar-dark-active-bg, $bar-dark-active-border, $bar-dark-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+// Material
+
+.bar-primary {
+  .button {
+    @include button-style($bar-primary-bg, $bar-primary-border, $bar-primary-active-bg, $bar-primary-active-border, $bar-primary-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-dark-primary {
+  .button {
+    @include button-style($bar-dark-primary-bg, $bar-dark-primary-border, $bar-dark-primary-active-bg, $bar-dark-primary-active-border, $bar-dark-primary-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-light {
+  .button {
+    @include button-style($bar-light-bg, $bar-light-border, $bar-light-active-bg, $bar-light-active-border, $bar-light-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+.bar-accent {
+  .button {
+    @include button-style($bar-accent-bg, $bar-accent-border, $bar-accent-active-bg, $bar-accent-active-border, $bar-accent-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+// Header at top
+.bar-header {
+  top: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  &.has-tabs-top {
+    border-bottom-width: 0px;
+    background-image: none;
+  }
+}
+
+// Footer at bottom
+.bar-footer {
+  bottom: 0;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+  background-position: top;
+
+  height: $bar-footer-height;
+
+  &.item-input-inset {
+    position: absolute;
+  }
+}
+
+// Don't render padding if the bar is just for tabs
+.bar-tabs {
+  padding: 0;
+}
+
+.bar-subheader {
+  top: $bar-height;
+  display: block;
+
+  height: $bar-subheader-height;
+}
+
+.bar-subfooter {
+  bottom: $bar-footer-height;
+  display: block;
+
+  height: $bar-subfooter-height;
+}
+
+.nav-bar-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $z-index-bar;
+}
+
+.bar .back-button.hide,
+.bar .buttons .hide {
+  display: none;
+}

@@ -1,0 +1,34 @@
+<ion-view class="view-login" hide-nav-bar="true" view-title="{{ ::'USER.BUTTON.ENTER' | translate }}">
+
+  <ion-content padding="false">
+    <div class="padding">
+
+      <formly-form model="vm.form" fields="vm.formFields" form="vm.rForm">
+
+        <button recovery-pass class="button button-right button-block button-clear">
+                    <span></span>
+                </button>
+
+        <button class="button button-block button-positive " type="button" ng-disabled="vm.rForm.$invalid" ng-click="vm.submitLogin(vm.rForm, vm.form)"
+          translate="USER.BUTTON.ENTER">
+                </button>
+
+      </formly-form>
+
+      <div class="line">
+        <div class="left"></div>
+        <span translate="USER.OR">or</span>
+        <div class="right"></div>
+      </div>
+
+
+      <button ng-click="vm.facebook()" class="button button-block button-facebook"><i
+                    class="icon ion-social-facebook"></i>
+                <span>Facebook</span>
+            </button>
+
+    </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view class="view-login" view-title="{{ 'USER.BUTTON.SIGNIN' | translate }}">
+
+  <ion-content padding="false" scroll="false">
+
+    <div class="user-head padding text-center step1">
+      <div class="logo2">
+          <img src="img/icon.png">
+          <img src="img/header.png" class="img-title">
+      </div>
+
+      <!-- <h2 class="step2" translate="USER.INTRO"></h2> -->
+
+      <ion-tabs class="tabs-positive tabs-top">
+        <ion-tab title="login" ui-sref="user.signin"></ion-tab>
+        <ion-tab title="signup" ui-sref="user.signup"></ion-tab>
+      </ion-tabs>
+    </div>
+
+    <ion-nav-view class="step3" name="tabLogin"></ion-nav-view>
+  </ion-content>
+</ion-view>

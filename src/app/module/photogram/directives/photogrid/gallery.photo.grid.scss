@@ -1,0 +1,24 @@
+photogram-photo-grid {
+
+  .row {
+
+    .col {
+
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      border: 2px solid #fff;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 150px;
+        min-height: 150px;
+      }
+
+    }
+  }
+
+}
